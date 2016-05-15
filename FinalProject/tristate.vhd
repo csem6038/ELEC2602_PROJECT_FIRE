@@ -1,0 +1,11 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+entity tristate is
+port( A, enable : in std_logic;
+ Q : out std_logic);
+end tristate;
+architecture behavioural of tristate is
+begin
+ Q <= 'Z' WHEN enable = '0' ELSE A;
+end behavioural;

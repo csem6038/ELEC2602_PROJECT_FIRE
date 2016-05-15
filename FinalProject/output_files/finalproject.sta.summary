@@ -1,0 +1,77 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'Clock'
+Slack : -1.700
+TNS   : -117.685
+
+Type  : Slow Model Setup 'controlunit:cont|Y_present.ADD2'
+Slack : -1.536
+TNS   : -5.032
+
+Type  : Slow Model Setup 'Function_in[0]'
+Slack : -1.355
+TNS   : -1.355
+
+Type  : Slow Model Hold 'Function_in[0]'
+Slack : -3.259
+TNS   : -5.827
+
+Type  : Slow Model Hold 'Clock'
+Slack : 0.707
+TNS   : 0.000
+
+Type  : Slow Model Hold 'controlunit:cont|Y_present.ADD2'
+Slack : 0.768
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'Clock'
+Slack : -1.380
+TNS   : -90.380
+
+Type  : Slow Model Minimum Pulse Width 'Function_in[0]'
+Slack : -1.222
+TNS   : -1.222
+
+Type  : Slow Model Minimum Pulse Width 'controlunit:cont|Y_present.ADD2'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast Model Setup 'Clock'
+Slack : -0.397
+TNS   : -21.403
+
+Type  : Fast Model Setup 'controlunit:cont|Y_present.ADD2'
+Slack : -0.269
+TNS   : -0.519
+
+Type  : Fast Model Setup 'Function_in[0]'
+Slack : -0.266
+TNS   : -0.266
+
+Type  : Fast Model Hold 'Function_in[0]'
+Slack : -1.866
+TNS   : -1.866
+
+Type  : Fast Model Hold 'controlunit:cont|Y_present.ADD2'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast Model Hold 'Clock'
+Slack : 0.617
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'Clock'
+Slack : -1.380
+TNS   : -90.380
+
+Type  : Fast Model Minimum Pulse Width 'Function_in[0]'
+Slack : -1.222
+TNS   : -1.222
+
+Type  : Fast Model Minimum Pulse Width 'controlunit:cont|Y_present.ADD2'
+Slack : 0.500
+TNS   : 0.000
+
+------------------------------------------------------------

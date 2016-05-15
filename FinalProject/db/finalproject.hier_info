@@ -1,0 +1,1363 @@
+|proc
+Data[0] => ~NO_FANOUT~
+Data[1] => ~NO_FANOUT~
+Data[2] => ~NO_FANOUT~
+Data[3] => ~NO_FANOUT~
+Data[4] => ~NO_FANOUT~
+Data[5] => ~NO_FANOUT~
+Data[6] => ~NO_FANOUT~
+Data[7] => ~NO_FANOUT~
+Data[8] => ~NO_FANOUT~
+Data[9] => ~NO_FANOUT~
+Data[10] => ~NO_FANOUT~
+Data[11] => ~NO_FANOUT~
+Data[12] => ~NO_FANOUT~
+Data[13] => ~NO_FANOUT~
+Data[14] => ~NO_FANOUT~
+Data[15] => ~NO_FANOUT~
+Reset => controlunit:cont.Res
+w => controlunit:cont.w
+Clock => register16:regR0.Clk
+Clock => register16:regR1.Clk
+Clock => register16:regR2.Clk
+Clock => register16:regR3.Clk
+Clock => register16:regG.Clk
+Clock => register16:regA.Clk
+Clock => controlunit:cont.Clock
+Function_in[0] => controlunit:cont.funct[0]
+Function_in[1] => controlunit:cont.funct[1]
+Function_in[2] => controlunit:cont.funct[2]
+Function_in[3] => controlunit:cont.funct[3]
+Function_in[4] => controlunit:cont.funct[4]
+Function_in[5] => controlunit:cont.funct[5]
+Function_in[6] => controlunit:cont.funct[6]
+Function_in[7] => controlunit:cont.funct[7]
+Function_in[8] => controlunit:cont.funct[8]
+Function_in[9] => controlunit:cont.funct[9]
+Function_in[10] => controlunit:cont.funct[10]
+Function_in[11] => controlunit:cont.funct[11]
+Function_in[12] => controlunit:cont.funct[12]
+Function_in[13] => controlunit:cont.funct[13]
+Function_in[14] => controlunit:cont.funct[14]
+Function_in[15] => controlunit:cont.funct[15]
+F[0] => ~NO_FANOUT~
+F[1] => ~NO_FANOUT~
+Rx[0] => ~NO_FANOUT~
+Rx[1] => ~NO_FANOUT~
+Ry[0] => ~NO_FANOUT~
+Ry[1] => ~NO_FANOUT~
+Done <= comb.DB_MAX_OUTPUT_PORT_TYPE
+BusWires[0] <> BusWires[0]
+BusWires[0] <> BusWires[0]
+BusWires[0] <> BusWires[0]
+BusWires[0] <> BusWires[0]
+BusWires[0] <> BusWires[0]
+BusWires[1] <> BusWires[1]
+BusWires[1] <> BusWires[1]
+BusWires[1] <> BusWires[1]
+BusWires[1] <> BusWires[1]
+BusWires[1] <> BusWires[1]
+BusWires[2] <> BusWires[2]
+BusWires[2] <> BusWires[2]
+BusWires[2] <> BusWires[2]
+BusWires[2] <> BusWires[2]
+BusWires[2] <> BusWires[2]
+BusWires[3] <> BusWires[3]
+BusWires[3] <> BusWires[3]
+BusWires[3] <> BusWires[3]
+BusWires[3] <> BusWires[3]
+BusWires[3] <> BusWires[3]
+BusWires[4] <> BusWires[4]
+BusWires[4] <> BusWires[4]
+BusWires[4] <> BusWires[4]
+BusWires[4] <> BusWires[4]
+BusWires[4] <> BusWires[4]
+BusWires[5] <> BusWires[5]
+BusWires[5] <> BusWires[5]
+BusWires[5] <> BusWires[5]
+BusWires[5] <> BusWires[5]
+BusWires[5] <> BusWires[5]
+BusWires[6] <> BusWires[6]
+BusWires[6] <> BusWires[6]
+BusWires[6] <> BusWires[6]
+BusWires[6] <> BusWires[6]
+BusWires[6] <> BusWires[6]
+BusWires[7] <> BusWires[7]
+BusWires[7] <> BusWires[7]
+BusWires[7] <> BusWires[7]
+BusWires[7] <> BusWires[7]
+BusWires[7] <> BusWires[7]
+BusWires[8] <> BusWires[8]
+BusWires[8] <> BusWires[8]
+BusWires[8] <> BusWires[8]
+BusWires[8] <> BusWires[8]
+BusWires[8] <> BusWires[8]
+BusWires[9] <> BusWires[9]
+BusWires[9] <> BusWires[9]
+BusWires[9] <> BusWires[9]
+BusWires[9] <> BusWires[9]
+BusWires[9] <> BusWires[9]
+BusWires[10] <> BusWires[10]
+BusWires[10] <> BusWires[10]
+BusWires[10] <> BusWires[10]
+BusWires[10] <> BusWires[10]
+BusWires[10] <> BusWires[10]
+BusWires[11] <> BusWires[11]
+BusWires[11] <> BusWires[11]
+BusWires[11] <> BusWires[11]
+BusWires[11] <> BusWires[11]
+BusWires[11] <> BusWires[11]
+BusWires[12] <> BusWires[12]
+BusWires[12] <> BusWires[12]
+BusWires[12] <> BusWires[12]
+BusWires[12] <> BusWires[12]
+BusWires[12] <> BusWires[12]
+BusWires[13] <> BusWires[13]
+BusWires[13] <> BusWires[13]
+BusWires[13] <> BusWires[13]
+BusWires[13] <> BusWires[13]
+BusWires[13] <> BusWires[13]
+BusWires[14] <> BusWires[14]
+BusWires[14] <> BusWires[14]
+BusWires[14] <> BusWires[14]
+BusWires[14] <> BusWires[14]
+BusWires[14] <> BusWires[14]
+BusWires[15] <> BusWires[15]
+BusWires[15] <> BusWires[15]
+BusWires[15] <> BusWires[15]
+BusWires[15] <> BusWires[15]
+BusWires[15] <> BusWires[15]
+
+
+|proc|register16:regR0
+Clk => D[0].CLK
+Clk => D[1].CLK
+Clk => D[2].CLK
+Clk => D[3].CLK
+Clk => D[4].CLK
+Clk => D[5].CLK
+Clk => D[6].CLK
+Clk => D[7].CLK
+Clk => D[8].CLK
+Clk => D[9].CLK
+Clk => D[10].CLK
+Clk => D[11].CLK
+Clk => D[12].CLK
+Clk => D[13].CLK
+Clk => D[14].CLK
+Clk => D[15].CLK
+Enable => D[0].ENA
+Enable => D[1].ENA
+Enable => D[2].ENA
+Enable => D[3].ENA
+Enable => D[4].ENA
+Enable => D[5].ENA
+Enable => D[6].ENA
+Enable => D[7].ENA
+Enable => D[8].ENA
+Enable => D[9].ENA
+Enable => D[10].ENA
+Enable => D[11].ENA
+Enable => D[12].ENA
+Enable => D[13].ENA
+Enable => D[14].ENA
+Enable => D[15].ENA
+Data_in[0] => D[0].DATAIN
+Data_in[1] => D[1].DATAIN
+Data_in[2] => D[2].DATAIN
+Data_in[3] => D[3].DATAIN
+Data_in[4] => D[4].DATAIN
+Data_in[5] => D[5].DATAIN
+Data_in[6] => D[6].DATAIN
+Data_in[7] => D[7].DATAIN
+Data_in[8] => D[8].DATAIN
+Data_in[9] => D[9].DATAIN
+Data_in[10] => D[10].DATAIN
+Data_in[11] => D[11].DATAIN
+Data_in[12] => D[12].DATAIN
+Data_in[13] => D[13].DATAIN
+Data_in[14] => D[14].DATAIN
+Data_in[15] => D[15].DATAIN
+Data_out[0] <= D[0].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[1] <= D[1].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[2] <= D[2].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[3] <= D[3].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[4] <= D[4].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[5] <= D[5].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[6] <= D[6].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[7] <= D[7].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[8] <= D[8].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[9] <= D[9].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[10] <= D[10].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[11] <= D[11].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[12] <= D[12].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[13] <= D[13].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[14] <= D[14].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[15] <= D[15].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|proc|register16:regR1
+Clk => D[0].CLK
+Clk => D[1].CLK
+Clk => D[2].CLK
+Clk => D[3].CLK
+Clk => D[4].CLK
+Clk => D[5].CLK
+Clk => D[6].CLK
+Clk => D[7].CLK
+Clk => D[8].CLK
+Clk => D[9].CLK
+Clk => D[10].CLK
+Clk => D[11].CLK
+Clk => D[12].CLK
+Clk => D[13].CLK
+Clk => D[14].CLK
+Clk => D[15].CLK
+Enable => D[0].ENA
+Enable => D[1].ENA
+Enable => D[2].ENA
+Enable => D[3].ENA
+Enable => D[4].ENA
+Enable => D[5].ENA
+Enable => D[6].ENA
+Enable => D[7].ENA
+Enable => D[8].ENA
+Enable => D[9].ENA
+Enable => D[10].ENA
+Enable => D[11].ENA
+Enable => D[12].ENA
+Enable => D[13].ENA
+Enable => D[14].ENA
+Enable => D[15].ENA
+Data_in[0] => D[0].DATAIN
+Data_in[1] => D[1].DATAIN
+Data_in[2] => D[2].DATAIN
+Data_in[3] => D[3].DATAIN
+Data_in[4] => D[4].DATAIN
+Data_in[5] => D[5].DATAIN
+Data_in[6] => D[6].DATAIN
+Data_in[7] => D[7].DATAIN
+Data_in[8] => D[8].DATAIN
+Data_in[9] => D[9].DATAIN
+Data_in[10] => D[10].DATAIN
+Data_in[11] => D[11].DATAIN
+Data_in[12] => D[12].DATAIN
+Data_in[13] => D[13].DATAIN
+Data_in[14] => D[14].DATAIN
+Data_in[15] => D[15].DATAIN
+Data_out[0] <= D[0].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[1] <= D[1].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[2] <= D[2].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[3] <= D[3].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[4] <= D[4].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[5] <= D[5].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[6] <= D[6].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[7] <= D[7].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[8] <= D[8].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[9] <= D[9].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[10] <= D[10].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[11] <= D[11].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[12] <= D[12].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[13] <= D[13].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[14] <= D[14].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[15] <= D[15].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|proc|register16:regR2
+Clk => D[0].CLK
+Clk => D[1].CLK
+Clk => D[2].CLK
+Clk => D[3].CLK
+Clk => D[4].CLK
+Clk => D[5].CLK
+Clk => D[6].CLK
+Clk => D[7].CLK
+Clk => D[8].CLK
+Clk => D[9].CLK
+Clk => D[10].CLK
+Clk => D[11].CLK
+Clk => D[12].CLK
+Clk => D[13].CLK
+Clk => D[14].CLK
+Clk => D[15].CLK
+Enable => D[0].ENA
+Enable => D[1].ENA
+Enable => D[2].ENA
+Enable => D[3].ENA
+Enable => D[4].ENA
+Enable => D[5].ENA
+Enable => D[6].ENA
+Enable => D[7].ENA
+Enable => D[8].ENA
+Enable => D[9].ENA
+Enable => D[10].ENA
+Enable => D[11].ENA
+Enable => D[12].ENA
+Enable => D[13].ENA
+Enable => D[14].ENA
+Enable => D[15].ENA
+Data_in[0] => D[0].DATAIN
+Data_in[1] => D[1].DATAIN
+Data_in[2] => D[2].DATAIN
+Data_in[3] => D[3].DATAIN
+Data_in[4] => D[4].DATAIN
+Data_in[5] => D[5].DATAIN
+Data_in[6] => D[6].DATAIN
+Data_in[7] => D[7].DATAIN
+Data_in[8] => D[8].DATAIN
+Data_in[9] => D[9].DATAIN
+Data_in[10] => D[10].DATAIN
+Data_in[11] => D[11].DATAIN
+Data_in[12] => D[12].DATAIN
+Data_in[13] => D[13].DATAIN
+Data_in[14] => D[14].DATAIN
+Data_in[15] => D[15].DATAIN
+Data_out[0] <= D[0].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[1] <= D[1].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[2] <= D[2].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[3] <= D[3].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[4] <= D[4].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[5] <= D[5].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[6] <= D[6].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[7] <= D[7].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[8] <= D[8].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[9] <= D[9].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[10] <= D[10].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[11] <= D[11].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[12] <= D[12].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[13] <= D[13].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[14] <= D[14].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[15] <= D[15].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|proc|register16:regR3
+Clk => D[0].CLK
+Clk => D[1].CLK
+Clk => D[2].CLK
+Clk => D[3].CLK
+Clk => D[4].CLK
+Clk => D[5].CLK
+Clk => D[6].CLK
+Clk => D[7].CLK
+Clk => D[8].CLK
+Clk => D[9].CLK
+Clk => D[10].CLK
+Clk => D[11].CLK
+Clk => D[12].CLK
+Clk => D[13].CLK
+Clk => D[14].CLK
+Clk => D[15].CLK
+Enable => D[0].ENA
+Enable => D[1].ENA
+Enable => D[2].ENA
+Enable => D[3].ENA
+Enable => D[4].ENA
+Enable => D[5].ENA
+Enable => D[6].ENA
+Enable => D[7].ENA
+Enable => D[8].ENA
+Enable => D[9].ENA
+Enable => D[10].ENA
+Enable => D[11].ENA
+Enable => D[12].ENA
+Enable => D[13].ENA
+Enable => D[14].ENA
+Enable => D[15].ENA
+Data_in[0] => D[0].DATAIN
+Data_in[1] => D[1].DATAIN
+Data_in[2] => D[2].DATAIN
+Data_in[3] => D[3].DATAIN
+Data_in[4] => D[4].DATAIN
+Data_in[5] => D[5].DATAIN
+Data_in[6] => D[6].DATAIN
+Data_in[7] => D[7].DATAIN
+Data_in[8] => D[8].DATAIN
+Data_in[9] => D[9].DATAIN
+Data_in[10] => D[10].DATAIN
+Data_in[11] => D[11].DATAIN
+Data_in[12] => D[12].DATAIN
+Data_in[13] => D[13].DATAIN
+Data_in[14] => D[14].DATAIN
+Data_in[15] => D[15].DATAIN
+Data_out[0] <= D[0].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[1] <= D[1].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[2] <= D[2].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[3] <= D[3].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[4] <= D[4].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[5] <= D[5].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[6] <= D[6].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[7] <= D[7].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[8] <= D[8].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[9] <= D[9].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[10] <= D[10].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[11] <= D[11].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[12] <= D[12].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[13] <= D[13].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[14] <= D[14].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[15] <= D[15].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|proc|register16:regG
+Clk => D[0].CLK
+Clk => D[1].CLK
+Clk => D[2].CLK
+Clk => D[3].CLK
+Clk => D[4].CLK
+Clk => D[5].CLK
+Clk => D[6].CLK
+Clk => D[7].CLK
+Clk => D[8].CLK
+Clk => D[9].CLK
+Clk => D[10].CLK
+Clk => D[11].CLK
+Clk => D[12].CLK
+Clk => D[13].CLK
+Clk => D[14].CLK
+Clk => D[15].CLK
+Enable => D[0].ENA
+Enable => D[1].ENA
+Enable => D[2].ENA
+Enable => D[3].ENA
+Enable => D[4].ENA
+Enable => D[5].ENA
+Enable => D[6].ENA
+Enable => D[7].ENA
+Enable => D[8].ENA
+Enable => D[9].ENA
+Enable => D[10].ENA
+Enable => D[11].ENA
+Enable => D[12].ENA
+Enable => D[13].ENA
+Enable => D[14].ENA
+Enable => D[15].ENA
+Data_in[0] => D[0].DATAIN
+Data_in[1] => D[1].DATAIN
+Data_in[2] => D[2].DATAIN
+Data_in[3] => D[3].DATAIN
+Data_in[4] => D[4].DATAIN
+Data_in[5] => D[5].DATAIN
+Data_in[6] => D[6].DATAIN
+Data_in[7] => D[7].DATAIN
+Data_in[8] => D[8].DATAIN
+Data_in[9] => D[9].DATAIN
+Data_in[10] => D[10].DATAIN
+Data_in[11] => D[11].DATAIN
+Data_in[12] => D[12].DATAIN
+Data_in[13] => D[13].DATAIN
+Data_in[14] => D[14].DATAIN
+Data_in[15] => D[15].DATAIN
+Data_out[0] <= D[0].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[1] <= D[1].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[2] <= D[2].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[3] <= D[3].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[4] <= D[4].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[5] <= D[5].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[6] <= D[6].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[7] <= D[7].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[8] <= D[8].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[9] <= D[9].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[10] <= D[10].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[11] <= D[11].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[12] <= D[12].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[13] <= D[13].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[14] <= D[14].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[15] <= D[15].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|proc|register16:regA
+Clk => D[0].CLK
+Clk => D[1].CLK
+Clk => D[2].CLK
+Clk => D[3].CLK
+Clk => D[4].CLK
+Clk => D[5].CLK
+Clk => D[6].CLK
+Clk => D[7].CLK
+Clk => D[8].CLK
+Clk => D[9].CLK
+Clk => D[10].CLK
+Clk => D[11].CLK
+Clk => D[12].CLK
+Clk => D[13].CLK
+Clk => D[14].CLK
+Clk => D[15].CLK
+Enable => D[0].ENA
+Enable => D[1].ENA
+Enable => D[2].ENA
+Enable => D[3].ENA
+Enable => D[4].ENA
+Enable => D[5].ENA
+Enable => D[6].ENA
+Enable => D[7].ENA
+Enable => D[8].ENA
+Enable => D[9].ENA
+Enable => D[10].ENA
+Enable => D[11].ENA
+Enable => D[12].ENA
+Enable => D[13].ENA
+Enable => D[14].ENA
+Enable => D[15].ENA
+Data_in[0] => D[0].DATAIN
+Data_in[1] => D[1].DATAIN
+Data_in[2] => D[2].DATAIN
+Data_in[3] => D[3].DATAIN
+Data_in[4] => D[4].DATAIN
+Data_in[5] => D[5].DATAIN
+Data_in[6] => D[6].DATAIN
+Data_in[7] => D[7].DATAIN
+Data_in[8] => D[8].DATAIN
+Data_in[9] => D[9].DATAIN
+Data_in[10] => D[10].DATAIN
+Data_in[11] => D[11].DATAIN
+Data_in[12] => D[12].DATAIN
+Data_in[13] => D[13].DATAIN
+Data_in[14] => D[14].DATAIN
+Data_in[15] => D[15].DATAIN
+Data_out[0] <= D[0].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[1] <= D[1].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[2] <= D[2].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[3] <= D[3].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[4] <= D[4].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[5] <= D[5].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[6] <= D[6].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[7] <= D[7].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[8] <= D[8].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[9] <= D[9].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[10] <= D[10].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[11] <= D[11].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[12] <= D[12].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[13] <= D[13].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[14] <= D[14].DB_MAX_OUTPUT_PORT_TYPE
+Data_out[15] <= D[15].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|proc|trin:triR0
+A[0] => Q[0].DATAIN
+A[1] => Q[1].DATAIN
+A[2] => Q[2].DATAIN
+A[3] => Q[3].DATAIN
+A[4] => Q[4].DATAIN
+A[5] => Q[5].DATAIN
+A[6] => Q[6].DATAIN
+A[7] => Q[7].DATAIN
+A[8] => Q[8].DATAIN
+A[9] => Q[9].DATAIN
+A[10] => Q[10].DATAIN
+A[11] => Q[11].DATAIN
+A[12] => Q[12].DATAIN
+A[13] => Q[13].DATAIN
+A[14] => Q[14].DATAIN
+A[15] => Q[15].DATAIN
+enable => Q[0].OE
+enable => Q[1].OE
+enable => Q[2].OE
+enable => Q[3].OE
+enable => Q[4].OE
+enable => Q[5].OE
+enable => Q[6].OE
+enable => Q[7].OE
+enable => Q[8].OE
+enable => Q[9].OE
+enable => Q[10].OE
+enable => Q[11].OE
+enable => Q[12].OE
+enable => Q[13].OE
+enable => Q[14].OE
+enable => Q[15].OE
+Q[0] <= Q[0].DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1].DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2].DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3].DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= Q[4].DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= Q[5].DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= Q[6].DB_MAX_OUTPUT_PORT_TYPE
+Q[7] <= Q[7].DB_MAX_OUTPUT_PORT_TYPE
+Q[8] <= Q[8].DB_MAX_OUTPUT_PORT_TYPE
+Q[9] <= Q[9].DB_MAX_OUTPUT_PORT_TYPE
+Q[10] <= Q[10].DB_MAX_OUTPUT_PORT_TYPE
+Q[11] <= Q[11].DB_MAX_OUTPUT_PORT_TYPE
+Q[12] <= Q[12].DB_MAX_OUTPUT_PORT_TYPE
+Q[13] <= Q[13].DB_MAX_OUTPUT_PORT_TYPE
+Q[14] <= Q[14].DB_MAX_OUTPUT_PORT_TYPE
+Q[15] <= Q[15].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|proc|trin:triR1
+A[0] => Q[0].DATAIN
+A[1] => Q[1].DATAIN
+A[2] => Q[2].DATAIN
+A[3] => Q[3].DATAIN
+A[4] => Q[4].DATAIN
+A[5] => Q[5].DATAIN
+A[6] => Q[6].DATAIN
+A[7] => Q[7].DATAIN
+A[8] => Q[8].DATAIN
+A[9] => Q[9].DATAIN
+A[10] => Q[10].DATAIN
+A[11] => Q[11].DATAIN
+A[12] => Q[12].DATAIN
+A[13] => Q[13].DATAIN
+A[14] => Q[14].DATAIN
+A[15] => Q[15].DATAIN
+enable => Q[0].OE
+enable => Q[1].OE
+enable => Q[2].OE
+enable => Q[3].OE
+enable => Q[4].OE
+enable => Q[5].OE
+enable => Q[6].OE
+enable => Q[7].OE
+enable => Q[8].OE
+enable => Q[9].OE
+enable => Q[10].OE
+enable => Q[11].OE
+enable => Q[12].OE
+enable => Q[13].OE
+enable => Q[14].OE
+enable => Q[15].OE
+Q[0] <= Q[0].DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1].DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2].DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3].DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= Q[4].DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= Q[5].DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= Q[6].DB_MAX_OUTPUT_PORT_TYPE
+Q[7] <= Q[7].DB_MAX_OUTPUT_PORT_TYPE
+Q[8] <= Q[8].DB_MAX_OUTPUT_PORT_TYPE
+Q[9] <= Q[9].DB_MAX_OUTPUT_PORT_TYPE
+Q[10] <= Q[10].DB_MAX_OUTPUT_PORT_TYPE
+Q[11] <= Q[11].DB_MAX_OUTPUT_PORT_TYPE
+Q[12] <= Q[12].DB_MAX_OUTPUT_PORT_TYPE
+Q[13] <= Q[13].DB_MAX_OUTPUT_PORT_TYPE
+Q[14] <= Q[14].DB_MAX_OUTPUT_PORT_TYPE
+Q[15] <= Q[15].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|proc|trin:triR2
+A[0] => Q[0].DATAIN
+A[1] => Q[1].DATAIN
+A[2] => Q[2].DATAIN
+A[3] => Q[3].DATAIN
+A[4] => Q[4].DATAIN
+A[5] => Q[5].DATAIN
+A[6] => Q[6].DATAIN
+A[7] => Q[7].DATAIN
+A[8] => Q[8].DATAIN
+A[9] => Q[9].DATAIN
+A[10] => Q[10].DATAIN
+A[11] => Q[11].DATAIN
+A[12] => Q[12].DATAIN
+A[13] => Q[13].DATAIN
+A[14] => Q[14].DATAIN
+A[15] => Q[15].DATAIN
+enable => Q[0].OE
+enable => Q[1].OE
+enable => Q[2].OE
+enable => Q[3].OE
+enable => Q[4].OE
+enable => Q[5].OE
+enable => Q[6].OE
+enable => Q[7].OE
+enable => Q[8].OE
+enable => Q[9].OE
+enable => Q[10].OE
+enable => Q[11].OE
+enable => Q[12].OE
+enable => Q[13].OE
+enable => Q[14].OE
+enable => Q[15].OE
+Q[0] <= Q[0].DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1].DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2].DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3].DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= Q[4].DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= Q[5].DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= Q[6].DB_MAX_OUTPUT_PORT_TYPE
+Q[7] <= Q[7].DB_MAX_OUTPUT_PORT_TYPE
+Q[8] <= Q[8].DB_MAX_OUTPUT_PORT_TYPE
+Q[9] <= Q[9].DB_MAX_OUTPUT_PORT_TYPE
+Q[10] <= Q[10].DB_MAX_OUTPUT_PORT_TYPE
+Q[11] <= Q[11].DB_MAX_OUTPUT_PORT_TYPE
+Q[12] <= Q[12].DB_MAX_OUTPUT_PORT_TYPE
+Q[13] <= Q[13].DB_MAX_OUTPUT_PORT_TYPE
+Q[14] <= Q[14].DB_MAX_OUTPUT_PORT_TYPE
+Q[15] <= Q[15].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|proc|trin:triR3
+A[0] => Q[0].DATAIN
+A[1] => Q[1].DATAIN
+A[2] => Q[2].DATAIN
+A[3] => Q[3].DATAIN
+A[4] => Q[4].DATAIN
+A[5] => Q[5].DATAIN
+A[6] => Q[6].DATAIN
+A[7] => Q[7].DATAIN
+A[8] => Q[8].DATAIN
+A[9] => Q[9].DATAIN
+A[10] => Q[10].DATAIN
+A[11] => Q[11].DATAIN
+A[12] => Q[12].DATAIN
+A[13] => Q[13].DATAIN
+A[14] => Q[14].DATAIN
+A[15] => Q[15].DATAIN
+enable => Q[0].OE
+enable => Q[1].OE
+enable => Q[2].OE
+enable => Q[3].OE
+enable => Q[4].OE
+enable => Q[5].OE
+enable => Q[6].OE
+enable => Q[7].OE
+enable => Q[8].OE
+enable => Q[9].OE
+enable => Q[10].OE
+enable => Q[11].OE
+enable => Q[12].OE
+enable => Q[13].OE
+enable => Q[14].OE
+enable => Q[15].OE
+Q[0] <= Q[0].DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1].DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2].DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3].DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= Q[4].DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= Q[5].DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= Q[6].DB_MAX_OUTPUT_PORT_TYPE
+Q[7] <= Q[7].DB_MAX_OUTPUT_PORT_TYPE
+Q[8] <= Q[8].DB_MAX_OUTPUT_PORT_TYPE
+Q[9] <= Q[9].DB_MAX_OUTPUT_PORT_TYPE
+Q[10] <= Q[10].DB_MAX_OUTPUT_PORT_TYPE
+Q[11] <= Q[11].DB_MAX_OUTPUT_PORT_TYPE
+Q[12] <= Q[12].DB_MAX_OUTPUT_PORT_TYPE
+Q[13] <= Q[13].DB_MAX_OUTPUT_PORT_TYPE
+Q[14] <= Q[14].DB_MAX_OUTPUT_PORT_TYPE
+Q[15] <= Q[15].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|proc|trin:triG
+A[0] => Q[0].DATAIN
+A[1] => Q[1].DATAIN
+A[2] => Q[2].DATAIN
+A[3] => Q[3].DATAIN
+A[4] => Q[4].DATAIN
+A[5] => Q[5].DATAIN
+A[6] => Q[6].DATAIN
+A[7] => Q[7].DATAIN
+A[8] => Q[8].DATAIN
+A[9] => Q[9].DATAIN
+A[10] => Q[10].DATAIN
+A[11] => Q[11].DATAIN
+A[12] => Q[12].DATAIN
+A[13] => Q[13].DATAIN
+A[14] => Q[14].DATAIN
+A[15] => Q[15].DATAIN
+enable => Q[0].OE
+enable => Q[1].OE
+enable => Q[2].OE
+enable => Q[3].OE
+enable => Q[4].OE
+enable => Q[5].OE
+enable => Q[6].OE
+enable => Q[7].OE
+enable => Q[8].OE
+enable => Q[9].OE
+enable => Q[10].OE
+enable => Q[11].OE
+enable => Q[12].OE
+enable => Q[13].OE
+enable => Q[14].OE
+enable => Q[15].OE
+Q[0] <= Q[0].DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q[1].DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q[2].DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q[3].DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= Q[4].DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= Q[5].DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= Q[6].DB_MAX_OUTPUT_PORT_TYPE
+Q[7] <= Q[7].DB_MAX_OUTPUT_PORT_TYPE
+Q[8] <= Q[8].DB_MAX_OUTPUT_PORT_TYPE
+Q[9] <= Q[9].DB_MAX_OUTPUT_PORT_TYPE
+Q[10] <= Q[10].DB_MAX_OUTPUT_PORT_TYPE
+Q[11] <= Q[11].DB_MAX_OUTPUT_PORT_TYPE
+Q[12] <= Q[12].DB_MAX_OUTPUT_PORT_TYPE
+Q[13] <= Q[13].DB_MAX_OUTPUT_PORT_TYPE
+Q[14] <= Q[14].DB_MAX_OUTPUT_PORT_TYPE
+Q[15] <= Q[15].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|proc|Arithmetic_Logic_Unit:ALU
+num1[0] => sixteen_bit_adder:adderres.A[0]
+num1[0] => sixteen_bit_xor:xorres.A[0]
+num1[1] => sixteen_bit_adder:adderres.A[1]
+num1[1] => sixteen_bit_xor:xorres.A[1]
+num1[2] => sixteen_bit_adder:adderres.A[2]
+num1[2] => sixteen_bit_xor:xorres.A[2]
+num1[3] => sixteen_bit_adder:adderres.A[3]
+num1[3] => sixteen_bit_xor:xorres.A[3]
+num1[4] => sixteen_bit_adder:adderres.A[4]
+num1[4] => sixteen_bit_xor:xorres.A[4]
+num1[5] => sixteen_bit_adder:adderres.A[5]
+num1[5] => sixteen_bit_xor:xorres.A[5]
+num1[6] => sixteen_bit_adder:adderres.A[6]
+num1[6] => sixteen_bit_xor:xorres.A[6]
+num1[7] => sixteen_bit_adder:adderres.A[7]
+num1[7] => sixteen_bit_xor:xorres.A[7]
+num1[8] => sixteen_bit_adder:adderres.A[8]
+num1[8] => sixteen_bit_xor:xorres.A[8]
+num1[9] => sixteen_bit_adder:adderres.A[9]
+num1[9] => sixteen_bit_xor:xorres.A[9]
+num1[10] => sixteen_bit_adder:adderres.A[10]
+num1[10] => sixteen_bit_xor:xorres.A[10]
+num1[11] => sixteen_bit_adder:adderres.A[11]
+num1[11] => sixteen_bit_xor:xorres.A[11]
+num1[12] => sixteen_bit_adder:adderres.A[12]
+num1[12] => sixteen_bit_xor:xorres.A[12]
+num1[13] => sixteen_bit_adder:adderres.A[13]
+num1[13] => sixteen_bit_xor:xorres.A[13]
+num1[14] => sixteen_bit_adder:adderres.A[14]
+num1[14] => sixteen_bit_xor:xorres.A[14]
+num1[15] => sixteen_bit_adder:adderres.A[15]
+num1[15] => sixteen_bit_xor:xorres.A[15]
+num2[0] => sixteen_bit_adder:adderres.B[0]
+num2[0] => sixteen_bit_xor:xorres.B[0]
+num2[1] => sixteen_bit_adder:adderres.B[1]
+num2[1] => sixteen_bit_xor:xorres.B[1]
+num2[2] => sixteen_bit_adder:adderres.B[2]
+num2[2] => sixteen_bit_xor:xorres.B[2]
+num2[3] => sixteen_bit_adder:adderres.B[3]
+num2[3] => sixteen_bit_xor:xorres.B[3]
+num2[4] => sixteen_bit_adder:adderres.B[4]
+num2[4] => sixteen_bit_xor:xorres.B[4]
+num2[5] => sixteen_bit_adder:adderres.B[5]
+num2[5] => sixteen_bit_xor:xorres.B[5]
+num2[6] => sixteen_bit_adder:adderres.B[6]
+num2[6] => sixteen_bit_xor:xorres.B[6]
+num2[7] => sixteen_bit_adder:adderres.B[7]
+num2[7] => sixteen_bit_xor:xorres.B[7]
+num2[8] => sixteen_bit_adder:adderres.B[8]
+num2[8] => sixteen_bit_xor:xorres.B[8]
+num2[9] => sixteen_bit_adder:adderres.B[9]
+num2[9] => sixteen_bit_xor:xorres.B[9]
+num2[10] => sixteen_bit_adder:adderres.B[10]
+num2[10] => sixteen_bit_xor:xorres.B[10]
+num2[11] => sixteen_bit_adder:adderres.B[11]
+num2[11] => sixteen_bit_xor:xorres.B[11]
+num2[12] => sixteen_bit_adder:adderres.B[12]
+num2[12] => sixteen_bit_xor:xorres.B[12]
+num2[13] => sixteen_bit_adder:adderres.B[13]
+num2[13] => sixteen_bit_xor:xorres.B[13]
+num2[14] => sixteen_bit_adder:adderres.B[14]
+num2[14] => sixteen_bit_xor:xorres.B[14]
+num2[15] => sixteen_bit_adder:adderres.B[15]
+num2[15] => sixteen_bit_xor:xorres.B[15]
+sel => sixteen_two_to_one_mux:sixteen_mux.selection
+chosen_result[0] <= sixteen_two_to_one_mux:sixteen_mux.CHOSEN[0]
+chosen_result[1] <= sixteen_two_to_one_mux:sixteen_mux.CHOSEN[1]
+chosen_result[2] <= sixteen_two_to_one_mux:sixteen_mux.CHOSEN[2]
+chosen_result[3] <= sixteen_two_to_one_mux:sixteen_mux.CHOSEN[3]
+chosen_result[4] <= sixteen_two_to_one_mux:sixteen_mux.CHOSEN[4]
+chosen_result[5] <= sixteen_two_to_one_mux:sixteen_mux.CHOSEN[5]
+chosen_result[6] <= sixteen_two_to_one_mux:sixteen_mux.CHOSEN[6]
+chosen_result[7] <= sixteen_two_to_one_mux:sixteen_mux.CHOSEN[7]
+chosen_result[8] <= sixteen_two_to_one_mux:sixteen_mux.CHOSEN[8]
+chosen_result[9] <= sixteen_two_to_one_mux:sixteen_mux.CHOSEN[9]
+chosen_result[10] <= sixteen_two_to_one_mux:sixteen_mux.CHOSEN[10]
+chosen_result[11] <= sixteen_two_to_one_mux:sixteen_mux.CHOSEN[11]
+chosen_result[12] <= sixteen_two_to_one_mux:sixteen_mux.CHOSEN[12]
+chosen_result[13] <= sixteen_two_to_one_mux:sixteen_mux.CHOSEN[13]
+chosen_result[14] <= sixteen_two_to_one_mux:sixteen_mux.CHOSEN[14]
+chosen_result[15] <= sixteen_two_to_one_mux:sixteen_mux.CHOSEN[15]
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres
+A[0] => bit_adder:fa0.A
+A[1] => bit_adder:fa1.A
+A[2] => bit_adder:fa2.A
+A[3] => bit_adder:fa3.A
+A[4] => bit_adder:fa4.A
+A[5] => bit_adder:fa5.A
+A[6] => bit_adder:fa6.A
+A[7] => bit_adder:fa7.A
+A[8] => bit_adder:fa8.A
+A[9] => bit_adder:fa9.A
+A[10] => bit_adder:fa10.A
+A[11] => bit_adder:fa11.A
+A[12] => bit_adder:fa12.A
+A[13] => bit_adder:fa13.A
+A[14] => bit_adder:fa14.A
+A[15] => bit_adder:fa15.A
+B[0] => bit_adder:fa0.B
+B[1] => bit_adder:fa1.B
+B[2] => bit_adder:fa2.B
+B[3] => bit_adder:fa3.B
+B[4] => bit_adder:fa4.B
+B[5] => bit_adder:fa5.B
+B[6] => bit_adder:fa6.B
+B[7] => bit_adder:fa7.B
+B[8] => bit_adder:fa8.B
+B[9] => bit_adder:fa9.B
+B[10] => bit_adder:fa10.B
+B[11] => bit_adder:fa11.B
+B[12] => bit_adder:fa12.B
+B[13] => bit_adder:fa13.B
+B[14] => bit_adder:fa14.B
+B[15] => bit_adder:fa15.B
+RESULT[0] <= bit_adder:fa0.result
+RESULT[1] <= bit_adder:fa1.result
+RESULT[2] <= bit_adder:fa2.result
+RESULT[3] <= bit_adder:fa3.result
+RESULT[4] <= bit_adder:fa4.result
+RESULT[5] <= bit_adder:fa5.result
+RESULT[6] <= bit_adder:fa6.result
+RESULT[7] <= bit_adder:fa7.result
+RESULT[8] <= bit_adder:fa8.result
+RESULT[9] <= bit_adder:fa9.result
+RESULT[10] <= bit_adder:fa10.result
+RESULT[11] <= bit_adder:fa11.result
+RESULT[12] <= bit_adder:fa12.result
+RESULT[13] <= bit_adder:fa13.result
+RESULT[14] <= bit_adder:fa14.result
+RESULT[15] <= bit_adder:fa15.result
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa0
+A => inter.IN0
+B => inter.IN1
+B => two_to_one_mux:mux.a
+Cin => result.IN1
+Cin => two_to_one_mux:mux.b
+result <= result.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= two_to_one_mux:mux.res
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa0|two_to_one_mux:mux
+a => res.DATAB
+b => res.DATAA
+sel => res.OUTPUTSELECT
+res <= res.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa1
+A => inter.IN0
+B => inter.IN1
+B => two_to_one_mux:mux.a
+Cin => result.IN1
+Cin => two_to_one_mux:mux.b
+result <= result.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= two_to_one_mux:mux.res
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa1|two_to_one_mux:mux
+a => res.DATAB
+b => res.DATAA
+sel => res.OUTPUTSELECT
+res <= res.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa2
+A => inter.IN0
+B => inter.IN1
+B => two_to_one_mux:mux.a
+Cin => result.IN1
+Cin => two_to_one_mux:mux.b
+result <= result.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= two_to_one_mux:mux.res
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa2|two_to_one_mux:mux
+a => res.DATAB
+b => res.DATAA
+sel => res.OUTPUTSELECT
+res <= res.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa3
+A => inter.IN0
+B => inter.IN1
+B => two_to_one_mux:mux.a
+Cin => result.IN1
+Cin => two_to_one_mux:mux.b
+result <= result.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= two_to_one_mux:mux.res
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa3|two_to_one_mux:mux
+a => res.DATAB
+b => res.DATAA
+sel => res.OUTPUTSELECT
+res <= res.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa4
+A => inter.IN0
+B => inter.IN1
+B => two_to_one_mux:mux.a
+Cin => result.IN1
+Cin => two_to_one_mux:mux.b
+result <= result.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= two_to_one_mux:mux.res
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa4|two_to_one_mux:mux
+a => res.DATAB
+b => res.DATAA
+sel => res.OUTPUTSELECT
+res <= res.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa5
+A => inter.IN0
+B => inter.IN1
+B => two_to_one_mux:mux.a
+Cin => result.IN1
+Cin => two_to_one_mux:mux.b
+result <= result.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= two_to_one_mux:mux.res
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa5|two_to_one_mux:mux
+a => res.DATAB
+b => res.DATAA
+sel => res.OUTPUTSELECT
+res <= res.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa6
+A => inter.IN0
+B => inter.IN1
+B => two_to_one_mux:mux.a
+Cin => result.IN1
+Cin => two_to_one_mux:mux.b
+result <= result.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= two_to_one_mux:mux.res
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa6|two_to_one_mux:mux
+a => res.DATAB
+b => res.DATAA
+sel => res.OUTPUTSELECT
+res <= res.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa7
+A => inter.IN0
+B => inter.IN1
+B => two_to_one_mux:mux.a
+Cin => result.IN1
+Cin => two_to_one_mux:mux.b
+result <= result.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= two_to_one_mux:mux.res
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa7|two_to_one_mux:mux
+a => res.DATAB
+b => res.DATAA
+sel => res.OUTPUTSELECT
+res <= res.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa8
+A => inter.IN0
+B => inter.IN1
+B => two_to_one_mux:mux.a
+Cin => result.IN1
+Cin => two_to_one_mux:mux.b
+result <= result.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= two_to_one_mux:mux.res
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa8|two_to_one_mux:mux
+a => res.DATAB
+b => res.DATAA
+sel => res.OUTPUTSELECT
+res <= res.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa9
+A => inter.IN0
+B => inter.IN1
+B => two_to_one_mux:mux.a
+Cin => result.IN1
+Cin => two_to_one_mux:mux.b
+result <= result.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= two_to_one_mux:mux.res
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa9|two_to_one_mux:mux
+a => res.DATAB
+b => res.DATAA
+sel => res.OUTPUTSELECT
+res <= res.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa10
+A => inter.IN0
+B => inter.IN1
+B => two_to_one_mux:mux.a
+Cin => result.IN1
+Cin => two_to_one_mux:mux.b
+result <= result.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= two_to_one_mux:mux.res
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa10|two_to_one_mux:mux
+a => res.DATAB
+b => res.DATAA
+sel => res.OUTPUTSELECT
+res <= res.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa11
+A => inter.IN0
+B => inter.IN1
+B => two_to_one_mux:mux.a
+Cin => result.IN1
+Cin => two_to_one_mux:mux.b
+result <= result.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= two_to_one_mux:mux.res
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa11|two_to_one_mux:mux
+a => res.DATAB
+b => res.DATAA
+sel => res.OUTPUTSELECT
+res <= res.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa12
+A => inter.IN0
+B => inter.IN1
+B => two_to_one_mux:mux.a
+Cin => result.IN1
+Cin => two_to_one_mux:mux.b
+result <= result.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= two_to_one_mux:mux.res
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa12|two_to_one_mux:mux
+a => res.DATAB
+b => res.DATAA
+sel => res.OUTPUTSELECT
+res <= res.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa13
+A => inter.IN0
+B => inter.IN1
+B => two_to_one_mux:mux.a
+Cin => result.IN1
+Cin => two_to_one_mux:mux.b
+result <= result.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= two_to_one_mux:mux.res
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa13|two_to_one_mux:mux
+a => res.DATAB
+b => res.DATAA
+sel => res.OUTPUTSELECT
+res <= res.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa14
+A => inter.IN0
+B => inter.IN1
+B => two_to_one_mux:mux.a
+Cin => result.IN1
+Cin => two_to_one_mux:mux.b
+result <= result.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= two_to_one_mux:mux.res
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa14|two_to_one_mux:mux
+a => res.DATAB
+b => res.DATAA
+sel => res.OUTPUTSELECT
+res <= res.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa15
+A => inter.IN0
+B => inter.IN1
+B => two_to_one_mux:mux.a
+Cin => result.IN1
+Cin => two_to_one_mux:mux.b
+result <= result.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= two_to_one_mux:mux.res
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa15|two_to_one_mux:mux
+a => res.DATAB
+b => res.DATAA
+sel => res.OUTPUTSELECT
+res <= res.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_xor:xorres
+A[0] => RESULT.IN0
+A[1] => RESULT.IN0
+A[2] => RESULT.IN0
+A[3] => RESULT.IN0
+A[4] => RESULT.IN0
+A[5] => RESULT.IN0
+A[6] => RESULT.IN0
+A[7] => RESULT.IN0
+A[8] => RESULT.IN0
+A[9] => RESULT.IN0
+A[10] => RESULT.IN0
+A[11] => RESULT.IN0
+A[12] => RESULT.IN0
+A[13] => RESULT.IN0
+A[14] => RESULT.IN0
+A[15] => RESULT.IN0
+B[0] => RESULT.IN1
+B[1] => RESULT.IN1
+B[2] => RESULT.IN1
+B[3] => RESULT.IN1
+B[4] => RESULT.IN1
+B[5] => RESULT.IN1
+B[6] => RESULT.IN1
+B[7] => RESULT.IN1
+B[8] => RESULT.IN1
+B[9] => RESULT.IN1
+B[10] => RESULT.IN1
+B[11] => RESULT.IN1
+B[12] => RESULT.IN1
+B[13] => RESULT.IN1
+B[14] => RESULT.IN1
+B[15] => RESULT.IN1
+RESULT[0] <= RESULT.DB_MAX_OUTPUT_PORT_TYPE
+RESULT[1] <= RESULT.DB_MAX_OUTPUT_PORT_TYPE
+RESULT[2] <= RESULT.DB_MAX_OUTPUT_PORT_TYPE
+RESULT[3] <= RESULT.DB_MAX_OUTPUT_PORT_TYPE
+RESULT[4] <= RESULT.DB_MAX_OUTPUT_PORT_TYPE
+RESULT[5] <= RESULT.DB_MAX_OUTPUT_PORT_TYPE
+RESULT[6] <= RESULT.DB_MAX_OUTPUT_PORT_TYPE
+RESULT[7] <= RESULT.DB_MAX_OUTPUT_PORT_TYPE
+RESULT[8] <= RESULT.DB_MAX_OUTPUT_PORT_TYPE
+RESULT[9] <= RESULT.DB_MAX_OUTPUT_PORT_TYPE
+RESULT[10] <= RESULT.DB_MAX_OUTPUT_PORT_TYPE
+RESULT[11] <= RESULT.DB_MAX_OUTPUT_PORT_TYPE
+RESULT[12] <= RESULT.DB_MAX_OUTPUT_PORT_TYPE
+RESULT[13] <= RESULT.DB_MAX_OUTPUT_PORT_TYPE
+RESULT[14] <= RESULT.DB_MAX_OUTPUT_PORT_TYPE
+RESULT[15] <= RESULT.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_two_to_one_mux:sixteen_mux
+selection => CHOSEN.OUTPUTSELECT
+selection => CHOSEN.OUTPUTSELECT
+selection => CHOSEN.OUTPUTSELECT
+selection => CHOSEN.OUTPUTSELECT
+selection => CHOSEN.OUTPUTSELECT
+selection => CHOSEN.OUTPUTSELECT
+selection => CHOSEN.OUTPUTSELECT
+selection => CHOSEN.OUTPUTSELECT
+selection => CHOSEN.OUTPUTSELECT
+selection => CHOSEN.OUTPUTSELECT
+selection => CHOSEN.OUTPUTSELECT
+selection => CHOSEN.OUTPUTSELECT
+selection => CHOSEN.OUTPUTSELECT
+selection => CHOSEN.OUTPUTSELECT
+selection => CHOSEN.OUTPUTSELECT
+selection => CHOSEN.OUTPUTSELECT
+A[0] => CHOSEN.DATAB
+A[1] => CHOSEN.DATAB
+A[2] => CHOSEN.DATAB
+A[3] => CHOSEN.DATAB
+A[4] => CHOSEN.DATAB
+A[5] => CHOSEN.DATAB
+A[6] => CHOSEN.DATAB
+A[7] => CHOSEN.DATAB
+A[8] => CHOSEN.DATAB
+A[9] => CHOSEN.DATAB
+A[10] => CHOSEN.DATAB
+A[11] => CHOSEN.DATAB
+A[12] => CHOSEN.DATAB
+A[13] => CHOSEN.DATAB
+A[14] => CHOSEN.DATAB
+A[15] => CHOSEN.DATAB
+B[0] => CHOSEN.DATAA
+B[1] => CHOSEN.DATAA
+B[2] => CHOSEN.DATAA
+B[3] => CHOSEN.DATAA
+B[4] => CHOSEN.DATAA
+B[5] => CHOSEN.DATAA
+B[6] => CHOSEN.DATAA
+B[7] => CHOSEN.DATAA
+B[8] => CHOSEN.DATAA
+B[9] => CHOSEN.DATAA
+B[10] => CHOSEN.DATAA
+B[11] => CHOSEN.DATAA
+B[12] => CHOSEN.DATAA
+B[13] => CHOSEN.DATAA
+B[14] => CHOSEN.DATAA
+B[15] => CHOSEN.DATAA
+CHOSEN[0] <= CHOSEN.DB_MAX_OUTPUT_PORT_TYPE
+CHOSEN[1] <= CHOSEN.DB_MAX_OUTPUT_PORT_TYPE
+CHOSEN[2] <= CHOSEN.DB_MAX_OUTPUT_PORT_TYPE
+CHOSEN[3] <= CHOSEN.DB_MAX_OUTPUT_PORT_TYPE
+CHOSEN[4] <= CHOSEN.DB_MAX_OUTPUT_PORT_TYPE
+CHOSEN[5] <= CHOSEN.DB_MAX_OUTPUT_PORT_TYPE
+CHOSEN[6] <= CHOSEN.DB_MAX_OUTPUT_PORT_TYPE
+CHOSEN[7] <= CHOSEN.DB_MAX_OUTPUT_PORT_TYPE
+CHOSEN[8] <= CHOSEN.DB_MAX_OUTPUT_PORT_TYPE
+CHOSEN[9] <= CHOSEN.DB_MAX_OUTPUT_PORT_TYPE
+CHOSEN[10] <= CHOSEN.DB_MAX_OUTPUT_PORT_TYPE
+CHOSEN[11] <= CHOSEN.DB_MAX_OUTPUT_PORT_TYPE
+CHOSEN[12] <= CHOSEN.DB_MAX_OUTPUT_PORT_TYPE
+CHOSEN[13] <= CHOSEN.DB_MAX_OUTPUT_PORT_TYPE
+CHOSEN[14] <= CHOSEN.DB_MAX_OUTPUT_PORT_TYPE
+CHOSEN[15] <= CHOSEN.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|proc|controlunit:cont
+Clock => Y_present~1.DATAIN
+Res => Y_present~3.DATAIN
+w => ~NO_FANOUT~
+Ain <= <GND>
+Gin <= Gin.DB_MAX_OUTPUT_PORT_TYPE
+Gout <= Gout.DB_MAX_OUTPUT_PORT_TYPE
+Data <= <VCC>
+R0_in <= R0_in$latch.DB_MAX_OUTPUT_PORT_TYPE
+R0_out <= R0_out$latch.DB_MAX_OUTPUT_PORT_TYPE
+R1_in <= R1_in$latch.DB_MAX_OUTPUT_PORT_TYPE
+R1_out <= R1_out$latch.DB_MAX_OUTPUT_PORT_TYPE
+R2_in <= R2_in$latch.DB_MAX_OUTPUT_PORT_TYPE
+R2_out <= R2_out$latch.DB_MAX_OUTPUT_PORT_TYPE
+R3_in <= R3_in$latch.DB_MAX_OUTPUT_PORT_TYPE
+R3_out <= R3_out$latch.DB_MAX_OUTPUT_PORT_TYPE
+funct[0] => Equal0.IN0
+funct[0] => Equal1.IN3
+funct[0] => Equal2.IN3
+funct[0] => Equal3.IN3
+funct[1] => Equal0.IN3
+funct[1] => Equal1.IN0
+funct[1] => Equal2.IN2
+funct[1] => Equal3.IN2
+funct[2] => Equal0.IN2
+funct[2] => Equal1.IN2
+funct[2] => Equal2.IN0
+funct[2] => Equal3.IN1
+funct[3] => Equal0.IN1
+funct[3] => Equal1.IN1
+funct[3] => Equal2.IN1
+funct[3] => Equal3.IN0
+funct[4] => Selector1.IN2
+funct[5] => Selector2.IN2
+funct[6] => Selector3.IN2
+funct[7] => Selector4.IN2
+funct[8] => Selector1.IN1
+funct[8] => R0_in$latch.DATAIN
+funct[9] => Selector2.IN1
+funct[9] => R1_in$latch.DATAIN
+funct[10] => Selector3.IN1
+funct[10] => R2_in$latch.DATAIN
+funct[11] => Selector4.IN1
+funct[11] => R3_in$latch.DATAIN
+funct[12] => ~NO_FANOUT~
+funct[13] => ~NO_FANOUT~
+funct[14] => ~NO_FANOUT~
+funct[15] => ~NO_FANOUT~
+
+

@@ -1,0 +1,14 @@
+ARCHITECTURE Behaviour OF proc IS
+COMPONENT regn IS ... -- n-bit register
+COMPONENT trin IS ... -- tri-state buffer (or use MUX)
+COMPONENT addersub IS ... -- n-bit adder/sub
+COMPONENT controlunit IS ...
+SIGNAL Rin, Rout : STD_LOGIC_VECTOR(0 TO 3);
+SIGNAL Ain, Gin, Gout : STD_LOGIC;
+SIGNAL AddSub, Extern : STD_LOGIC ;
+--register outputs
+SIGNAL R0, R1, R2, R3 : STD_LOGIC_VECTOR(7 DOWNTO 0) ;
+SIGNAL A, Sum, G : STD_LOGIC_VECTOR(7 DOWNTO 0);
+BEGIN
+...
+END Behaviour;
