@@ -1,0 +1,1299 @@
+TimeQuest Timing Analyzer report for lab5
+Wed Apr 20 11:36:45 2016
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'KEY[0]'
+ 12. Slow Model Hold: 'KEY[0]'
+ 13. Slow Model Minimum Pulse Width: 'KEY[0]'
+ 14. Setup Times
+ 15. Hold Times
+ 16. Clock to Output Times
+ 17. Minimum Clock to Output Times
+ 18. Fast Model Setup Summary
+ 19. Fast Model Hold Summary
+ 20. Fast Model Recovery Summary
+ 21. Fast Model Removal Summary
+ 22. Fast Model Minimum Pulse Width Summary
+ 23. Fast Model Setup: 'KEY[0]'
+ 24. Fast Model Hold: 'KEY[0]'
+ 25. Fast Model Minimum Pulse Width: 'KEY[0]'
+ 26. Setup Times
+ 27. Hold Times
+ 28. Clock to Output Times
+ 29. Minimum Clock to Output Times
+ 30. Multicorner Timing Analysis Summary
+ 31. Setup Times
+ 32. Hold Times
+ 33. Clock to Output Times
+ 34. Minimum Clock to Output Times
+ 35. Setup Transfers
+ 36. Hold Transfers
+ 37. Report TCCS
+ 38. Report RSKM
+ 39. Unconstrained Paths
+ 40. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; lab5                                                              ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C35F672C6                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                             ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets    ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------+
+; KEY[0]     ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { KEY[0] } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------+
+
+
++--------------------------------------------------+
+; Slow Model Fmax Summary                          ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 330.14 MHz ; 330.14 MHz      ; KEY[0]     ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++---------------------------------+
+; Slow Model Setup Summary        ;
++--------+--------+---------------+
+; Clock  ; Slack  ; End Point TNS ;
++--------+--------+---------------+
+; KEY[0] ; -2.029 ; -17.887       ;
++--------+--------+---------------+
+
+
++--------------------------------+
+; Slow Model Hold Summary        ;
++--------+-------+---------------+
+; Clock  ; Slack ; End Point TNS ;
++--------+-------+---------------+
+; KEY[0] ; 0.391 ; 0.000         ;
++--------+-------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++--------+--------+----------------------+
+; Clock  ; Slack  ; End Point TNS        ;
++--------+--------+----------------------+
+; KEY[0] ; -1.222 ; -17.222              ;
++--------+--------+----------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'KEY[0]'                                                                                                 ;
++--------+----------------------+----------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node            ; To Node              ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------+----------------------+--------------+-------------+--------------+------------+------------+
+; -2.029 ; Tlatch:\GEN_T:2:t|t  ; Tlatch:\GEN_T:14:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.040     ; 3.025      ;
+; -1.988 ; Tlatch:\GEN_T:7:t|t  ; Tlatch:\GEN_T:14:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.040     ; 2.984      ;
+; -1.858 ; Tlatch:\GEN_T:4:t|t  ; Tlatch:\GEN_T:14:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.040     ; 2.854      ;
+; -1.825 ; Tlatch:\GEN_T:0:t|t  ; Tlatch:\GEN_T:14:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.010      ; 2.871      ;
+; -1.791 ; Tlatch:\GEN_T:3:t|t  ; Tlatch:\GEN_T:14:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.040     ; 2.787      ;
+; -1.722 ; Tlatch:t0|t          ; Tlatch:\GEN_T:14:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.010      ; 2.768      ;
+; -1.626 ; Tlatch:\GEN_T:2:t|t  ; Tlatch:\GEN_T:11:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.040     ; 2.622      ;
+; -1.626 ; Tlatch:\GEN_T:2:t|t  ; Tlatch:\GEN_T:12:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.040     ; 2.622      ;
+; -1.625 ; Tlatch:\GEN_T:2:t|t  ; Tlatch:\GEN_T:13:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.040     ; 2.621      ;
+; -1.585 ; Tlatch:\GEN_T:7:t|t  ; Tlatch:\GEN_T:11:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.040     ; 2.581      ;
+; -1.585 ; Tlatch:\GEN_T:7:t|t  ; Tlatch:\GEN_T:12:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.040     ; 2.581      ;
+; -1.584 ; Tlatch:\GEN_T:7:t|t  ; Tlatch:\GEN_T:13:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.040     ; 2.580      ;
+; -1.570 ; Tlatch:\GEN_T:1:t|t  ; Tlatch:\GEN_T:14:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.010      ; 2.616      ;
+; -1.501 ; Tlatch:\GEN_T:6:t|t  ; Tlatch:\GEN_T:14:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.040     ; 2.497      ;
+; -1.455 ; Tlatch:\GEN_T:4:t|t  ; Tlatch:\GEN_T:11:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.040     ; 2.451      ;
+; -1.455 ; Tlatch:\GEN_T:4:t|t  ; Tlatch:\GEN_T:12:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.040     ; 2.451      ;
+; -1.454 ; Tlatch:\GEN_T:4:t|t  ; Tlatch:\GEN_T:13:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.040     ; 2.450      ;
+; -1.422 ; Tlatch:\GEN_T:5:t|t  ; Tlatch:\GEN_T:14:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.040     ; 2.418      ;
+; -1.422 ; Tlatch:\GEN_T:0:t|t  ; Tlatch:\GEN_T:11:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.010      ; 2.468      ;
+; -1.422 ; Tlatch:\GEN_T:0:t|t  ; Tlatch:\GEN_T:12:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.010      ; 2.468      ;
+; -1.421 ; Tlatch:\GEN_T:0:t|t  ; Tlatch:\GEN_T:13:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.010      ; 2.467      ;
+; -1.388 ; Tlatch:\GEN_T:3:t|t  ; Tlatch:\GEN_T:11:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.040     ; 2.384      ;
+; -1.388 ; Tlatch:\GEN_T:3:t|t  ; Tlatch:\GEN_T:12:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.040     ; 2.384      ;
+; -1.387 ; Tlatch:\GEN_T:3:t|t  ; Tlatch:\GEN_T:13:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.040     ; 2.383      ;
+; -1.378 ; Tlatch:\GEN_T:2:t|t  ; Tlatch:\GEN_T:8:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 2.414      ;
+; -1.378 ; Tlatch:\GEN_T:2:t|t  ; Tlatch:\GEN_T:10:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 2.414      ;
+; -1.376 ; Tlatch:\GEN_T:2:t|t  ; Tlatch:\GEN_T:9:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 2.412      ;
+; -1.369 ; Tlatch:\GEN_T:10:t|t ; Tlatch:\GEN_T:14:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.040     ; 2.365      ;
+; -1.337 ; Tlatch:\GEN_T:7:t|t  ; Tlatch:\GEN_T:8:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 2.373      ;
+; -1.337 ; Tlatch:\GEN_T:7:t|t  ; Tlatch:\GEN_T:10:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 2.373      ;
+; -1.335 ; Tlatch:\GEN_T:7:t|t  ; Tlatch:\GEN_T:9:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 2.371      ;
+; -1.319 ; Tlatch:t0|t          ; Tlatch:\GEN_T:11:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.010      ; 2.365      ;
+; -1.319 ; Tlatch:t0|t          ; Tlatch:\GEN_T:12:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.010      ; 2.365      ;
+; -1.318 ; Tlatch:t0|t          ; Tlatch:\GEN_T:13:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.010      ; 2.364      ;
+; -1.292 ; Tlatch:\GEN_T:0:t|t  ; Tlatch:\GEN_T:3:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.050      ; 2.378      ;
+; -1.254 ; Tlatch:\GEN_T:0:t|t  ; Tlatch:\GEN_T:4:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.050      ; 2.340      ;
+; -1.211 ; Tlatch:\GEN_T:2:t|t  ; Tlatch:\GEN_T:3:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 2.247      ;
+; -1.207 ; Tlatch:\GEN_T:4:t|t  ; Tlatch:\GEN_T:8:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 2.243      ;
+; -1.207 ; Tlatch:\GEN_T:4:t|t  ; Tlatch:\GEN_T:10:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 2.243      ;
+; -1.205 ; Tlatch:\GEN_T:4:t|t  ; Tlatch:\GEN_T:9:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 2.241      ;
+; -1.189 ; Tlatch:t0|t          ; Tlatch:\GEN_T:3:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.050      ; 2.275      ;
+; -1.174 ; Tlatch:\GEN_T:0:t|t  ; Tlatch:\GEN_T:8:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.050      ; 2.260      ;
+; -1.174 ; Tlatch:\GEN_T:0:t|t  ; Tlatch:\GEN_T:10:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.050      ; 2.260      ;
+; -1.172 ; Tlatch:\GEN_T:0:t|t  ; Tlatch:\GEN_T:9:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.050      ; 2.258      ;
+; -1.170 ; Tlatch:\GEN_T:0:t|t  ; Tlatch:\GEN_T:5:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.050      ; 2.256      ;
+; -1.168 ; Tlatch:\GEN_T:0:t|t  ; Tlatch:\GEN_T:7:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.050      ; 2.254      ;
+; -1.167 ; Tlatch:\GEN_T:1:t|t  ; Tlatch:\GEN_T:11:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.010      ; 2.213      ;
+; -1.167 ; Tlatch:\GEN_T:1:t|t  ; Tlatch:\GEN_T:12:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.010      ; 2.213      ;
+; -1.166 ; Tlatch:\GEN_T:0:t|t  ; Tlatch:\GEN_T:6:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.050      ; 2.252      ;
+; -1.166 ; Tlatch:\GEN_T:1:t|t  ; Tlatch:\GEN_T:13:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.010      ; 2.212      ;
+; -1.151 ; Tlatch:t0|t          ; Tlatch:\GEN_T:4:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.050      ; 2.237      ;
+; -1.142 ; Tlatch:\GEN_T:9:t|t  ; Tlatch:\GEN_T:14:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.040     ; 2.138      ;
+; -1.141 ; Tlatch:\GEN_T:3:t|t  ; Tlatch:\GEN_T:4:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 2.177      ;
+; -1.140 ; Tlatch:\GEN_T:3:t|t  ; Tlatch:\GEN_T:8:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 2.176      ;
+; -1.140 ; Tlatch:\GEN_T:3:t|t  ; Tlatch:\GEN_T:10:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 2.176      ;
+; -1.138 ; Tlatch:\GEN_T:3:t|t  ; Tlatch:\GEN_T:9:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 2.174      ;
+; -1.098 ; Tlatch:\GEN_T:6:t|t  ; Tlatch:\GEN_T:11:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.040     ; 2.094      ;
+; -1.098 ; Tlatch:\GEN_T:6:t|t  ; Tlatch:\GEN_T:12:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.040     ; 2.094      ;
+; -1.097 ; Tlatch:\GEN_T:6:t|t  ; Tlatch:\GEN_T:13:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.040     ; 2.093      ;
+; -1.071 ; Tlatch:t0|t          ; Tlatch:\GEN_T:8:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.050      ; 2.157      ;
+; -1.071 ; Tlatch:t0|t          ; Tlatch:\GEN_T:10:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.050      ; 2.157      ;
+; -1.069 ; Tlatch:t0|t          ; Tlatch:\GEN_T:9:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.050      ; 2.155      ;
+; -1.067 ; Tlatch:t0|t          ; Tlatch:\GEN_T:5:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.050      ; 2.153      ;
+; -1.065 ; Tlatch:t0|t          ; Tlatch:\GEN_T:7:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.050      ; 2.151      ;
+; -1.063 ; Tlatch:t0|t          ; Tlatch:\GEN_T:6:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.050      ; 2.149      ;
+; -1.037 ; Tlatch:\GEN_T:1:t|t  ; Tlatch:\GEN_T:3:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.050      ; 2.123      ;
+; -1.028 ; Tlatch:\GEN_T:3:t|t  ; Tlatch:\GEN_T:5:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 2.064      ;
+; -1.026 ; Tlatch:\GEN_T:3:t|t  ; Tlatch:\GEN_T:7:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 2.062      ;
+; -1.024 ; Tlatch:\GEN_T:3:t|t  ; Tlatch:\GEN_T:6:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 2.060      ;
+; -1.019 ; Tlatch:\GEN_T:5:t|t  ; Tlatch:\GEN_T:11:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.040     ; 2.015      ;
+; -1.019 ; Tlatch:\GEN_T:5:t|t  ; Tlatch:\GEN_T:12:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.040     ; 2.015      ;
+; -1.018 ; Tlatch:\GEN_T:5:t|t  ; Tlatch:\GEN_T:13:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.040     ; 2.014      ;
+; -1.003 ; Tlatch:\GEN_T:2:t|t  ; Tlatch:\GEN_T:4:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 2.039      ;
+; -0.999 ; Tlatch:\GEN_T:1:t|t  ; Tlatch:\GEN_T:4:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.050      ; 2.085      ;
+; -0.996 ; Tlatch:\GEN_T:4:t|t  ; Tlatch:\GEN_T:4:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 2.032      ;
+; -0.984 ; Tlatch:\GEN_T:8:t|t  ; Tlatch:\GEN_T:14:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.040     ; 1.980      ;
+; -0.966 ; Tlatch:\GEN_T:10:t|t ; Tlatch:\GEN_T:11:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.040     ; 1.962      ;
+; -0.966 ; Tlatch:\GEN_T:10:t|t ; Tlatch:\GEN_T:12:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.040     ; 1.962      ;
+; -0.965 ; Tlatch:\GEN_T:10:t|t ; Tlatch:\GEN_T:13:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.040     ; 1.961      ;
+; -0.919 ; Tlatch:\GEN_T:1:t|t  ; Tlatch:\GEN_T:8:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.050      ; 2.005      ;
+; -0.919 ; Tlatch:\GEN_T:1:t|t  ; Tlatch:\GEN_T:10:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.050      ; 2.005      ;
+; -0.917 ; Tlatch:\GEN_T:1:t|t  ; Tlatch:\GEN_T:9:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.050      ; 2.003      ;
+; -0.915 ; Tlatch:\GEN_T:1:t|t  ; Tlatch:\GEN_T:5:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.050      ; 2.001      ;
+; -0.913 ; Tlatch:\GEN_T:2:t|t  ; Tlatch:\GEN_T:5:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 1.949      ;
+; -0.913 ; Tlatch:\GEN_T:1:t|t  ; Tlatch:\GEN_T:7:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.050      ; 1.999      ;
+; -0.911 ; Tlatch:\GEN_T:2:t|t  ; Tlatch:\GEN_T:7:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 1.947      ;
+; -0.911 ; Tlatch:\GEN_T:1:t|t  ; Tlatch:\GEN_T:6:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.050      ; 1.997      ;
+; -0.909 ; Tlatch:\GEN_T:2:t|t  ; Tlatch:\GEN_T:6:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 1.945      ;
+; -0.883 ; Tlatch:\GEN_T:4:t|t  ; Tlatch:\GEN_T:5:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 1.919      ;
+; -0.881 ; Tlatch:\GEN_T:4:t|t  ; Tlatch:\GEN_T:7:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 1.917      ;
+; -0.879 ; Tlatch:\GEN_T:4:t|t  ; Tlatch:\GEN_T:6:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 1.915      ;
+; -0.850 ; Tlatch:\GEN_T:6:t|t  ; Tlatch:\GEN_T:8:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 1.886      ;
+; -0.850 ; Tlatch:\GEN_T:6:t|t  ; Tlatch:\GEN_T:10:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 1.886      ;
+; -0.848 ; Tlatch:\GEN_T:6:t|t  ; Tlatch:\GEN_T:9:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 1.884      ;
+; -0.821 ; Tlatch:\GEN_T:3:t|t  ; Tlatch:\GEN_T:3:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 1.857      ;
+; -0.771 ; Tlatch:\GEN_T:5:t|t  ; Tlatch:\GEN_T:8:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 1.807      ;
+; -0.771 ; Tlatch:\GEN_T:5:t|t  ; Tlatch:\GEN_T:10:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 1.807      ;
+; -0.769 ; Tlatch:\GEN_T:5:t|t  ; Tlatch:\GEN_T:9:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 1.805      ;
+; -0.751 ; Tlatch:\GEN_T:0:t|t  ; Tlatch:\GEN_T:2:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.050      ; 1.837      ;
+; -0.739 ; Tlatch:\GEN_T:9:t|t  ; Tlatch:\GEN_T:11:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.040     ; 1.735      ;
++--------+----------------------+----------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'KEY[0]'                                                                                                 ;
++-------+----------------------+----------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node            ; To Node              ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------+----------------------+--------------+-------------+--------------+------------+------------+
+; 0.391 ; Tlatch:t0|t          ; Tlatch:t0|t          ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; Tlatch:\GEN_T:0:t|t  ; Tlatch:\GEN_T:0:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; Tlatch:\GEN_T:1:t|t  ; Tlatch:\GEN_T:1:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; Tlatch:\GEN_T:2:t|t  ; Tlatch:\GEN_T:2:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; Tlatch:\GEN_T:5:t|t  ; Tlatch:\GEN_T:5:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; Tlatch:\GEN_T:6:t|t  ; Tlatch:\GEN_T:6:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; Tlatch:\GEN_T:7:t|t  ; Tlatch:\GEN_T:7:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; Tlatch:\GEN_T:8:t|t  ; Tlatch:\GEN_T:8:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; Tlatch:\GEN_T:9:t|t  ; Tlatch:\GEN_T:9:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; Tlatch:\GEN_T:10:t|t ; Tlatch:\GEN_T:10:t|t ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; Tlatch:\GEN_T:11:t|t ; Tlatch:\GEN_T:11:t|t ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; Tlatch:\GEN_T:12:t|t ; Tlatch:\GEN_T:12:t|t ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; Tlatch:\GEN_T:13:t|t ; Tlatch:\GEN_T:13:t|t ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; Tlatch:\GEN_T:14:t|t ; Tlatch:\GEN_T:14:t|t ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.657      ;
+; 0.719 ; Tlatch:t0|t          ; Tlatch:\GEN_T:0:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.985      ;
+; 0.750 ; Tlatch:\GEN_T:0:t|t  ; Tlatch:\GEN_T:1:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 1.016      ;
+; 0.812 ; Tlatch:\GEN_T:9:t|t  ; Tlatch:\GEN_T:10:t|t ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 1.078      ;
+; 0.816 ; Tlatch:\GEN_T:11:t|t ; Tlatch:\GEN_T:13:t|t ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 1.082      ;
+; 0.818 ; Tlatch:t0|t          ; Tlatch:\GEN_T:1:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 1.084      ;
+; 0.819 ; Tlatch:\GEN_T:11:t|t ; Tlatch:\GEN_T:12:t|t ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 1.085      ;
+; 0.852 ; Tlatch:\GEN_T:8:t|t  ; Tlatch:\GEN_T:10:t|t ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 1.118      ;
+; 0.854 ; Tlatch:\GEN_T:8:t|t  ; Tlatch:\GEN_T:9:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 1.120      ;
+; 0.871 ; Tlatch:\GEN_T:5:t|t  ; Tlatch:\GEN_T:7:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 1.137      ;
+; 0.872 ; Tlatch:\GEN_T:5:t|t  ; Tlatch:\GEN_T:6:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 1.138      ;
+; 0.875 ; Tlatch:\GEN_T:6:t|t  ; Tlatch:\GEN_T:7:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 1.141      ;
+; 1.020 ; Tlatch:\GEN_T:12:t|t ; Tlatch:\GEN_T:13:t|t ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 1.286      ;
+; 1.076 ; Tlatch:\GEN_T:11:t|t ; Tlatch:\GEN_T:14:t|t ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 1.342      ;
+; 1.194 ; Tlatch:\GEN_T:13:t|t ; Tlatch:\GEN_T:14:t|t ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 1.460      ;
+; 1.266 ; Tlatch:\GEN_T:1:t|t  ; Tlatch:\GEN_T:2:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.050      ; 1.582      ;
+; 1.350 ; Tlatch:\GEN_T:8:t|t  ; Tlatch:\GEN_T:13:t|t ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.040     ; 1.576      ;
+; 1.351 ; Tlatch:\GEN_T:8:t|t  ; Tlatch:\GEN_T:11:t|t ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.040     ; 1.577      ;
+; 1.351 ; Tlatch:\GEN_T:8:t|t  ; Tlatch:\GEN_T:12:t|t ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.040     ; 1.577      ;
+; 1.396 ; Tlatch:\GEN_T:12:t|t ; Tlatch:\GEN_T:14:t|t ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 1.662      ;
+; 1.418 ; Tlatch:t0|t          ; Tlatch:\GEN_T:2:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.050      ; 1.734      ;
+; 1.508 ; Tlatch:\GEN_T:9:t|t  ; Tlatch:\GEN_T:13:t|t ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.040     ; 1.734      ;
+; 1.509 ; Tlatch:\GEN_T:9:t|t  ; Tlatch:\GEN_T:11:t|t ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.040     ; 1.735      ;
+; 1.509 ; Tlatch:\GEN_T:9:t|t  ; Tlatch:\GEN_T:12:t|t ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.040     ; 1.735      ;
+; 1.521 ; Tlatch:\GEN_T:0:t|t  ; Tlatch:\GEN_T:2:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.050      ; 1.837      ;
+; 1.539 ; Tlatch:\GEN_T:5:t|t  ; Tlatch:\GEN_T:9:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 1.805      ;
+; 1.541 ; Tlatch:\GEN_T:5:t|t  ; Tlatch:\GEN_T:8:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 1.807      ;
+; 1.541 ; Tlatch:\GEN_T:5:t|t  ; Tlatch:\GEN_T:10:t|t ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 1.807      ;
+; 1.591 ; Tlatch:\GEN_T:3:t|t  ; Tlatch:\GEN_T:3:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 1.857      ;
+; 1.618 ; Tlatch:\GEN_T:6:t|t  ; Tlatch:\GEN_T:9:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 1.884      ;
+; 1.620 ; Tlatch:\GEN_T:6:t|t  ; Tlatch:\GEN_T:8:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 1.886      ;
+; 1.620 ; Tlatch:\GEN_T:6:t|t  ; Tlatch:\GEN_T:10:t|t ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 1.886      ;
+; 1.649 ; Tlatch:\GEN_T:4:t|t  ; Tlatch:\GEN_T:6:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 1.915      ;
+; 1.651 ; Tlatch:\GEN_T:4:t|t  ; Tlatch:\GEN_T:7:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 1.917      ;
+; 1.653 ; Tlatch:\GEN_T:4:t|t  ; Tlatch:\GEN_T:5:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 1.919      ;
+; 1.679 ; Tlatch:\GEN_T:2:t|t  ; Tlatch:\GEN_T:6:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 1.945      ;
+; 1.681 ; Tlatch:\GEN_T:1:t|t  ; Tlatch:\GEN_T:6:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.050      ; 1.997      ;
+; 1.681 ; Tlatch:\GEN_T:2:t|t  ; Tlatch:\GEN_T:7:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 1.947      ;
+; 1.683 ; Tlatch:\GEN_T:1:t|t  ; Tlatch:\GEN_T:7:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.050      ; 1.999      ;
+; 1.683 ; Tlatch:\GEN_T:2:t|t  ; Tlatch:\GEN_T:5:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 1.949      ;
+; 1.685 ; Tlatch:\GEN_T:1:t|t  ; Tlatch:\GEN_T:5:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.050      ; 2.001      ;
+; 1.687 ; Tlatch:\GEN_T:1:t|t  ; Tlatch:\GEN_T:9:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.050      ; 2.003      ;
+; 1.689 ; Tlatch:\GEN_T:1:t|t  ; Tlatch:\GEN_T:8:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.050      ; 2.005      ;
+; 1.689 ; Tlatch:\GEN_T:1:t|t  ; Tlatch:\GEN_T:10:t|t ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.050      ; 2.005      ;
+; 1.735 ; Tlatch:\GEN_T:10:t|t ; Tlatch:\GEN_T:13:t|t ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.040     ; 1.961      ;
+; 1.736 ; Tlatch:\GEN_T:10:t|t ; Tlatch:\GEN_T:11:t|t ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.040     ; 1.962      ;
+; 1.736 ; Tlatch:\GEN_T:10:t|t ; Tlatch:\GEN_T:12:t|t ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.040     ; 1.962      ;
+; 1.754 ; Tlatch:\GEN_T:8:t|t  ; Tlatch:\GEN_T:14:t|t ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.040     ; 1.980      ;
+; 1.766 ; Tlatch:\GEN_T:4:t|t  ; Tlatch:\GEN_T:4:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 2.032      ;
+; 1.769 ; Tlatch:\GEN_T:1:t|t  ; Tlatch:\GEN_T:4:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.050      ; 2.085      ;
+; 1.773 ; Tlatch:\GEN_T:2:t|t  ; Tlatch:\GEN_T:4:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 2.039      ;
+; 1.788 ; Tlatch:\GEN_T:5:t|t  ; Tlatch:\GEN_T:13:t|t ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.040     ; 2.014      ;
+; 1.789 ; Tlatch:\GEN_T:5:t|t  ; Tlatch:\GEN_T:11:t|t ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.040     ; 2.015      ;
+; 1.789 ; Tlatch:\GEN_T:5:t|t  ; Tlatch:\GEN_T:12:t|t ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.040     ; 2.015      ;
+; 1.794 ; Tlatch:\GEN_T:3:t|t  ; Tlatch:\GEN_T:6:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 2.060      ;
+; 1.796 ; Tlatch:\GEN_T:3:t|t  ; Tlatch:\GEN_T:7:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 2.062      ;
+; 1.798 ; Tlatch:\GEN_T:3:t|t  ; Tlatch:\GEN_T:5:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 2.064      ;
+; 1.807 ; Tlatch:\GEN_T:1:t|t  ; Tlatch:\GEN_T:3:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.050      ; 2.123      ;
+; 1.833 ; Tlatch:t0|t          ; Tlatch:\GEN_T:6:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.050      ; 2.149      ;
+; 1.835 ; Tlatch:t0|t          ; Tlatch:\GEN_T:7:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.050      ; 2.151      ;
+; 1.837 ; Tlatch:t0|t          ; Tlatch:\GEN_T:5:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.050      ; 2.153      ;
+; 1.839 ; Tlatch:t0|t          ; Tlatch:\GEN_T:9:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.050      ; 2.155      ;
+; 1.841 ; Tlatch:t0|t          ; Tlatch:\GEN_T:8:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.050      ; 2.157      ;
+; 1.841 ; Tlatch:t0|t          ; Tlatch:\GEN_T:10:t|t ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.050      ; 2.157      ;
+; 1.867 ; Tlatch:\GEN_T:6:t|t  ; Tlatch:\GEN_T:13:t|t ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.040     ; 2.093      ;
+; 1.868 ; Tlatch:\GEN_T:6:t|t  ; Tlatch:\GEN_T:11:t|t ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.040     ; 2.094      ;
+; 1.868 ; Tlatch:\GEN_T:6:t|t  ; Tlatch:\GEN_T:12:t|t ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.040     ; 2.094      ;
+; 1.908 ; Tlatch:\GEN_T:3:t|t  ; Tlatch:\GEN_T:9:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 2.174      ;
+; 1.910 ; Tlatch:\GEN_T:3:t|t  ; Tlatch:\GEN_T:8:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 2.176      ;
+; 1.910 ; Tlatch:\GEN_T:3:t|t  ; Tlatch:\GEN_T:10:t|t ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 2.176      ;
+; 1.911 ; Tlatch:\GEN_T:3:t|t  ; Tlatch:\GEN_T:4:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 2.177      ;
+; 1.912 ; Tlatch:\GEN_T:9:t|t  ; Tlatch:\GEN_T:14:t|t ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.040     ; 2.138      ;
+; 1.921 ; Tlatch:t0|t          ; Tlatch:\GEN_T:4:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.050      ; 2.237      ;
+; 1.936 ; Tlatch:\GEN_T:0:t|t  ; Tlatch:\GEN_T:6:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.050      ; 2.252      ;
+; 1.936 ; Tlatch:\GEN_T:1:t|t  ; Tlatch:\GEN_T:13:t|t ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.010      ; 2.212      ;
+; 1.937 ; Tlatch:\GEN_T:1:t|t  ; Tlatch:\GEN_T:11:t|t ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.010      ; 2.213      ;
+; 1.937 ; Tlatch:\GEN_T:1:t|t  ; Tlatch:\GEN_T:12:t|t ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.010      ; 2.213      ;
+; 1.938 ; Tlatch:\GEN_T:0:t|t  ; Tlatch:\GEN_T:7:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.050      ; 2.254      ;
+; 1.940 ; Tlatch:\GEN_T:0:t|t  ; Tlatch:\GEN_T:5:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.050      ; 2.256      ;
+; 1.942 ; Tlatch:\GEN_T:0:t|t  ; Tlatch:\GEN_T:9:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.050      ; 2.258      ;
+; 1.944 ; Tlatch:\GEN_T:0:t|t  ; Tlatch:\GEN_T:8:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.050      ; 2.260      ;
+; 1.944 ; Tlatch:\GEN_T:0:t|t  ; Tlatch:\GEN_T:10:t|t ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.050      ; 2.260      ;
+; 1.959 ; Tlatch:t0|t          ; Tlatch:\GEN_T:3:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.050      ; 2.275      ;
+; 1.975 ; Tlatch:\GEN_T:4:t|t  ; Tlatch:\GEN_T:9:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 2.241      ;
+; 1.977 ; Tlatch:\GEN_T:4:t|t  ; Tlatch:\GEN_T:8:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 2.243      ;
+; 1.977 ; Tlatch:\GEN_T:4:t|t  ; Tlatch:\GEN_T:10:t|t ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 2.243      ;
+; 1.981 ; Tlatch:\GEN_T:2:t|t  ; Tlatch:\GEN_T:3:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 2.247      ;
++-------+----------------------+----------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'KEY[0]'                                                               ;
++--------+--------------+----------------+------------------+--------+------------+----------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock  ; Clock Edge ; Target               ;
++--------+--------------+----------------+------------------+--------+------------+----------------------+
+; -1.222 ; 1.000        ; 2.222          ; Port Rate        ; KEY[0] ; Rise       ; KEY[0]               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[0] ; Rise       ; Tlatch:\GEN_T:0:t|t  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; Tlatch:\GEN_T:0:t|t  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[0] ; Rise       ; Tlatch:\GEN_T:10:t|t ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; Tlatch:\GEN_T:10:t|t ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[0] ; Rise       ; Tlatch:\GEN_T:11:t|t ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; Tlatch:\GEN_T:11:t|t ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[0] ; Rise       ; Tlatch:\GEN_T:12:t|t ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; Tlatch:\GEN_T:12:t|t ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[0] ; Rise       ; Tlatch:\GEN_T:13:t|t ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; Tlatch:\GEN_T:13:t|t ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[0] ; Rise       ; Tlatch:\GEN_T:14:t|t ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; Tlatch:\GEN_T:14:t|t ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[0] ; Rise       ; Tlatch:\GEN_T:1:t|t  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; Tlatch:\GEN_T:1:t|t  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[0] ; Rise       ; Tlatch:\GEN_T:2:t|t  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; Tlatch:\GEN_T:2:t|t  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[0] ; Rise       ; Tlatch:\GEN_T:3:t|t  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; Tlatch:\GEN_T:3:t|t  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[0] ; Rise       ; Tlatch:\GEN_T:4:t|t  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; Tlatch:\GEN_T:4:t|t  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[0] ; Rise       ; Tlatch:\GEN_T:5:t|t  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; Tlatch:\GEN_T:5:t|t  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[0] ; Rise       ; Tlatch:\GEN_T:6:t|t  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; Tlatch:\GEN_T:6:t|t  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[0] ; Rise       ; Tlatch:\GEN_T:7:t|t  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; Tlatch:\GEN_T:7:t|t  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[0] ; Rise       ; Tlatch:\GEN_T:8:t|t  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; Tlatch:\GEN_T:8:t|t  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[0] ; Rise       ; Tlatch:\GEN_T:9:t|t  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; Tlatch:\GEN_T:9:t|t  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[0] ; Rise       ; Tlatch:t0|t          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; Tlatch:t0|t          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; KEY[0]|combout       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; KEY[0]|combout       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; \GEN_T:0:t|t|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; \GEN_T:0:t|t|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; \GEN_T:10:t|t|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; \GEN_T:10:t|t|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; \GEN_T:11:t|t|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; \GEN_T:11:t|t|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; \GEN_T:12:t|t|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; \GEN_T:12:t|t|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; \GEN_T:13:t|t|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; \GEN_T:13:t|t|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; \GEN_T:14:t|t|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; \GEN_T:14:t|t|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; \GEN_T:1:t|t|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; \GEN_T:1:t|t|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; \GEN_T:2:t|t|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; \GEN_T:2:t|t|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; \GEN_T:3:t|t|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; \GEN_T:3:t|t|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; \GEN_T:4:t|t|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; \GEN_T:4:t|t|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; \GEN_T:5:t|t|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; \GEN_T:5:t|t|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; \GEN_T:6:t|t|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; \GEN_T:6:t|t|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; \GEN_T:7:t|t|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; \GEN_T:7:t|t|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; \GEN_T:8:t|t|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; \GEN_T:8:t|t|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; \GEN_T:9:t|t|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; \GEN_T:9:t|t|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; t0|t|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; t0|t|clk             ;
++--------+--------------+----------------+------------------+--------+------------+----------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; SW[*]     ; KEY[0]     ; 1.069 ; 1.069 ; Rise       ; KEY[0]          ;
+;  SW[1]    ; KEY[0]     ; 1.069 ; 1.069 ; Rise       ; KEY[0]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Hold Times                                                            ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; SW[*]     ; KEY[0]     ; 0.950 ; 0.950 ; Rise       ; KEY[0]          ;
+;  SW[1]    ; KEY[0]     ; 0.950 ; 0.950 ; Rise       ; KEY[0]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; HEX0[*]   ; KEY[0]     ; 11.322 ; 11.322 ; Rise       ; KEY[0]          ;
+;  HEX0[0]  ; KEY[0]     ; 10.926 ; 10.926 ; Rise       ; KEY[0]          ;
+;  HEX0[1]  ; KEY[0]     ; 10.231 ; 10.231 ; Rise       ; KEY[0]          ;
+;  HEX0[2]  ; KEY[0]     ; 10.850 ; 10.850 ; Rise       ; KEY[0]          ;
+;  HEX0[3]  ; KEY[0]     ; 10.461 ; 10.461 ; Rise       ; KEY[0]          ;
+;  HEX0[4]  ; KEY[0]     ; 11.322 ; 11.322 ; Rise       ; KEY[0]          ;
+;  HEX0[5]  ; KEY[0]     ; 10.712 ; 10.712 ; Rise       ; KEY[0]          ;
+;  HEX0[6]  ; KEY[0]     ; 10.658 ; 10.658 ; Rise       ; KEY[0]          ;
+; HEX1[*]   ; KEY[0]     ; 8.468  ; 8.468  ; Rise       ; KEY[0]          ;
+;  HEX1[0]  ; KEY[0]     ; 8.181  ; 8.181  ; Rise       ; KEY[0]          ;
+;  HEX1[1]  ; KEY[0]     ; 8.047  ; 8.047  ; Rise       ; KEY[0]          ;
+;  HEX1[2]  ; KEY[0]     ; 8.153  ; 8.153  ; Rise       ; KEY[0]          ;
+;  HEX1[3]  ; KEY[0]     ; 8.003  ; 8.003  ; Rise       ; KEY[0]          ;
+;  HEX1[4]  ; KEY[0]     ; 8.129  ; 8.129  ; Rise       ; KEY[0]          ;
+;  HEX1[5]  ; KEY[0]     ; 8.468  ; 8.468  ; Rise       ; KEY[0]          ;
+;  HEX1[6]  ; KEY[0]     ; 8.320  ; 8.320  ; Rise       ; KEY[0]          ;
+; HEX2[*]   ; KEY[0]     ; 8.850  ; 8.850  ; Rise       ; KEY[0]          ;
+;  HEX2[0]  ; KEY[0]     ; 8.804  ; 8.804  ; Rise       ; KEY[0]          ;
+;  HEX2[1]  ; KEY[0]     ; 8.796  ; 8.796  ; Rise       ; KEY[0]          ;
+;  HEX2[2]  ; KEY[0]     ; 8.318  ; 8.318  ; Rise       ; KEY[0]          ;
+;  HEX2[3]  ; KEY[0]     ; 8.850  ; 8.850  ; Rise       ; KEY[0]          ;
+;  HEX2[4]  ; KEY[0]     ; 8.793  ; 8.793  ; Rise       ; KEY[0]          ;
+;  HEX2[5]  ; KEY[0]     ; 8.370  ; 8.370  ; Rise       ; KEY[0]          ;
+;  HEX2[6]  ; KEY[0]     ; 8.792  ; 8.792  ; Rise       ; KEY[0]          ;
+; HEX3[*]   ; KEY[0]     ; 9.912  ; 9.912  ; Rise       ; KEY[0]          ;
+;  HEX3[0]  ; KEY[0]     ; 9.912  ; 9.912  ; Rise       ; KEY[0]          ;
+;  HEX3[1]  ; KEY[0]     ; 9.655  ; 9.655  ; Rise       ; KEY[0]          ;
+;  HEX3[2]  ; KEY[0]     ; 9.701  ; 9.701  ; Rise       ; KEY[0]          ;
+;  HEX3[3]  ; KEY[0]     ; 9.655  ; 9.655  ; Rise       ; KEY[0]          ;
+;  HEX3[4]  ; KEY[0]     ; 9.696  ; 9.696  ; Rise       ; KEY[0]          ;
+;  HEX3[5]  ; KEY[0]     ; 9.902  ; 9.902  ; Rise       ; KEY[0]          ;
+;  HEX3[6]  ; KEY[0]     ; 9.895  ; 9.895  ; Rise       ; KEY[0]          ;
+; LEDR[*]   ; KEY[0]     ; 9.400  ; 9.400  ; Rise       ; KEY[0]          ;
+;  LEDR[0]  ; KEY[0]     ; 7.648  ; 7.648  ; Rise       ; KEY[0]          ;
+;  LEDR[1]  ; KEY[0]     ; 7.664  ; 7.664  ; Rise       ; KEY[0]          ;
+;  LEDR[2]  ; KEY[0]     ; 7.422  ; 7.422  ; Rise       ; KEY[0]          ;
+;  LEDR[3]  ; KEY[0]     ; 7.455  ; 7.455  ; Rise       ; KEY[0]          ;
+;  LEDR[4]  ; KEY[0]     ; 7.718  ; 7.718  ; Rise       ; KEY[0]          ;
+;  LEDR[5]  ; KEY[0]     ; 7.691  ; 7.691  ; Rise       ; KEY[0]          ;
+;  LEDR[6]  ; KEY[0]     ; 7.708  ; 7.708  ; Rise       ; KEY[0]          ;
+;  LEDR[7]  ; KEY[0]     ; 7.650  ; 7.650  ; Rise       ; KEY[0]          ;
+;  LEDR[8]  ; KEY[0]     ; 8.351  ; 8.351  ; Rise       ; KEY[0]          ;
+;  LEDR[9]  ; KEY[0]     ; 8.356  ; 8.356  ; Rise       ; KEY[0]          ;
+;  LEDR[10] ; KEY[0]     ; 9.067  ; 9.067  ; Rise       ; KEY[0]          ;
+;  LEDR[11] ; KEY[0]     ; 8.865  ; 8.865  ; Rise       ; KEY[0]          ;
+;  LEDR[12] ; KEY[0]     ; 9.246  ; 9.246  ; Rise       ; KEY[0]          ;
+;  LEDR[13] ; KEY[0]     ; 9.040  ; 9.040  ; Rise       ; KEY[0]          ;
+;  LEDR[14] ; KEY[0]     ; 9.400  ; 9.400  ; Rise       ; KEY[0]          ;
+;  LEDR[15] ; KEY[0]     ; 8.837  ; 8.837  ; Rise       ; KEY[0]          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                           ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; HEX0[*]   ; KEY[0]     ; 9.654  ; 9.654  ; Rise       ; KEY[0]          ;
+;  HEX0[0]  ; KEY[0]     ; 10.343 ; 10.343 ; Rise       ; KEY[0]          ;
+;  HEX0[1]  ; KEY[0]     ; 9.654  ; 9.654  ; Rise       ; KEY[0]          ;
+;  HEX0[2]  ; KEY[0]     ; 10.264 ; 10.264 ; Rise       ; KEY[0]          ;
+;  HEX0[3]  ; KEY[0]     ; 9.882  ; 9.882  ; Rise       ; KEY[0]          ;
+;  HEX0[4]  ; KEY[0]     ; 10.732 ; 10.732 ; Rise       ; KEY[0]          ;
+;  HEX0[5]  ; KEY[0]     ; 10.132 ; 10.132 ; Rise       ; KEY[0]          ;
+;  HEX0[6]  ; KEY[0]     ; 10.082 ; 10.082 ; Rise       ; KEY[0]          ;
+; HEX1[*]   ; KEY[0]     ; 7.535  ; 7.535  ; Rise       ; KEY[0]          ;
+;  HEX1[0]  ; KEY[0]     ; 7.535  ; 7.535  ; Rise       ; KEY[0]          ;
+;  HEX1[1]  ; KEY[0]     ; 7.750  ; 7.750  ; Rise       ; KEY[0]          ;
+;  HEX1[2]  ; KEY[0]     ; 7.858  ; 7.858  ; Rise       ; KEY[0]          ;
+;  HEX1[3]  ; KEY[0]     ; 7.713  ; 7.713  ; Rise       ; KEY[0]          ;
+;  HEX1[4]  ; KEY[0]     ; 7.840  ; 7.840  ; Rise       ; KEY[0]          ;
+;  HEX1[5]  ; KEY[0]     ; 8.192  ; 8.192  ; Rise       ; KEY[0]          ;
+;  HEX1[6]  ; KEY[0]     ; 7.826  ; 7.826  ; Rise       ; KEY[0]          ;
+; HEX2[*]   ; KEY[0]     ; 7.824  ; 7.824  ; Rise       ; KEY[0]          ;
+;  HEX2[0]  ; KEY[0]     ; 8.280  ; 8.280  ; Rise       ; KEY[0]          ;
+;  HEX2[1]  ; KEY[0]     ; 8.271  ; 8.271  ; Rise       ; KEY[0]          ;
+;  HEX2[2]  ; KEY[0]     ; 7.824  ; 7.824  ; Rise       ; KEY[0]          ;
+;  HEX2[3]  ; KEY[0]     ; 8.327  ; 8.327  ; Rise       ; KEY[0]          ;
+;  HEX2[4]  ; KEY[0]     ; 8.269  ; 8.269  ; Rise       ; KEY[0]          ;
+;  HEX2[5]  ; KEY[0]     ; 7.872  ; 7.872  ; Rise       ; KEY[0]          ;
+;  HEX2[6]  ; KEY[0]     ; 8.267  ; 8.267  ; Rise       ; KEY[0]          ;
+; HEX3[*]   ; KEY[0]     ; 8.267  ; 8.267  ; Rise       ; KEY[0]          ;
+;  HEX3[0]  ; KEY[0]     ; 8.524  ; 8.524  ; Rise       ; KEY[0]          ;
+;  HEX3[1]  ; KEY[0]     ; 8.267  ; 8.267  ; Rise       ; KEY[0]          ;
+;  HEX3[2]  ; KEY[0]     ; 8.306  ; 8.306  ; Rise       ; KEY[0]          ;
+;  HEX3[3]  ; KEY[0]     ; 8.268  ; 8.268  ; Rise       ; KEY[0]          ;
+;  HEX3[4]  ; KEY[0]     ; 8.310  ; 8.310  ; Rise       ; KEY[0]          ;
+;  HEX3[5]  ; KEY[0]     ; 8.512  ; 8.512  ; Rise       ; KEY[0]          ;
+;  HEX3[6]  ; KEY[0]     ; 8.524  ; 8.524  ; Rise       ; KEY[0]          ;
+; LEDR[*]   ; KEY[0]     ; 7.422  ; 7.422  ; Rise       ; KEY[0]          ;
+;  LEDR[0]  ; KEY[0]     ; 7.648  ; 7.648  ; Rise       ; KEY[0]          ;
+;  LEDR[1]  ; KEY[0]     ; 7.664  ; 7.664  ; Rise       ; KEY[0]          ;
+;  LEDR[2]  ; KEY[0]     ; 7.422  ; 7.422  ; Rise       ; KEY[0]          ;
+;  LEDR[3]  ; KEY[0]     ; 7.455  ; 7.455  ; Rise       ; KEY[0]          ;
+;  LEDR[4]  ; KEY[0]     ; 7.718  ; 7.718  ; Rise       ; KEY[0]          ;
+;  LEDR[5]  ; KEY[0]     ; 7.691  ; 7.691  ; Rise       ; KEY[0]          ;
+;  LEDR[6]  ; KEY[0]     ; 7.708  ; 7.708  ; Rise       ; KEY[0]          ;
+;  LEDR[7]  ; KEY[0]     ; 7.650  ; 7.650  ; Rise       ; KEY[0]          ;
+;  LEDR[8]  ; KEY[0]     ; 8.351  ; 8.351  ; Rise       ; KEY[0]          ;
+;  LEDR[9]  ; KEY[0]     ; 8.356  ; 8.356  ; Rise       ; KEY[0]          ;
+;  LEDR[10] ; KEY[0]     ; 9.067  ; 9.067  ; Rise       ; KEY[0]          ;
+;  LEDR[11] ; KEY[0]     ; 8.865  ; 8.865  ; Rise       ; KEY[0]          ;
+;  LEDR[12] ; KEY[0]     ; 9.246  ; 9.246  ; Rise       ; KEY[0]          ;
+;  LEDR[13] ; KEY[0]     ; 9.040  ; 9.040  ; Rise       ; KEY[0]          ;
+;  LEDR[14] ; KEY[0]     ; 9.400  ; 9.400  ; Rise       ; KEY[0]          ;
+;  LEDR[15] ; KEY[0]     ; 8.837  ; 8.837  ; Rise       ; KEY[0]          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++---------------------------------+
+; Fast Model Setup Summary        ;
++--------+--------+---------------+
+; Clock  ; Slack  ; End Point TNS ;
++--------+--------+---------------+
+; KEY[0] ; -0.321 ; -1.308        ;
++--------+--------+---------------+
+
+
++--------------------------------+
+; Fast Model Hold Summary        ;
++--------+-------+---------------+
+; Clock  ; Slack ; End Point TNS ;
++--------+-------+---------------+
+; KEY[0] ; 0.215 ; 0.000         ;
++--------+-------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++--------+--------+----------------------+
+; Clock  ; Slack  ; End Point TNS        ;
++--------+--------+----------------------+
+; KEY[0] ; -1.222 ; -17.222              ;
++--------+--------+----------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'KEY[0]'                                                                                                 ;
++--------+----------------------+----------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node            ; To Node              ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------+----------------------+--------------+-------------+--------------+------------+------------+
+; -0.321 ; Tlatch:\GEN_T:2:t|t  ; Tlatch:\GEN_T:14:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.023      ; 1.376      ;
+; -0.302 ; Tlatch:\GEN_T:7:t|t  ; Tlatch:\GEN_T:14:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.023      ; 1.357      ;
+; -0.255 ; Tlatch:\GEN_T:0:t|t  ; Tlatch:\GEN_T:14:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.006      ; 1.293      ;
+; -0.245 ; Tlatch:\GEN_T:4:t|t  ; Tlatch:\GEN_T:14:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.023      ; 1.300      ;
+; -0.213 ; Tlatch:t0|t          ; Tlatch:\GEN_T:14:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.006      ; 1.251      ;
+; -0.207 ; Tlatch:\GEN_T:3:t|t  ; Tlatch:\GEN_T:14:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.023      ; 1.262      ;
+; -0.152 ; Tlatch:\GEN_T:2:t|t  ; Tlatch:\GEN_T:11:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.023      ; 1.207      ;
+; -0.152 ; Tlatch:\GEN_T:2:t|t  ; Tlatch:\GEN_T:12:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.023      ; 1.207      ;
+; -0.151 ; Tlatch:\GEN_T:2:t|t  ; Tlatch:\GEN_T:13:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.023      ; 1.206      ;
+; -0.133 ; Tlatch:\GEN_T:7:t|t  ; Tlatch:\GEN_T:11:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.023      ; 1.188      ;
+; -0.133 ; Tlatch:\GEN_T:7:t|t  ; Tlatch:\GEN_T:12:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.023      ; 1.188      ;
+; -0.132 ; Tlatch:\GEN_T:7:t|t  ; Tlatch:\GEN_T:13:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.023      ; 1.187      ;
+; -0.128 ; Tlatch:\GEN_T:1:t|t  ; Tlatch:\GEN_T:14:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.006      ; 1.166      ;
+; -0.099 ; Tlatch:\GEN_T:0:t|t  ; Tlatch:\GEN_T:3:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.017     ; 1.114      ;
+; -0.094 ; Tlatch:\GEN_T:2:t|t  ; Tlatch:\GEN_T:8:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 1.126      ;
+; -0.094 ; Tlatch:\GEN_T:2:t|t  ; Tlatch:\GEN_T:10:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 1.126      ;
+; -0.091 ; Tlatch:\GEN_T:0:t|t  ; Tlatch:\GEN_T:4:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.017     ; 1.106      ;
+; -0.091 ; Tlatch:\GEN_T:2:t|t  ; Tlatch:\GEN_T:9:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 1.123      ;
+; -0.086 ; Tlatch:\GEN_T:0:t|t  ; Tlatch:\GEN_T:11:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.006      ; 1.124      ;
+; -0.086 ; Tlatch:\GEN_T:0:t|t  ; Tlatch:\GEN_T:12:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.006      ; 1.124      ;
+; -0.085 ; Tlatch:\GEN_T:0:t|t  ; Tlatch:\GEN_T:13:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.006      ; 1.123      ;
+; -0.078 ; Tlatch:\GEN_T:6:t|t  ; Tlatch:\GEN_T:14:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.023      ; 1.133      ;
+; -0.076 ; Tlatch:\GEN_T:4:t|t  ; Tlatch:\GEN_T:11:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.023      ; 1.131      ;
+; -0.076 ; Tlatch:\GEN_T:4:t|t  ; Tlatch:\GEN_T:12:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.023      ; 1.131      ;
+; -0.075 ; Tlatch:\GEN_T:4:t|t  ; Tlatch:\GEN_T:13:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.023      ; 1.130      ;
+; -0.075 ; Tlatch:\GEN_T:7:t|t  ; Tlatch:\GEN_T:8:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 1.107      ;
+; -0.075 ; Tlatch:\GEN_T:7:t|t  ; Tlatch:\GEN_T:10:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 1.107      ;
+; -0.072 ; Tlatch:\GEN_T:7:t|t  ; Tlatch:\GEN_T:9:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 1.104      ;
+; -0.057 ; Tlatch:t0|t          ; Tlatch:\GEN_T:3:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.017     ; 1.072      ;
+; -0.050 ; Tlatch:\GEN_T:5:t|t  ; Tlatch:\GEN_T:14:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.023      ; 1.105      ;
+; -0.049 ; Tlatch:t0|t          ; Tlatch:\GEN_T:4:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.017     ; 1.064      ;
+; -0.044 ; Tlatch:t0|t          ; Tlatch:\GEN_T:11:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.006      ; 1.082      ;
+; -0.044 ; Tlatch:t0|t          ; Tlatch:\GEN_T:12:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.006      ; 1.082      ;
+; -0.043 ; Tlatch:t0|t          ; Tlatch:\GEN_T:13:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.006      ; 1.081      ;
+; -0.039 ; Tlatch:\GEN_T:10:t|t ; Tlatch:\GEN_T:14:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.023      ; 1.094      ;
+; -0.038 ; Tlatch:\GEN_T:3:t|t  ; Tlatch:\GEN_T:11:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.023      ; 1.093      ;
+; -0.038 ; Tlatch:\GEN_T:3:t|t  ; Tlatch:\GEN_T:12:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.023      ; 1.093      ;
+; -0.037 ; Tlatch:\GEN_T:3:t|t  ; Tlatch:\GEN_T:13:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.023      ; 1.092      ;
+; -0.028 ; Tlatch:\GEN_T:0:t|t  ; Tlatch:\GEN_T:8:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.017     ; 1.043      ;
+; -0.028 ; Tlatch:\GEN_T:0:t|t  ; Tlatch:\GEN_T:10:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.017     ; 1.043      ;
+; -0.025 ; Tlatch:\GEN_T:0:t|t  ; Tlatch:\GEN_T:9:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.017     ; 1.040      ;
+; -0.023 ; Tlatch:\GEN_T:0:t|t  ; Tlatch:\GEN_T:5:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.017     ; 1.038      ;
+; -0.021 ; Tlatch:\GEN_T:0:t|t  ; Tlatch:\GEN_T:7:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.017     ; 1.036      ;
+; -0.019 ; Tlatch:\GEN_T:0:t|t  ; Tlatch:\GEN_T:6:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.017     ; 1.034      ;
+; -0.018 ; Tlatch:\GEN_T:4:t|t  ; Tlatch:\GEN_T:8:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 1.050      ;
+; -0.018 ; Tlatch:\GEN_T:4:t|t  ; Tlatch:\GEN_T:10:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 1.050      ;
+; -0.015 ; Tlatch:\GEN_T:4:t|t  ; Tlatch:\GEN_T:9:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 1.047      ;
+; -0.014 ; Tlatch:\GEN_T:2:t|t  ; Tlatch:\GEN_T:3:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 1.046      ;
+; 0.003  ; Tlatch:\GEN_T:3:t|t  ; Tlatch:\GEN_T:4:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 1.029      ;
+; 0.014  ; Tlatch:t0|t          ; Tlatch:\GEN_T:8:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.017     ; 1.001      ;
+; 0.014  ; Tlatch:t0|t          ; Tlatch:\GEN_T:10:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.017     ; 1.001      ;
+; 0.017  ; Tlatch:t0|t          ; Tlatch:\GEN_T:9:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.017     ; 0.998      ;
+; 0.019  ; Tlatch:t0|t          ; Tlatch:\GEN_T:5:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.017     ; 0.996      ;
+; 0.020  ; Tlatch:\GEN_T:3:t|t  ; Tlatch:\GEN_T:8:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 1.012      ;
+; 0.020  ; Tlatch:\GEN_T:3:t|t  ; Tlatch:\GEN_T:10:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 1.012      ;
+; 0.021  ; Tlatch:t0|t          ; Tlatch:\GEN_T:7:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.017     ; 0.994      ;
+; 0.023  ; Tlatch:\GEN_T:3:t|t  ; Tlatch:\GEN_T:9:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 1.009      ;
+; 0.023  ; Tlatch:t0|t          ; Tlatch:\GEN_T:6:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.017     ; 0.992      ;
+; 0.028  ; Tlatch:\GEN_T:1:t|t  ; Tlatch:\GEN_T:3:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.017     ; 0.987      ;
+; 0.036  ; Tlatch:\GEN_T:1:t|t  ; Tlatch:\GEN_T:4:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.017     ; 0.979      ;
+; 0.041  ; Tlatch:\GEN_T:1:t|t  ; Tlatch:\GEN_T:11:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.006      ; 0.997      ;
+; 0.041  ; Tlatch:\GEN_T:1:t|t  ; Tlatch:\GEN_T:12:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.006      ; 0.997      ;
+; 0.042  ; Tlatch:\GEN_T:1:t|t  ; Tlatch:\GEN_T:13:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.006      ; 0.996      ;
+; 0.053  ; Tlatch:\GEN_T:9:t|t  ; Tlatch:\GEN_T:14:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.023      ; 1.002      ;
+; 0.066  ; Tlatch:\GEN_T:4:t|t  ; Tlatch:\GEN_T:4:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 0.966      ;
+; 0.070  ; Tlatch:\GEN_T:2:t|t  ; Tlatch:\GEN_T:4:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 0.962      ;
+; 0.071  ; Tlatch:\GEN_T:3:t|t  ; Tlatch:\GEN_T:5:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 0.961      ;
+; 0.073  ; Tlatch:\GEN_T:3:t|t  ; Tlatch:\GEN_T:7:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 0.959      ;
+; 0.075  ; Tlatch:\GEN_T:3:t|t  ; Tlatch:\GEN_T:6:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 0.957      ;
+; 0.091  ; Tlatch:\GEN_T:6:t|t  ; Tlatch:\GEN_T:11:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.023      ; 0.964      ;
+; 0.091  ; Tlatch:\GEN_T:6:t|t  ; Tlatch:\GEN_T:12:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.023      ; 0.964      ;
+; 0.092  ; Tlatch:\GEN_T:6:t|t  ; Tlatch:\GEN_T:13:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.023      ; 0.963      ;
+; 0.099  ; Tlatch:\GEN_T:1:t|t  ; Tlatch:\GEN_T:8:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.017     ; 0.916      ;
+; 0.099  ; Tlatch:\GEN_T:1:t|t  ; Tlatch:\GEN_T:10:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.017     ; 0.916      ;
+; 0.102  ; Tlatch:\GEN_T:1:t|t  ; Tlatch:\GEN_T:9:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.017     ; 0.913      ;
+; 0.104  ; Tlatch:\GEN_T:1:t|t  ; Tlatch:\GEN_T:5:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.017     ; 0.911      ;
+; 0.106  ; Tlatch:\GEN_T:1:t|t  ; Tlatch:\GEN_T:7:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.017     ; 0.909      ;
+; 0.108  ; Tlatch:\GEN_T:1:t|t  ; Tlatch:\GEN_T:6:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.017     ; 0.907      ;
+; 0.118  ; Tlatch:\GEN_T:2:t|t  ; Tlatch:\GEN_T:5:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 0.914      ;
+; 0.119  ; Tlatch:\GEN_T:5:t|t  ; Tlatch:\GEN_T:11:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.023      ; 0.936      ;
+; 0.119  ; Tlatch:\GEN_T:5:t|t  ; Tlatch:\GEN_T:12:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.023      ; 0.936      ;
+; 0.120  ; Tlatch:\GEN_T:5:t|t  ; Tlatch:\GEN_T:13:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.023      ; 0.935      ;
+; 0.120  ; Tlatch:\GEN_T:2:t|t  ; Tlatch:\GEN_T:7:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 0.912      ;
+; 0.122  ; Tlatch:\GEN_T:8:t|t  ; Tlatch:\GEN_T:14:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.023      ; 0.933      ;
+; 0.122  ; Tlatch:\GEN_T:2:t|t  ; Tlatch:\GEN_T:6:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 0.910      ;
+; 0.127  ; Tlatch:\GEN_T:4:t|t  ; Tlatch:\GEN_T:5:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 0.905      ;
+; 0.129  ; Tlatch:\GEN_T:4:t|t  ; Tlatch:\GEN_T:7:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 0.903      ;
+; 0.130  ; Tlatch:\GEN_T:10:t|t ; Tlatch:\GEN_T:11:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.023      ; 0.925      ;
+; 0.130  ; Tlatch:\GEN_T:10:t|t ; Tlatch:\GEN_T:12:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.023      ; 0.925      ;
+; 0.131  ; Tlatch:\GEN_T:10:t|t ; Tlatch:\GEN_T:13:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.023      ; 0.924      ;
+; 0.131  ; Tlatch:\GEN_T:4:t|t  ; Tlatch:\GEN_T:6:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 0.901      ;
+; 0.149  ; Tlatch:\GEN_T:6:t|t  ; Tlatch:\GEN_T:8:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 0.883      ;
+; 0.149  ; Tlatch:\GEN_T:6:t|t  ; Tlatch:\GEN_T:10:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 0.883      ;
+; 0.152  ; Tlatch:\GEN_T:6:t|t  ; Tlatch:\GEN_T:9:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 0.880      ;
+; 0.160  ; Tlatch:\GEN_T:0:t|t  ; Tlatch:\GEN_T:2:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.017     ; 0.855      ;
+; 0.160  ; Tlatch:\GEN_T:3:t|t  ; Tlatch:\GEN_T:3:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 0.872      ;
+; 0.177  ; Tlatch:\GEN_T:5:t|t  ; Tlatch:\GEN_T:8:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 0.855      ;
+; 0.177  ; Tlatch:\GEN_T:5:t|t  ; Tlatch:\GEN_T:10:t|t ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 0.855      ;
+; 0.180  ; Tlatch:\GEN_T:5:t|t  ; Tlatch:\GEN_T:9:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; 0.000      ; 0.852      ;
+; 0.202  ; Tlatch:t0|t          ; Tlatch:\GEN_T:2:t|t  ; KEY[0]       ; KEY[0]      ; 1.000        ; -0.017     ; 0.813      ;
++--------+----------------------+----------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'KEY[0]'                                                                                                 ;
++-------+----------------------+----------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node            ; To Node              ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------+----------------------+--------------+-------------+--------------+------------+------------+
+; 0.215 ; Tlatch:t0|t          ; Tlatch:t0|t          ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Tlatch:\GEN_T:0:t|t  ; Tlatch:\GEN_T:0:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Tlatch:\GEN_T:1:t|t  ; Tlatch:\GEN_T:1:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Tlatch:\GEN_T:2:t|t  ; Tlatch:\GEN_T:2:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Tlatch:\GEN_T:5:t|t  ; Tlatch:\GEN_T:5:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Tlatch:\GEN_T:6:t|t  ; Tlatch:\GEN_T:6:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Tlatch:\GEN_T:7:t|t  ; Tlatch:\GEN_T:7:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Tlatch:\GEN_T:8:t|t  ; Tlatch:\GEN_T:8:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Tlatch:\GEN_T:9:t|t  ; Tlatch:\GEN_T:9:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Tlatch:\GEN_T:10:t|t ; Tlatch:\GEN_T:10:t|t ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Tlatch:\GEN_T:11:t|t ; Tlatch:\GEN_T:11:t|t ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Tlatch:\GEN_T:12:t|t ; Tlatch:\GEN_T:12:t|t ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Tlatch:\GEN_T:13:t|t ; Tlatch:\GEN_T:13:t|t ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Tlatch:\GEN_T:14:t|t ; Tlatch:\GEN_T:14:t|t ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.367      ;
+; 0.326 ; Tlatch:t0|t          ; Tlatch:\GEN_T:0:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.478      ;
+; 0.361 ; Tlatch:\GEN_T:0:t|t  ; Tlatch:\GEN_T:1:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.513      ;
+; 0.366 ; Tlatch:\GEN_T:9:t|t  ; Tlatch:\GEN_T:10:t|t ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.518      ;
+; 0.368 ; Tlatch:t0|t          ; Tlatch:\GEN_T:1:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.520      ;
+; 0.368 ; Tlatch:\GEN_T:11:t|t ; Tlatch:\GEN_T:13:t|t ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.520      ;
+; 0.371 ; Tlatch:\GEN_T:11:t|t ; Tlatch:\GEN_T:12:t|t ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.523      ;
+; 0.380 ; Tlatch:\GEN_T:8:t|t  ; Tlatch:\GEN_T:10:t|t ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.532      ;
+; 0.382 ; Tlatch:\GEN_T:8:t|t  ; Tlatch:\GEN_T:9:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.534      ;
+; 0.391 ; Tlatch:\GEN_T:6:t|t  ; Tlatch:\GEN_T:7:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.543      ;
+; 0.400 ; Tlatch:\GEN_T:5:t|t  ; Tlatch:\GEN_T:6:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.552      ;
+; 0.400 ; Tlatch:\GEN_T:5:t|t  ; Tlatch:\GEN_T:7:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.552      ;
+; 0.455 ; Tlatch:\GEN_T:12:t|t ; Tlatch:\GEN_T:13:t|t ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.607      ;
+; 0.493 ; Tlatch:\GEN_T:11:t|t ; Tlatch:\GEN_T:14:t|t ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.645      ;
+; 0.541 ; Tlatch:\GEN_T:13:t|t ; Tlatch:\GEN_T:14:t|t ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.693      ;
+; 0.588 ; Tlatch:\GEN_T:8:t|t  ; Tlatch:\GEN_T:13:t|t ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.023      ; 0.763      ;
+; 0.589 ; Tlatch:\GEN_T:8:t|t  ; Tlatch:\GEN_T:11:t|t ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.023      ; 0.764      ;
+; 0.589 ; Tlatch:\GEN_T:8:t|t  ; Tlatch:\GEN_T:12:t|t ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.023      ; 0.764      ;
+; 0.593 ; Tlatch:\GEN_T:1:t|t  ; Tlatch:\GEN_T:2:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.017     ; 0.728      ;
+; 0.631 ; Tlatch:\GEN_T:12:t|t ; Tlatch:\GEN_T:14:t|t ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.783      ;
+; 0.657 ; Tlatch:\GEN_T:9:t|t  ; Tlatch:\GEN_T:13:t|t ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.023      ; 0.832      ;
+; 0.658 ; Tlatch:\GEN_T:9:t|t  ; Tlatch:\GEN_T:11:t|t ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.023      ; 0.833      ;
+; 0.658 ; Tlatch:\GEN_T:9:t|t  ; Tlatch:\GEN_T:12:t|t ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.023      ; 0.833      ;
+; 0.678 ; Tlatch:t0|t          ; Tlatch:\GEN_T:2:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.017     ; 0.813      ;
+; 0.700 ; Tlatch:\GEN_T:5:t|t  ; Tlatch:\GEN_T:9:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.852      ;
+; 0.703 ; Tlatch:\GEN_T:5:t|t  ; Tlatch:\GEN_T:8:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.855      ;
+; 0.703 ; Tlatch:\GEN_T:5:t|t  ; Tlatch:\GEN_T:10:t|t ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.855      ;
+; 0.720 ; Tlatch:\GEN_T:3:t|t  ; Tlatch:\GEN_T:3:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.872      ;
+; 0.720 ; Tlatch:\GEN_T:0:t|t  ; Tlatch:\GEN_T:2:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.017     ; 0.855      ;
+; 0.728 ; Tlatch:\GEN_T:6:t|t  ; Tlatch:\GEN_T:9:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.880      ;
+; 0.731 ; Tlatch:\GEN_T:6:t|t  ; Tlatch:\GEN_T:8:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.883      ;
+; 0.731 ; Tlatch:\GEN_T:6:t|t  ; Tlatch:\GEN_T:10:t|t ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.883      ;
+; 0.749 ; Tlatch:\GEN_T:4:t|t  ; Tlatch:\GEN_T:6:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.901      ;
+; 0.749 ; Tlatch:\GEN_T:10:t|t ; Tlatch:\GEN_T:13:t|t ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.023      ; 0.924      ;
+; 0.750 ; Tlatch:\GEN_T:10:t|t ; Tlatch:\GEN_T:11:t|t ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.023      ; 0.925      ;
+; 0.750 ; Tlatch:\GEN_T:10:t|t ; Tlatch:\GEN_T:12:t|t ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.023      ; 0.925      ;
+; 0.751 ; Tlatch:\GEN_T:4:t|t  ; Tlatch:\GEN_T:7:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.903      ;
+; 0.753 ; Tlatch:\GEN_T:4:t|t  ; Tlatch:\GEN_T:5:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.905      ;
+; 0.758 ; Tlatch:\GEN_T:8:t|t  ; Tlatch:\GEN_T:14:t|t ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.023      ; 0.933      ;
+; 0.758 ; Tlatch:\GEN_T:2:t|t  ; Tlatch:\GEN_T:6:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.910      ;
+; 0.760 ; Tlatch:\GEN_T:5:t|t  ; Tlatch:\GEN_T:13:t|t ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.023      ; 0.935      ;
+; 0.760 ; Tlatch:\GEN_T:2:t|t  ; Tlatch:\GEN_T:7:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.912      ;
+; 0.761 ; Tlatch:\GEN_T:5:t|t  ; Tlatch:\GEN_T:11:t|t ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.023      ; 0.936      ;
+; 0.761 ; Tlatch:\GEN_T:5:t|t  ; Tlatch:\GEN_T:12:t|t ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.023      ; 0.936      ;
+; 0.762 ; Tlatch:\GEN_T:2:t|t  ; Tlatch:\GEN_T:5:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.914      ;
+; 0.772 ; Tlatch:\GEN_T:1:t|t  ; Tlatch:\GEN_T:6:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.017     ; 0.907      ;
+; 0.774 ; Tlatch:\GEN_T:1:t|t  ; Tlatch:\GEN_T:7:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.017     ; 0.909      ;
+; 0.776 ; Tlatch:\GEN_T:1:t|t  ; Tlatch:\GEN_T:5:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.017     ; 0.911      ;
+; 0.778 ; Tlatch:\GEN_T:1:t|t  ; Tlatch:\GEN_T:9:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.017     ; 0.913      ;
+; 0.781 ; Tlatch:\GEN_T:1:t|t  ; Tlatch:\GEN_T:8:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.017     ; 0.916      ;
+; 0.781 ; Tlatch:\GEN_T:1:t|t  ; Tlatch:\GEN_T:10:t|t ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.017     ; 0.916      ;
+; 0.788 ; Tlatch:\GEN_T:6:t|t  ; Tlatch:\GEN_T:13:t|t ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.023      ; 0.963      ;
+; 0.789 ; Tlatch:\GEN_T:6:t|t  ; Tlatch:\GEN_T:11:t|t ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.023      ; 0.964      ;
+; 0.789 ; Tlatch:\GEN_T:6:t|t  ; Tlatch:\GEN_T:12:t|t ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.023      ; 0.964      ;
+; 0.805 ; Tlatch:\GEN_T:3:t|t  ; Tlatch:\GEN_T:6:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.957      ;
+; 0.807 ; Tlatch:\GEN_T:3:t|t  ; Tlatch:\GEN_T:7:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.959      ;
+; 0.809 ; Tlatch:\GEN_T:3:t|t  ; Tlatch:\GEN_T:5:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.961      ;
+; 0.810 ; Tlatch:\GEN_T:2:t|t  ; Tlatch:\GEN_T:4:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.962      ;
+; 0.814 ; Tlatch:\GEN_T:4:t|t  ; Tlatch:\GEN_T:4:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 0.966      ;
+; 0.827 ; Tlatch:\GEN_T:9:t|t  ; Tlatch:\GEN_T:14:t|t ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.023      ; 1.002      ;
+; 0.838 ; Tlatch:\GEN_T:1:t|t  ; Tlatch:\GEN_T:13:t|t ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.006      ; 0.996      ;
+; 0.839 ; Tlatch:\GEN_T:1:t|t  ; Tlatch:\GEN_T:11:t|t ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.006      ; 0.997      ;
+; 0.839 ; Tlatch:\GEN_T:1:t|t  ; Tlatch:\GEN_T:12:t|t ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.006      ; 0.997      ;
+; 0.844 ; Tlatch:\GEN_T:1:t|t  ; Tlatch:\GEN_T:4:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.017     ; 0.979      ;
+; 0.852 ; Tlatch:\GEN_T:1:t|t  ; Tlatch:\GEN_T:3:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.017     ; 0.987      ;
+; 0.857 ; Tlatch:\GEN_T:3:t|t  ; Tlatch:\GEN_T:9:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 1.009      ;
+; 0.857 ; Tlatch:t0|t          ; Tlatch:\GEN_T:6:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.017     ; 0.992      ;
+; 0.859 ; Tlatch:t0|t          ; Tlatch:\GEN_T:7:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.017     ; 0.994      ;
+; 0.860 ; Tlatch:\GEN_T:3:t|t  ; Tlatch:\GEN_T:8:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 1.012      ;
+; 0.860 ; Tlatch:\GEN_T:3:t|t  ; Tlatch:\GEN_T:10:t|t ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 1.012      ;
+; 0.861 ; Tlatch:t0|t          ; Tlatch:\GEN_T:5:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.017     ; 0.996      ;
+; 0.863 ; Tlatch:t0|t          ; Tlatch:\GEN_T:9:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.017     ; 0.998      ;
+; 0.866 ; Tlatch:t0|t          ; Tlatch:\GEN_T:8:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.017     ; 1.001      ;
+; 0.866 ; Tlatch:t0|t          ; Tlatch:\GEN_T:10:t|t ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.017     ; 1.001      ;
+; 0.877 ; Tlatch:\GEN_T:3:t|t  ; Tlatch:\GEN_T:4:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 1.029      ;
+; 0.894 ; Tlatch:\GEN_T:2:t|t  ; Tlatch:\GEN_T:3:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 1.046      ;
+; 0.895 ; Tlatch:\GEN_T:4:t|t  ; Tlatch:\GEN_T:9:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 1.047      ;
+; 0.898 ; Tlatch:\GEN_T:4:t|t  ; Tlatch:\GEN_T:8:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 1.050      ;
+; 0.898 ; Tlatch:\GEN_T:4:t|t  ; Tlatch:\GEN_T:10:t|t ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.000      ; 1.050      ;
+; 0.899 ; Tlatch:\GEN_T:0:t|t  ; Tlatch:\GEN_T:6:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.017     ; 1.034      ;
+; 0.901 ; Tlatch:\GEN_T:0:t|t  ; Tlatch:\GEN_T:7:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.017     ; 1.036      ;
+; 0.903 ; Tlatch:\GEN_T:0:t|t  ; Tlatch:\GEN_T:5:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.017     ; 1.038      ;
+; 0.905 ; Tlatch:\GEN_T:0:t|t  ; Tlatch:\GEN_T:9:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.017     ; 1.040      ;
+; 0.908 ; Tlatch:\GEN_T:0:t|t  ; Tlatch:\GEN_T:8:t|t  ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.017     ; 1.043      ;
+; 0.908 ; Tlatch:\GEN_T:0:t|t  ; Tlatch:\GEN_T:10:t|t ; KEY[0]       ; KEY[0]      ; 0.000        ; -0.017     ; 1.043      ;
+; 0.917 ; Tlatch:\GEN_T:3:t|t  ; Tlatch:\GEN_T:13:t|t ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.023      ; 1.092      ;
+; 0.918 ; Tlatch:\GEN_T:3:t|t  ; Tlatch:\GEN_T:11:t|t ; KEY[0]       ; KEY[0]      ; 0.000        ; 0.023      ; 1.093      ;
++-------+----------------------+----------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'KEY[0]'                                                               ;
++--------+--------------+----------------+------------------+--------+------------+----------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock  ; Clock Edge ; Target               ;
++--------+--------------+----------------+------------------+--------+------------+----------------------+
+; -1.222 ; 1.000        ; 2.222          ; Port Rate        ; KEY[0] ; Rise       ; KEY[0]               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[0] ; Rise       ; Tlatch:\GEN_T:0:t|t  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; Tlatch:\GEN_T:0:t|t  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[0] ; Rise       ; Tlatch:\GEN_T:10:t|t ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; Tlatch:\GEN_T:10:t|t ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[0] ; Rise       ; Tlatch:\GEN_T:11:t|t ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; Tlatch:\GEN_T:11:t|t ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[0] ; Rise       ; Tlatch:\GEN_T:12:t|t ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; Tlatch:\GEN_T:12:t|t ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[0] ; Rise       ; Tlatch:\GEN_T:13:t|t ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; Tlatch:\GEN_T:13:t|t ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[0] ; Rise       ; Tlatch:\GEN_T:14:t|t ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; Tlatch:\GEN_T:14:t|t ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[0] ; Rise       ; Tlatch:\GEN_T:1:t|t  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; Tlatch:\GEN_T:1:t|t  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[0] ; Rise       ; Tlatch:\GEN_T:2:t|t  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; Tlatch:\GEN_T:2:t|t  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[0] ; Rise       ; Tlatch:\GEN_T:3:t|t  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; Tlatch:\GEN_T:3:t|t  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[0] ; Rise       ; Tlatch:\GEN_T:4:t|t  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; Tlatch:\GEN_T:4:t|t  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[0] ; Rise       ; Tlatch:\GEN_T:5:t|t  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; Tlatch:\GEN_T:5:t|t  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[0] ; Rise       ; Tlatch:\GEN_T:6:t|t  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; Tlatch:\GEN_T:6:t|t  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[0] ; Rise       ; Tlatch:\GEN_T:7:t|t  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; Tlatch:\GEN_T:7:t|t  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[0] ; Rise       ; Tlatch:\GEN_T:8:t|t  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; Tlatch:\GEN_T:8:t|t  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[0] ; Rise       ; Tlatch:\GEN_T:9:t|t  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; Tlatch:\GEN_T:9:t|t  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; KEY[0] ; Rise       ; Tlatch:t0|t          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; Tlatch:t0|t          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; KEY[0]|combout       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; KEY[0]|combout       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; \GEN_T:0:t|t|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; \GEN_T:0:t|t|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; \GEN_T:10:t|t|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; \GEN_T:10:t|t|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; \GEN_T:11:t|t|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; \GEN_T:11:t|t|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; \GEN_T:12:t|t|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; \GEN_T:12:t|t|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; \GEN_T:13:t|t|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; \GEN_T:13:t|t|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; \GEN_T:14:t|t|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; \GEN_T:14:t|t|clk    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; \GEN_T:1:t|t|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; \GEN_T:1:t|t|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; \GEN_T:2:t|t|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; \GEN_T:2:t|t|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; \GEN_T:3:t|t|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; \GEN_T:3:t|t|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; \GEN_T:4:t|t|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; \GEN_T:4:t|t|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; \GEN_T:5:t|t|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; \GEN_T:5:t|t|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; \GEN_T:6:t|t|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; \GEN_T:6:t|t|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; \GEN_T:7:t|t|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; \GEN_T:7:t|t|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; \GEN_T:8:t|t|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; \GEN_T:8:t|t|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; \GEN_T:9:t|t|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; \GEN_T:9:t|t|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; KEY[0] ; Rise       ; t0|t|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; KEY[0] ; Rise       ; t0|t|clk             ;
++--------+--------------+----------------+------------------+--------+------------+----------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; SW[*]     ; KEY[0]     ; 0.283 ; 0.283 ; Rise       ; KEY[0]          ;
+;  SW[1]    ; KEY[0]     ; 0.283 ; 0.283 ; Rise       ; KEY[0]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Hold Times                                                            ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; SW[*]     ; KEY[0]     ; 0.614 ; 0.614 ; Rise       ; KEY[0]          ;
+;  SW[1]    ; KEY[0]     ; 0.614 ; 0.614 ; Rise       ; KEY[0]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; HEX0[*]   ; KEY[0]     ; 5.928 ; 5.928 ; Rise       ; KEY[0]          ;
+;  HEX0[0]  ; KEY[0]     ; 5.556 ; 5.556 ; Rise       ; KEY[0]          ;
+;  HEX0[1]  ; KEY[0]     ; 5.269 ; 5.269 ; Rise       ; KEY[0]          ;
+;  HEX0[2]  ; KEY[0]     ; 5.641 ; 5.641 ; Rise       ; KEY[0]          ;
+;  HEX0[3]  ; KEY[0]     ; 5.381 ; 5.381 ; Rise       ; KEY[0]          ;
+;  HEX0[4]  ; KEY[0]     ; 5.928 ; 5.928 ; Rise       ; KEY[0]          ;
+;  HEX0[5]  ; KEY[0]     ; 5.457 ; 5.457 ; Rise       ; KEY[0]          ;
+;  HEX0[6]  ; KEY[0]     ; 5.428 ; 5.428 ; Rise       ; KEY[0]          ;
+; HEX1[*]   ; KEY[0]     ; 4.365 ; 4.365 ; Rise       ; KEY[0]          ;
+;  HEX1[0]  ; KEY[0]     ; 4.309 ; 4.309 ; Rise       ; KEY[0]          ;
+;  HEX1[1]  ; KEY[0]     ; 4.242 ; 4.242 ; Rise       ; KEY[0]          ;
+;  HEX1[2]  ; KEY[0]     ; 4.232 ; 4.232 ; Rise       ; KEY[0]          ;
+;  HEX1[3]  ; KEY[0]     ; 4.154 ; 4.154 ; Rise       ; KEY[0]          ;
+;  HEX1[4]  ; KEY[0]     ; 4.228 ; 4.228 ; Rise       ; KEY[0]          ;
+;  HEX1[5]  ; KEY[0]     ; 4.365 ; 4.365 ; Rise       ; KEY[0]          ;
+;  HEX1[6]  ; KEY[0]     ; 4.322 ; 4.322 ; Rise       ; KEY[0]          ;
+; HEX2[*]   ; KEY[0]     ; 4.593 ; 4.593 ; Rise       ; KEY[0]          ;
+;  HEX2[0]  ; KEY[0]     ; 4.551 ; 4.551 ; Rise       ; KEY[0]          ;
+;  HEX2[1]  ; KEY[0]     ; 4.541 ; 4.541 ; Rise       ; KEY[0]          ;
+;  HEX2[2]  ; KEY[0]     ; 4.328 ; 4.328 ; Rise       ; KEY[0]          ;
+;  HEX2[3]  ; KEY[0]     ; 4.593 ; 4.593 ; Rise       ; KEY[0]          ;
+;  HEX2[4]  ; KEY[0]     ; 4.550 ; 4.550 ; Rise       ; KEY[0]          ;
+;  HEX2[5]  ; KEY[0]     ; 4.354 ; 4.354 ; Rise       ; KEY[0]          ;
+;  HEX2[6]  ; KEY[0]     ; 4.546 ; 4.546 ; Rise       ; KEY[0]          ;
+; HEX3[*]   ; KEY[0]     ; 5.124 ; 5.124 ; Rise       ; KEY[0]          ;
+;  HEX3[0]  ; KEY[0]     ; 5.124 ; 5.124 ; Rise       ; KEY[0]          ;
+;  HEX3[1]  ; KEY[0]     ; 5.017 ; 5.017 ; Rise       ; KEY[0]          ;
+;  HEX3[2]  ; KEY[0]     ; 5.045 ; 5.045 ; Rise       ; KEY[0]          ;
+;  HEX3[3]  ; KEY[0]     ; 5.019 ; 5.019 ; Rise       ; KEY[0]          ;
+;  HEX3[4]  ; KEY[0]     ; 5.040 ; 5.040 ; Rise       ; KEY[0]          ;
+;  HEX3[5]  ; KEY[0]     ; 5.115 ; 5.115 ; Rise       ; KEY[0]          ;
+;  HEX3[6]  ; KEY[0]     ; 5.112 ; 5.112 ; Rise       ; KEY[0]          ;
+; LEDR[*]   ; KEY[0]     ; 4.968 ; 4.968 ; Rise       ; KEY[0]          ;
+;  LEDR[0]  ; KEY[0]     ; 4.138 ; 4.138 ; Rise       ; KEY[0]          ;
+;  LEDR[1]  ; KEY[0]     ; 4.147 ; 4.147 ; Rise       ; KEY[0]          ;
+;  LEDR[2]  ; KEY[0]     ; 4.025 ; 4.025 ; Rise       ; KEY[0]          ;
+;  LEDR[3]  ; KEY[0]     ; 3.997 ; 3.997 ; Rise       ; KEY[0]          ;
+;  LEDR[4]  ; KEY[0]     ; 4.128 ; 4.128 ; Rise       ; KEY[0]          ;
+;  LEDR[5]  ; KEY[0]     ; 4.115 ; 4.115 ; Rise       ; KEY[0]          ;
+;  LEDR[6]  ; KEY[0]     ; 4.122 ; 4.122 ; Rise       ; KEY[0]          ;
+;  LEDR[7]  ; KEY[0]     ; 4.084 ; 4.084 ; Rise       ; KEY[0]          ;
+;  LEDR[8]  ; KEY[0]     ; 4.432 ; 4.432 ; Rise       ; KEY[0]          ;
+;  LEDR[9]  ; KEY[0]     ; 4.438 ; 4.438 ; Rise       ; KEY[0]          ;
+;  LEDR[10] ; KEY[0]     ; 4.723 ; 4.723 ; Rise       ; KEY[0]          ;
+;  LEDR[11] ; KEY[0]     ; 4.671 ; 4.671 ; Rise       ; KEY[0]          ;
+;  LEDR[12] ; KEY[0]     ; 4.968 ; 4.968 ; Rise       ; KEY[0]          ;
+;  LEDR[13] ; KEY[0]     ; 4.758 ; 4.758 ; Rise       ; KEY[0]          ;
+;  LEDR[14] ; KEY[0]     ; 4.948 ; 4.948 ; Rise       ; KEY[0]          ;
+;  LEDR[15] ; KEY[0]     ; 4.714 ; 4.714 ; Rise       ; KEY[0]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; HEX0[*]   ; KEY[0]     ; 5.069 ; 5.069 ; Rise       ; KEY[0]          ;
+;  HEX0[0]  ; KEY[0]     ; 5.353 ; 5.353 ; Rise       ; KEY[0]          ;
+;  HEX0[1]  ; KEY[0]     ; 5.069 ; 5.069 ; Rise       ; KEY[0]          ;
+;  HEX0[2]  ; KEY[0]     ; 5.436 ; 5.436 ; Rise       ; KEY[0]          ;
+;  HEX0[3]  ; KEY[0]     ; 5.182 ; 5.182 ; Rise       ; KEY[0]          ;
+;  HEX0[4]  ; KEY[0]     ; 5.719 ; 5.719 ; Rise       ; KEY[0]          ;
+;  HEX0[5]  ; KEY[0]     ; 5.253 ; 5.253 ; Rise       ; KEY[0]          ;
+;  HEX0[6]  ; KEY[0]     ; 5.227 ; 5.227 ; Rise       ; KEY[0]          ;
+; HEX1[*]   ; KEY[0]     ; 4.037 ; 4.037 ; Rise       ; KEY[0]          ;
+;  HEX1[0]  ; KEY[0]     ; 4.048 ; 4.048 ; Rise       ; KEY[0]          ;
+;  HEX1[1]  ; KEY[0]     ; 4.136 ; 4.136 ; Rise       ; KEY[0]          ;
+;  HEX1[2]  ; KEY[0]     ; 4.110 ; 4.110 ; Rise       ; KEY[0]          ;
+;  HEX1[3]  ; KEY[0]     ; 4.037 ; 4.037 ; Rise       ; KEY[0]          ;
+;  HEX1[4]  ; KEY[0]     ; 4.111 ; 4.111 ; Rise       ; KEY[0]          ;
+;  HEX1[5]  ; KEY[0]     ; 4.250 ; 4.250 ; Rise       ; KEY[0]          ;
+;  HEX1[6]  ; KEY[0]     ; 4.135 ; 4.135 ; Rise       ; KEY[0]          ;
+; HEX2[*]   ; KEY[0]     ; 4.117 ; 4.117 ; Rise       ; KEY[0]          ;
+;  HEX2[0]  ; KEY[0]     ; 4.319 ; 4.319 ; Rise       ; KEY[0]          ;
+;  HEX2[1]  ; KEY[0]     ; 4.329 ; 4.329 ; Rise       ; KEY[0]          ;
+;  HEX2[2]  ; KEY[0]     ; 4.117 ; 4.117 ; Rise       ; KEY[0]          ;
+;  HEX2[3]  ; KEY[0]     ; 4.361 ; 4.361 ; Rise       ; KEY[0]          ;
+;  HEX2[4]  ; KEY[0]     ; 4.318 ; 4.318 ; Rise       ; KEY[0]          ;
+;  HEX2[5]  ; KEY[0]     ; 4.138 ; 4.138 ; Rise       ; KEY[0]          ;
+;  HEX2[6]  ; KEY[0]     ; 4.313 ; 4.313 ; Rise       ; KEY[0]          ;
+; HEX3[*]   ; KEY[0]     ; 4.357 ; 4.357 ; Rise       ; KEY[0]          ;
+;  HEX3[0]  ; KEY[0]     ; 4.459 ; 4.459 ; Rise       ; KEY[0]          ;
+;  HEX3[1]  ; KEY[0]     ; 4.358 ; 4.358 ; Rise       ; KEY[0]          ;
+;  HEX3[2]  ; KEY[0]     ; 4.376 ; 4.376 ; Rise       ; KEY[0]          ;
+;  HEX3[3]  ; KEY[0]     ; 4.357 ; 4.357 ; Rise       ; KEY[0]          ;
+;  HEX3[4]  ; KEY[0]     ; 4.382 ; 4.382 ; Rise       ; KEY[0]          ;
+;  HEX3[5]  ; KEY[0]     ; 4.448 ; 4.448 ; Rise       ; KEY[0]          ;
+;  HEX3[6]  ; KEY[0]     ; 4.463 ; 4.463 ; Rise       ; KEY[0]          ;
+; LEDR[*]   ; KEY[0]     ; 3.997 ; 3.997 ; Rise       ; KEY[0]          ;
+;  LEDR[0]  ; KEY[0]     ; 4.138 ; 4.138 ; Rise       ; KEY[0]          ;
+;  LEDR[1]  ; KEY[0]     ; 4.147 ; 4.147 ; Rise       ; KEY[0]          ;
+;  LEDR[2]  ; KEY[0]     ; 4.025 ; 4.025 ; Rise       ; KEY[0]          ;
+;  LEDR[3]  ; KEY[0]     ; 3.997 ; 3.997 ; Rise       ; KEY[0]          ;
+;  LEDR[4]  ; KEY[0]     ; 4.128 ; 4.128 ; Rise       ; KEY[0]          ;
+;  LEDR[5]  ; KEY[0]     ; 4.115 ; 4.115 ; Rise       ; KEY[0]          ;
+;  LEDR[6]  ; KEY[0]     ; 4.122 ; 4.122 ; Rise       ; KEY[0]          ;
+;  LEDR[7]  ; KEY[0]     ; 4.084 ; 4.084 ; Rise       ; KEY[0]          ;
+;  LEDR[8]  ; KEY[0]     ; 4.432 ; 4.432 ; Rise       ; KEY[0]          ;
+;  LEDR[9]  ; KEY[0]     ; 4.438 ; 4.438 ; Rise       ; KEY[0]          ;
+;  LEDR[10] ; KEY[0]     ; 4.723 ; 4.723 ; Rise       ; KEY[0]          ;
+;  LEDR[11] ; KEY[0]     ; 4.671 ; 4.671 ; Rise       ; KEY[0]          ;
+;  LEDR[12] ; KEY[0]     ; 4.968 ; 4.968 ; Rise       ; KEY[0]          ;
+;  LEDR[13] ; KEY[0]     ; 4.758 ; 4.758 ; Rise       ; KEY[0]          ;
+;  LEDR[14] ; KEY[0]     ; 4.948 ; 4.948 ; Rise       ; KEY[0]          ;
+;  LEDR[15] ; KEY[0]     ; 4.714 ; 4.714 ; Rise       ; KEY[0]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                           ;
++------------------+---------+-------+----------+---------+---------------------+
+; Clock            ; Setup   ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+---------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -2.029  ; 0.215 ; N/A      ; N/A     ; -1.222              ;
+;  KEY[0]          ; -2.029  ; 0.215 ; N/A      ; N/A     ; -1.222              ;
+; Design-wide TNS  ; -17.887 ; 0.0   ; 0.0      ; 0.0     ; -17.222             ;
+;  KEY[0]          ; -17.887 ; 0.000 ; N/A      ; N/A     ; -17.222             ;
++------------------+---------+-------+----------+---------+---------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; SW[*]     ; KEY[0]     ; 1.069 ; 1.069 ; Rise       ; KEY[0]          ;
+;  SW[1]    ; KEY[0]     ; 1.069 ; 1.069 ; Rise       ; KEY[0]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Hold Times                                                            ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; SW[*]     ; KEY[0]     ; 0.950 ; 0.950 ; Rise       ; KEY[0]          ;
+;  SW[1]    ; KEY[0]     ; 0.950 ; 0.950 ; Rise       ; KEY[0]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; HEX0[*]   ; KEY[0]     ; 11.322 ; 11.322 ; Rise       ; KEY[0]          ;
+;  HEX0[0]  ; KEY[0]     ; 10.926 ; 10.926 ; Rise       ; KEY[0]          ;
+;  HEX0[1]  ; KEY[0]     ; 10.231 ; 10.231 ; Rise       ; KEY[0]          ;
+;  HEX0[2]  ; KEY[0]     ; 10.850 ; 10.850 ; Rise       ; KEY[0]          ;
+;  HEX0[3]  ; KEY[0]     ; 10.461 ; 10.461 ; Rise       ; KEY[0]          ;
+;  HEX0[4]  ; KEY[0]     ; 11.322 ; 11.322 ; Rise       ; KEY[0]          ;
+;  HEX0[5]  ; KEY[0]     ; 10.712 ; 10.712 ; Rise       ; KEY[0]          ;
+;  HEX0[6]  ; KEY[0]     ; 10.658 ; 10.658 ; Rise       ; KEY[0]          ;
+; HEX1[*]   ; KEY[0]     ; 8.468  ; 8.468  ; Rise       ; KEY[0]          ;
+;  HEX1[0]  ; KEY[0]     ; 8.181  ; 8.181  ; Rise       ; KEY[0]          ;
+;  HEX1[1]  ; KEY[0]     ; 8.047  ; 8.047  ; Rise       ; KEY[0]          ;
+;  HEX1[2]  ; KEY[0]     ; 8.153  ; 8.153  ; Rise       ; KEY[0]          ;
+;  HEX1[3]  ; KEY[0]     ; 8.003  ; 8.003  ; Rise       ; KEY[0]          ;
+;  HEX1[4]  ; KEY[0]     ; 8.129  ; 8.129  ; Rise       ; KEY[0]          ;
+;  HEX1[5]  ; KEY[0]     ; 8.468  ; 8.468  ; Rise       ; KEY[0]          ;
+;  HEX1[6]  ; KEY[0]     ; 8.320  ; 8.320  ; Rise       ; KEY[0]          ;
+; HEX2[*]   ; KEY[0]     ; 8.850  ; 8.850  ; Rise       ; KEY[0]          ;
+;  HEX2[0]  ; KEY[0]     ; 8.804  ; 8.804  ; Rise       ; KEY[0]          ;
+;  HEX2[1]  ; KEY[0]     ; 8.796  ; 8.796  ; Rise       ; KEY[0]          ;
+;  HEX2[2]  ; KEY[0]     ; 8.318  ; 8.318  ; Rise       ; KEY[0]          ;
+;  HEX2[3]  ; KEY[0]     ; 8.850  ; 8.850  ; Rise       ; KEY[0]          ;
+;  HEX2[4]  ; KEY[0]     ; 8.793  ; 8.793  ; Rise       ; KEY[0]          ;
+;  HEX2[5]  ; KEY[0]     ; 8.370  ; 8.370  ; Rise       ; KEY[0]          ;
+;  HEX2[6]  ; KEY[0]     ; 8.792  ; 8.792  ; Rise       ; KEY[0]          ;
+; HEX3[*]   ; KEY[0]     ; 9.912  ; 9.912  ; Rise       ; KEY[0]          ;
+;  HEX3[0]  ; KEY[0]     ; 9.912  ; 9.912  ; Rise       ; KEY[0]          ;
+;  HEX3[1]  ; KEY[0]     ; 9.655  ; 9.655  ; Rise       ; KEY[0]          ;
+;  HEX3[2]  ; KEY[0]     ; 9.701  ; 9.701  ; Rise       ; KEY[0]          ;
+;  HEX3[3]  ; KEY[0]     ; 9.655  ; 9.655  ; Rise       ; KEY[0]          ;
+;  HEX3[4]  ; KEY[0]     ; 9.696  ; 9.696  ; Rise       ; KEY[0]          ;
+;  HEX3[5]  ; KEY[0]     ; 9.902  ; 9.902  ; Rise       ; KEY[0]          ;
+;  HEX3[6]  ; KEY[0]     ; 9.895  ; 9.895  ; Rise       ; KEY[0]          ;
+; LEDR[*]   ; KEY[0]     ; 9.400  ; 9.400  ; Rise       ; KEY[0]          ;
+;  LEDR[0]  ; KEY[0]     ; 7.648  ; 7.648  ; Rise       ; KEY[0]          ;
+;  LEDR[1]  ; KEY[0]     ; 7.664  ; 7.664  ; Rise       ; KEY[0]          ;
+;  LEDR[2]  ; KEY[0]     ; 7.422  ; 7.422  ; Rise       ; KEY[0]          ;
+;  LEDR[3]  ; KEY[0]     ; 7.455  ; 7.455  ; Rise       ; KEY[0]          ;
+;  LEDR[4]  ; KEY[0]     ; 7.718  ; 7.718  ; Rise       ; KEY[0]          ;
+;  LEDR[5]  ; KEY[0]     ; 7.691  ; 7.691  ; Rise       ; KEY[0]          ;
+;  LEDR[6]  ; KEY[0]     ; 7.708  ; 7.708  ; Rise       ; KEY[0]          ;
+;  LEDR[7]  ; KEY[0]     ; 7.650  ; 7.650  ; Rise       ; KEY[0]          ;
+;  LEDR[8]  ; KEY[0]     ; 8.351  ; 8.351  ; Rise       ; KEY[0]          ;
+;  LEDR[9]  ; KEY[0]     ; 8.356  ; 8.356  ; Rise       ; KEY[0]          ;
+;  LEDR[10] ; KEY[0]     ; 9.067  ; 9.067  ; Rise       ; KEY[0]          ;
+;  LEDR[11] ; KEY[0]     ; 8.865  ; 8.865  ; Rise       ; KEY[0]          ;
+;  LEDR[12] ; KEY[0]     ; 9.246  ; 9.246  ; Rise       ; KEY[0]          ;
+;  LEDR[13] ; KEY[0]     ; 9.040  ; 9.040  ; Rise       ; KEY[0]          ;
+;  LEDR[14] ; KEY[0]     ; 9.400  ; 9.400  ; Rise       ; KEY[0]          ;
+;  LEDR[15] ; KEY[0]     ; 8.837  ; 8.837  ; Rise       ; KEY[0]          ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; HEX0[*]   ; KEY[0]     ; 5.069 ; 5.069 ; Rise       ; KEY[0]          ;
+;  HEX0[0]  ; KEY[0]     ; 5.353 ; 5.353 ; Rise       ; KEY[0]          ;
+;  HEX0[1]  ; KEY[0]     ; 5.069 ; 5.069 ; Rise       ; KEY[0]          ;
+;  HEX0[2]  ; KEY[0]     ; 5.436 ; 5.436 ; Rise       ; KEY[0]          ;
+;  HEX0[3]  ; KEY[0]     ; 5.182 ; 5.182 ; Rise       ; KEY[0]          ;
+;  HEX0[4]  ; KEY[0]     ; 5.719 ; 5.719 ; Rise       ; KEY[0]          ;
+;  HEX0[5]  ; KEY[0]     ; 5.253 ; 5.253 ; Rise       ; KEY[0]          ;
+;  HEX0[6]  ; KEY[0]     ; 5.227 ; 5.227 ; Rise       ; KEY[0]          ;
+; HEX1[*]   ; KEY[0]     ; 4.037 ; 4.037 ; Rise       ; KEY[0]          ;
+;  HEX1[0]  ; KEY[0]     ; 4.048 ; 4.048 ; Rise       ; KEY[0]          ;
+;  HEX1[1]  ; KEY[0]     ; 4.136 ; 4.136 ; Rise       ; KEY[0]          ;
+;  HEX1[2]  ; KEY[0]     ; 4.110 ; 4.110 ; Rise       ; KEY[0]          ;
+;  HEX1[3]  ; KEY[0]     ; 4.037 ; 4.037 ; Rise       ; KEY[0]          ;
+;  HEX1[4]  ; KEY[0]     ; 4.111 ; 4.111 ; Rise       ; KEY[0]          ;
+;  HEX1[5]  ; KEY[0]     ; 4.250 ; 4.250 ; Rise       ; KEY[0]          ;
+;  HEX1[6]  ; KEY[0]     ; 4.135 ; 4.135 ; Rise       ; KEY[0]          ;
+; HEX2[*]   ; KEY[0]     ; 4.117 ; 4.117 ; Rise       ; KEY[0]          ;
+;  HEX2[0]  ; KEY[0]     ; 4.319 ; 4.319 ; Rise       ; KEY[0]          ;
+;  HEX2[1]  ; KEY[0]     ; 4.329 ; 4.329 ; Rise       ; KEY[0]          ;
+;  HEX2[2]  ; KEY[0]     ; 4.117 ; 4.117 ; Rise       ; KEY[0]          ;
+;  HEX2[3]  ; KEY[0]     ; 4.361 ; 4.361 ; Rise       ; KEY[0]          ;
+;  HEX2[4]  ; KEY[0]     ; 4.318 ; 4.318 ; Rise       ; KEY[0]          ;
+;  HEX2[5]  ; KEY[0]     ; 4.138 ; 4.138 ; Rise       ; KEY[0]          ;
+;  HEX2[6]  ; KEY[0]     ; 4.313 ; 4.313 ; Rise       ; KEY[0]          ;
+; HEX3[*]   ; KEY[0]     ; 4.357 ; 4.357 ; Rise       ; KEY[0]          ;
+;  HEX3[0]  ; KEY[0]     ; 4.459 ; 4.459 ; Rise       ; KEY[0]          ;
+;  HEX3[1]  ; KEY[0]     ; 4.358 ; 4.358 ; Rise       ; KEY[0]          ;
+;  HEX3[2]  ; KEY[0]     ; 4.376 ; 4.376 ; Rise       ; KEY[0]          ;
+;  HEX3[3]  ; KEY[0]     ; 4.357 ; 4.357 ; Rise       ; KEY[0]          ;
+;  HEX3[4]  ; KEY[0]     ; 4.382 ; 4.382 ; Rise       ; KEY[0]          ;
+;  HEX3[5]  ; KEY[0]     ; 4.448 ; 4.448 ; Rise       ; KEY[0]          ;
+;  HEX3[6]  ; KEY[0]     ; 4.463 ; 4.463 ; Rise       ; KEY[0]          ;
+; LEDR[*]   ; KEY[0]     ; 3.997 ; 3.997 ; Rise       ; KEY[0]          ;
+;  LEDR[0]  ; KEY[0]     ; 4.138 ; 4.138 ; Rise       ; KEY[0]          ;
+;  LEDR[1]  ; KEY[0]     ; 4.147 ; 4.147 ; Rise       ; KEY[0]          ;
+;  LEDR[2]  ; KEY[0]     ; 4.025 ; 4.025 ; Rise       ; KEY[0]          ;
+;  LEDR[3]  ; KEY[0]     ; 3.997 ; 3.997 ; Rise       ; KEY[0]          ;
+;  LEDR[4]  ; KEY[0]     ; 4.128 ; 4.128 ; Rise       ; KEY[0]          ;
+;  LEDR[5]  ; KEY[0]     ; 4.115 ; 4.115 ; Rise       ; KEY[0]          ;
+;  LEDR[6]  ; KEY[0]     ; 4.122 ; 4.122 ; Rise       ; KEY[0]          ;
+;  LEDR[7]  ; KEY[0]     ; 4.084 ; 4.084 ; Rise       ; KEY[0]          ;
+;  LEDR[8]  ; KEY[0]     ; 4.432 ; 4.432 ; Rise       ; KEY[0]          ;
+;  LEDR[9]  ; KEY[0]     ; 4.438 ; 4.438 ; Rise       ; KEY[0]          ;
+;  LEDR[10] ; KEY[0]     ; 4.723 ; 4.723 ; Rise       ; KEY[0]          ;
+;  LEDR[11] ; KEY[0]     ; 4.671 ; 4.671 ; Rise       ; KEY[0]          ;
+;  LEDR[12] ; KEY[0]     ; 4.968 ; 4.968 ; Rise       ; KEY[0]          ;
+;  LEDR[13] ; KEY[0]     ; 4.758 ; 4.758 ; Rise       ; KEY[0]          ;
+;  LEDR[14] ; KEY[0]     ; 4.948 ; 4.948 ; Rise       ; KEY[0]          ;
+;  LEDR[15] ; KEY[0]     ; 4.714 ; 4.714 ; Rise       ; KEY[0]          ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; KEY[0]     ; KEY[0]   ; 136      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; KEY[0]     ; KEY[0]   ; 136      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 2     ; 2    ;
+; Unconstrained Input Port Paths  ; 32    ; 32   ;
+; Unconstrained Output Ports      ; 44    ; 44   ;
+; Unconstrained Output Port Paths ; 128   ; 128  ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Wed Apr 20 11:36:44 2016
+Info: Command: quartus_sta lab5 -c lab5
+Info: qsta_default_script.tcl version: #1
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'lab5.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name KEY[0] KEY[0]
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -2.029
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -2.029       -17.887 KEY[0] 
+Info (332146): Worst-case hold slack is 0.391
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.391         0.000 KEY[0] 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.222
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.222       -17.222 KEY[0] 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -0.321
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.321        -1.308 KEY[0] 
+Info (332146): Worst-case hold slack is 0.215
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.215         0.000 KEY[0] 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.222
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.222       -17.222 KEY[0] 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 437 megabytes
+    Info: Processing ended: Wed Apr 20 11:36:45 2016
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

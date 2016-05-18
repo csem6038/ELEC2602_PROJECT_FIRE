@@ -1,0 +1,5 @@
+ENTITY counter IS
+ PORT (Clk, enable, reset : in std_logic;
+		Q : out std_logic);
+		
+END Tlatch;

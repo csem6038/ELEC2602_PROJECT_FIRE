@@ -1,0 +1,362 @@
+|counter
+SW[0] => Tlatch:t0.reset
+SW[0] => Tlatch:GEN_T:0:t.reset
+SW[0] => Tlatch:GEN_T:1:t.reset
+SW[0] => Tlatch:GEN_T:2:t.reset
+SW[0] => Tlatch:GEN_T:3:t.reset
+SW[0] => Tlatch:GEN_T:4:t.reset
+SW[0] => Tlatch:GEN_T:5:t.reset
+SW[0] => Tlatch:GEN_T:6:t.reset
+SW[0] => Tlatch:GEN_T:7:t.reset
+SW[0] => Tlatch:GEN_T:8:t.reset
+SW[0] => Tlatch:GEN_T:9:t.reset
+SW[0] => Tlatch:GEN_T:10:t.reset
+SW[0] => Tlatch:GEN_T:11:t.reset
+SW[0] => Tlatch:GEN_T:12:t.reset
+SW[0] => Tlatch:GEN_T:13:t.reset
+SW[0] => Tlatch:GEN_T:14:t.reset
+SW[1] => Aout[1].IN1
+SW[1] => Tlatch:t0.enable
+KEY[0] => Tlatch:t0.Clk
+KEY[0] => Tlatch:GEN_T:0:t.Clk
+KEY[0] => Tlatch:GEN_T:1:t.Clk
+KEY[0] => Tlatch:GEN_T:2:t.Clk
+KEY[0] => Tlatch:GEN_T:3:t.Clk
+KEY[0] => Tlatch:GEN_T:4:t.Clk
+KEY[0] => Tlatch:GEN_T:5:t.Clk
+KEY[0] => Tlatch:GEN_T:6:t.Clk
+KEY[0] => Tlatch:GEN_T:7:t.Clk
+KEY[0] => Tlatch:GEN_T:8:t.Clk
+KEY[0] => Tlatch:GEN_T:9:t.Clk
+KEY[0] => Tlatch:GEN_T:10:t.Clk
+KEY[0] => Tlatch:GEN_T:11:t.Clk
+KEY[0] => Tlatch:GEN_T:12:t.Clk
+KEY[0] => Tlatch:GEN_T:13:t.Clk
+KEY[0] => Tlatch:GEN_T:14:t.Clk
+LEDR[0] <= Tlatch:t0.Q
+LEDR[1] <= Tlatch:GEN_T:0:t.Q
+LEDR[2] <= Tlatch:GEN_T:1:t.Q
+LEDR[3] <= Tlatch:GEN_T:2:t.Q
+LEDR[4] <= Tlatch:GEN_T:3:t.Q
+LEDR[5] <= Tlatch:GEN_T:4:t.Q
+LEDR[6] <= Tlatch:GEN_T:5:t.Q
+LEDR[7] <= Tlatch:GEN_T:6:t.Q
+LEDR[8] <= Tlatch:GEN_T:7:t.Q
+LEDR[9] <= Tlatch:GEN_T:8:t.Q
+LEDR[10] <= Tlatch:GEN_T:9:t.Q
+LEDR[11] <= Tlatch:GEN_T:10:t.Q
+LEDR[12] <= Tlatch:GEN_T:11:t.Q
+LEDR[13] <= Tlatch:GEN_T:12:t.Q
+LEDR[14] <= Tlatch:GEN_T:13:t.Q
+LEDR[15] <= Tlatch:GEN_T:14:t.Q
+HEX0[6] <= hexdecode:h0.D[6]
+HEX0[5] <= hexdecode:h0.D[5]
+HEX0[4] <= hexdecode:h0.D[4]
+HEX0[3] <= hexdecode:h0.D[3]
+HEX0[2] <= hexdecode:h0.D[2]
+HEX0[1] <= hexdecode:h0.D[1]
+HEX0[0] <= hexdecode:h0.D[0]
+HEX1[6] <= hexdecode:h1.D[6]
+HEX1[5] <= hexdecode:h1.D[5]
+HEX1[4] <= hexdecode:h1.D[4]
+HEX1[3] <= hexdecode:h1.D[3]
+HEX1[2] <= hexdecode:h1.D[2]
+HEX1[1] <= hexdecode:h1.D[1]
+HEX1[0] <= hexdecode:h1.D[0]
+HEX2[6] <= hexdecode:h2.D[6]
+HEX2[5] <= hexdecode:h2.D[5]
+HEX2[4] <= hexdecode:h2.D[4]
+HEX2[3] <= hexdecode:h2.D[3]
+HEX2[2] <= hexdecode:h2.D[2]
+HEX2[1] <= hexdecode:h2.D[1]
+HEX2[0] <= hexdecode:h2.D[0]
+HEX3[6] <= hexdecode:h3.D[6]
+HEX3[5] <= hexdecode:h3.D[5]
+HEX3[4] <= hexdecode:h3.D[4]
+HEX3[3] <= hexdecode:h3.D[3]
+HEX3[2] <= hexdecode:h3.D[2]
+HEX3[1] <= hexdecode:h3.D[1]
+HEX3[0] <= hexdecode:h3.D[0]
+Q <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|counter|Tlatch:t0
+Clk => t.CLK
+enable => t.ENA
+reset => t.ACLR
+Q <= t.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|counter|Tlatch:\GEN_T:0:t
+Clk => t.CLK
+enable => t.ENA
+reset => t.ACLR
+Q <= t.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|counter|Tlatch:\GEN_T:1:t
+Clk => t.CLK
+enable => t.ENA
+reset => t.ACLR
+Q <= t.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|counter|Tlatch:\GEN_T:2:t
+Clk => t.CLK
+enable => t.ENA
+reset => t.ACLR
+Q <= t.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|counter|Tlatch:\GEN_T:3:t
+Clk => t.CLK
+enable => t.ENA
+reset => t.ACLR
+Q <= t.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|counter|Tlatch:\GEN_T:4:t
+Clk => t.CLK
+enable => t.ENA
+reset => t.ACLR
+Q <= t.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|counter|Tlatch:\GEN_T:5:t
+Clk => t.CLK
+enable => t.ENA
+reset => t.ACLR
+Q <= t.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|counter|Tlatch:\GEN_T:6:t
+Clk => t.CLK
+enable => t.ENA
+reset => t.ACLR
+Q <= t.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|counter|Tlatch:\GEN_T:7:t
+Clk => t.CLK
+enable => t.ENA
+reset => t.ACLR
+Q <= t.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|counter|Tlatch:\GEN_T:8:t
+Clk => t.CLK
+enable => t.ENA
+reset => t.ACLR
+Q <= t.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|counter|Tlatch:\GEN_T:9:t
+Clk => t.CLK
+enable => t.ENA
+reset => t.ACLR
+Q <= t.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|counter|Tlatch:\GEN_T:10:t
+Clk => t.CLK
+enable => t.ENA
+reset => t.ACLR
+Q <= t.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|counter|Tlatch:\GEN_T:11:t
+Clk => t.CLK
+enable => t.ENA
+reset => t.ACLR
+Q <= t.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|counter|Tlatch:\GEN_T:12:t
+Clk => t.CLK
+enable => t.ENA
+reset => t.ACLR
+Q <= t.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|counter|Tlatch:\GEN_T:13:t
+Clk => t.CLK
+enable => t.ENA
+reset => t.ACLR
+Q <= t.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|counter|Tlatch:\GEN_T:14:t
+Clk => t.CLK
+enable => t.ENA
+reset => t.ACLR
+Q <= t.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|counter|hexdecode:h0
+A[0] => i1.IN1
+A[0] => i3.IN1
+A[0] => i5.IN1
+A[0] => i7.IN1
+A[0] => i9.IN1
+A[0] => i11.IN1
+A[0] => i13.IN1
+A[0] => i15.IN1
+A[0] => i0.IN1
+A[0] => i2.IN1
+A[0] => i6.IN1
+A[0] => i8.IN1
+A[0] => i10.IN1
+A[0] => i12.IN1
+A[0] => i14.IN1
+A[0] => i4.IN1
+A[1] => i2.IN1
+A[1] => i6.IN1
+A[1] => i10.IN1
+A[1] => i14.IN1
+A[1] => i0.IN1
+A[1] => i5.IN1
+A[1] => i8.IN1
+A[1] => i12.IN1
+A[2] => i5.IN0
+A[2] => i12.IN0
+A[2] => i0.IN0
+A[2] => i8.IN0
+A[3] => i8.IN1
+A[3] => i12.IN1
+A[3] => i0.IN1
+A[3] => i5.IN1
+D[6] <= D.DB_MAX_OUTPUT_PORT_TYPE
+D[5] <= D.DB_MAX_OUTPUT_PORT_TYPE
+D[4] <= D.DB_MAX_OUTPUT_PORT_TYPE
+D[3] <= D.DB_MAX_OUTPUT_PORT_TYPE
+D[2] <= D.DB_MAX_OUTPUT_PORT_TYPE
+D[1] <= D.DB_MAX_OUTPUT_PORT_TYPE
+D[0] <= D.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|counter|hexdecode:h1
+A[0] => i1.IN1
+A[0] => i3.IN1
+A[0] => i5.IN1
+A[0] => i7.IN1
+A[0] => i9.IN1
+A[0] => i11.IN1
+A[0] => i13.IN1
+A[0] => i15.IN1
+A[0] => i0.IN1
+A[0] => i2.IN1
+A[0] => i6.IN1
+A[0] => i8.IN1
+A[0] => i10.IN1
+A[0] => i12.IN1
+A[0] => i14.IN1
+A[0] => i4.IN1
+A[1] => i2.IN1
+A[1] => i6.IN1
+A[1] => i10.IN1
+A[1] => i14.IN1
+A[1] => i0.IN1
+A[1] => i5.IN1
+A[1] => i8.IN1
+A[1] => i12.IN1
+A[2] => i5.IN0
+A[2] => i12.IN0
+A[2] => i0.IN0
+A[2] => i8.IN0
+A[3] => i8.IN1
+A[3] => i12.IN1
+A[3] => i0.IN1
+A[3] => i5.IN1
+D[6] <= D.DB_MAX_OUTPUT_PORT_TYPE
+D[5] <= D.DB_MAX_OUTPUT_PORT_TYPE
+D[4] <= D.DB_MAX_OUTPUT_PORT_TYPE
+D[3] <= D.DB_MAX_OUTPUT_PORT_TYPE
+D[2] <= D.DB_MAX_OUTPUT_PORT_TYPE
+D[1] <= D.DB_MAX_OUTPUT_PORT_TYPE
+D[0] <= D.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|counter|hexdecode:h2
+A[0] => i1.IN1
+A[0] => i3.IN1
+A[0] => i5.IN1
+A[0] => i7.IN1
+A[0] => i9.IN1
+A[0] => i11.IN1
+A[0] => i13.IN1
+A[0] => i15.IN1
+A[0] => i0.IN1
+A[0] => i2.IN1
+A[0] => i6.IN1
+A[0] => i8.IN1
+A[0] => i10.IN1
+A[0] => i12.IN1
+A[0] => i14.IN1
+A[0] => i4.IN1
+A[1] => i2.IN1
+A[1] => i6.IN1
+A[1] => i10.IN1
+A[1] => i14.IN1
+A[1] => i0.IN1
+A[1] => i5.IN1
+A[1] => i8.IN1
+A[1] => i12.IN1
+A[2] => i5.IN0
+A[2] => i12.IN0
+A[2] => i0.IN0
+A[2] => i8.IN0
+A[3] => i8.IN1
+A[3] => i12.IN1
+A[3] => i0.IN1
+A[3] => i5.IN1
+D[6] <= D.DB_MAX_OUTPUT_PORT_TYPE
+D[5] <= D.DB_MAX_OUTPUT_PORT_TYPE
+D[4] <= D.DB_MAX_OUTPUT_PORT_TYPE
+D[3] <= D.DB_MAX_OUTPUT_PORT_TYPE
+D[2] <= D.DB_MAX_OUTPUT_PORT_TYPE
+D[1] <= D.DB_MAX_OUTPUT_PORT_TYPE
+D[0] <= D.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|counter|hexdecode:h3
+A[0] => i1.IN1
+A[0] => i3.IN1
+A[0] => i5.IN1
+A[0] => i7.IN1
+A[0] => i9.IN1
+A[0] => i11.IN1
+A[0] => i13.IN1
+A[0] => i15.IN1
+A[0] => i0.IN1
+A[0] => i2.IN1
+A[0] => i6.IN1
+A[0] => i8.IN1
+A[0] => i10.IN1
+A[0] => i12.IN1
+A[0] => i14.IN1
+A[0] => i4.IN1
+A[1] => i2.IN1
+A[1] => i6.IN1
+A[1] => i10.IN1
+A[1] => i14.IN1
+A[1] => i0.IN1
+A[1] => i5.IN1
+A[1] => i8.IN1
+A[1] => i12.IN1
+A[2] => i5.IN0
+A[2] => i12.IN0
+A[2] => i0.IN0
+A[2] => i8.IN0
+A[3] => i8.IN1
+A[3] => i12.IN1
+A[3] => i0.IN1
+A[3] => i5.IN1
+D[6] <= D.DB_MAX_OUTPUT_PORT_TYPE
+D[5] <= D.DB_MAX_OUTPUT_PORT_TYPE
+D[4] <= D.DB_MAX_OUTPUT_PORT_TYPE
+D[3] <= D.DB_MAX_OUTPUT_PORT_TYPE
+D[2] <= D.DB_MAX_OUTPUT_PORT_TYPE
+D[1] <= D.DB_MAX_OUTPUT_PORT_TYPE
+D[0] <= D.DB_MAX_OUTPUT_PORT_TYPE
+
+

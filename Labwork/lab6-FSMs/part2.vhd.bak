@@ -1,0 +1,36 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+ENTITY part1 IS
+ PORT (SW : in std_logic_vector (17 downto 16);
+		KEY : in std_logic_vector (0 downto 0);
+		LEDG : out std_logic_vector (7 downto 0);
+		LEDR : out std_logic_vector (17 downto 0)
+		);
+		
+END part1;
+ARCHITECTURE Behavior OF part1 IS
+	SIGNAL y_present, y_next : std_logic_vector(8 downto 0) ;
+	SIGNAL Reset, Clock : std_logic ;
+	
+	TYPE State_type IS (B, C, D, E, F, G, H, I, A);
+	SIGNAL Y_present, Y_next : State_type;
+	
+	BEGIN
+	PROCESS (Y_present) -- state table
+	BEGIN
+		CASE Y_present IS
+		WHEN A =>
+			
+		IF K=’1’ THEN
+		Y_next <= B;
+		ELSE
+		Y_next <= F;
+		END IF;
+		WHEN B =>
+		…
+		WHEN C =>
+		… --and the rest of the states
+		END CASE;
+	END PROCESS; -- state_table
+		
+END Behavior;

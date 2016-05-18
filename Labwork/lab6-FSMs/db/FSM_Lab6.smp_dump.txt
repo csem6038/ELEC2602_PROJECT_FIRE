@@ -1,0 +1,12 @@
+
+State Machine - |part3|Y_present
+Name Y_present.B Y_present.I Y_present.H Y_present.G Y_present.F Y_present.E Y_present.D Y_present.C Y_present.A 
+Y_present.A 0 0 0 0 0 0 0 0 0 
+Y_present.C 0 0 0 0 0 0 0 1 1 
+Y_present.D 0 0 0 0 0 0 1 0 1 
+Y_present.E 0 0 0 0 0 1 0 0 1 
+Y_present.F 0 0 0 0 1 0 0 0 1 
+Y_present.G 0 0 0 1 0 0 0 0 1 
+Y_present.H 0 0 1 0 0 0 0 0 1 
+Y_present.I 0 1 0 0 0 0 0 0 1 
+Y_present.B 1 0 0 0 0 0 0 0 1 
