@@ -1,0 +1,356 @@
+Simulator report for finalproject
+Wed May 18 11:27:38 2016
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 123 nodes    ;
+; Simulation Coverage         ;      33.05 % ;
+; Total Number of Transitions ; 444          ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
++-----------------------------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                                                 ;
++--------------------------------------------------------------------------------------------+-------------------------------------------------------+---------------+
+; Option                                                                                     ; Setting                                               ; Default Value ;
++--------------------------------------------------------------------------------------------+-------------------------------------------------------+---------------+
+; Simulation mode                                                                            ; Functional                                            ; Timing        ;
+; Start time                                                                                 ; 0 ns                                                  ; 0 ns          ;
+; Simulation results format                                                                  ; VWF                                                   ;               ;
+; Vector input source                                                                        ; C:/Users/ting0310/Documents/FinalProject/Waveform.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                                                    ; On            ;
+; Check outputs                                                                              ; Off                                                   ; Off           ;
+; Report simulation coverage                                                                 ; On                                                    ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                                                    ; On            ;
+; Display missing 1-value coverage report                                                    ; On                                                    ; On            ;
+; Display missing 0-value coverage report                                                    ; On                                                    ; On            ;
+; Detect setup and hold time violations                                                      ; Off                                                   ; Off           ;
+; Detect glitches                                                                            ; Off                                                   ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                                                   ; Off           ;
+; Generate Signal Activity File                                                              ; Off                                                   ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                                                   ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                                                   ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                                                    ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE                                            ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                                                   ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                                                   ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                                                  ; Auto          ;
++--------------------------------------------------------------------------------------------+-------------------------------------------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II 64-Bit to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      33.05 % ;
+; Total nodes checked                                 ; 123          ;
+; Total output ports checked                          ; 118          ;
+; Total output ports with complete 1/0-value coverage ; 39           ;
+; Total output ports with no 1/0-value coverage       ; 76           ;
+; Total output ports with no 1-value coverage         ; 79           ;
+; Total output ports with no 0-value coverage         ; 76           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                        ;
++--------------------------------+--------------------------------+------------------+
+; Node Name                      ; Output Port Name               ; Output Port Type ;
++--------------------------------+--------------------------------+------------------+
+; |controlunit|Y_next.ADD1_234   ; |controlunit|Y_next.ADD1_234   ; out              ;
+; |controlunit|Y_next.ADD0~0     ; |controlunit|Y_next.ADD0~0     ; out              ;
+; |controlunit|Y_next.ADD2_219   ; |controlunit|Y_next.ADD2_219   ; out              ;
+; |controlunit|Y_present.ADD2    ; |controlunit|Y_present.ADD2    ; regout           ;
+; |controlunit|R0_in~0           ; |controlunit|R0_in~0           ; out              ;
+; |controlunit|WideOr5           ; |controlunit|WideOr5           ; out0             ;
+; |controlunit|WideOr7           ; |controlunit|WideOr7           ; out0             ;
+; |controlunit|Ain~0             ; |controlunit|Ain~0             ; out0             ;
+; |controlunit|Gin~0             ; |controlunit|Gin~0             ; out0             ;
+; |controlunit|Gout~0            ; |controlunit|Gout~0            ; out0             ;
+; |controlunit|Y_present.RESET   ; |controlunit|Y_present.RESET   ; regout           ;
+; |controlunit|Y_present.ADD0    ; |controlunit|Y_present.ADD0    ; regout           ;
+; |controlunit|Y_present.ADD1    ; |controlunit|Y_present.ADD1    ; regout           ;
+; |controlunit|Y_next.RESET_327  ; |controlunit|Y_next.RESET_327  ; out              ;
+; |controlunit|Y_next.ADD0_246   ; |controlunit|Y_next.ADD0_246   ; out              ;
+; |controlunit|comb~6            ; |controlunit|comb~6            ; out0             ;
+; |controlunit|comb~7            ; |controlunit|comb~7            ; out0             ;
+; |controlunit|Clock             ; |controlunit|Clock             ; out              ;
+; |controlunit|Ain               ; |controlunit|Ain               ; pin_out          ;
+; |controlunit|Gin               ; |controlunit|Gin               ; pin_out          ;
+; |controlunit|Gout              ; |controlunit|Gout              ; pin_out          ;
+; |controlunit|Done              ; |controlunit|Done              ; pin_out          ;
+; |controlunit|R0_in             ; |controlunit|R0_in             ; pin_out          ;
+; |controlunit|R0_out            ; |controlunit|R0_out            ; pin_out          ;
+; |controlunit|R1_out            ; |controlunit|R1_out            ; pin_out          ;
+; |controlunit|Y_present~0       ; |controlunit|Y_present~0       ; out0             ;
+; |controlunit|Y_present.RESET~0 ; |controlunit|Y_present.RESET~0 ; out0             ;
+; |controlunit|WideOr6~0         ; |controlunit|WideOr6~0         ; out0             ;
+; |controlunit|Y_present.ADD0~0  ; |controlunit|Y_present.ADD0~0  ; out0             ;
+; |controlunit|Ain~4             ; |controlunit|Ain~4             ; out0             ;
+; |controlunit|Y_present.ADD1~0  ; |controlunit|Y_present.ADD1~0  ; out0             ;
+; |controlunit|WideOr7~1         ; |controlunit|WideOr7~1         ; out0             ;
+; |controlunit|Y_present.ADD2~0  ; |controlunit|Y_present.ADD2~0  ; out0             ;
+; |controlunit|WideOr5~3         ; |controlunit|WideOr5~3         ; out0             ;
+; |controlunit|Y_present~5       ; |controlunit|Y_present~5       ; out0             ;
+; |controlunit|Selector4~0       ; |controlunit|Selector4~0       ; out0             ;
+; |controlunit|Selector4~1       ; |controlunit|Selector4~1       ; out0             ;
+; |controlunit|Selector5~0       ; |controlunit|Selector5~0       ; out0             ;
+; |controlunit|Selector5~2       ; |controlunit|Selector5~2       ; out0             ;
++--------------------------------+--------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++----------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                         ;
++-------------------------------+-------------------------------+------------------+
+; Node Name                     ; Output Port Name              ; Output Port Type ;
++-------------------------------+-------------------------------+------------------+
+; |controlunit|Y_next.XOR0~0    ; |controlunit|Y_next.XOR0~0    ; out              ;
+; |controlunit|Y_next.ADD0~1    ; |controlunit|Y_next.ADD0~1    ; out              ;
+; |controlunit|Y_next.ADD1~0    ; |controlunit|Y_next.ADD1~0    ; out0             ;
+; |controlunit|Y_next.ADD1~1    ; |controlunit|Y_next.ADD1~1    ; out0             ;
+; |controlunit|Y_next.ADD1~2    ; |controlunit|Y_next.ADD1~2    ; out0             ;
+; |controlunit|Y_next.XOR2_261  ; |controlunit|Y_next.XOR2_261  ; out              ;
+; |controlunit|Y_next.LOAD_312  ; |controlunit|Y_next.LOAD_312  ; out              ;
+; |controlunit|comb~0           ; |controlunit|comb~0           ; out0             ;
+; |controlunit|R1_in~0          ; |controlunit|R1_in~0          ; out              ;
+; |controlunit|R2_in~0          ; |controlunit|R2_in~0          ; out              ;
+; |controlunit|R3_in~0          ; |controlunit|R3_in~0          ; out              ;
+; |controlunit|Y_next.MOV_300   ; |controlunit|Y_next.MOV_300   ; out              ;
+; |controlunit|comb~1           ; |controlunit|comb~1           ; out0             ;
+; |controlunit|Y_present.LOAD   ; |controlunit|Y_present.LOAD   ; regout           ;
+; |controlunit|Y_present.MOV    ; |controlunit|Y_present.MOV    ; regout           ;
+; |controlunit|Y_present.XOR0   ; |controlunit|Y_present.XOR0   ; regout           ;
+; |controlunit|Y_present.XOR1   ; |controlunit|Y_present.XOR1   ; regout           ;
+; |controlunit|Y_present.XOR2   ; |controlunit|Y_present.XOR2   ; regout           ;
+; |controlunit|Y_next.MOV~0     ; |controlunit|Y_next.MOV~0     ; out              ;
+; |controlunit|Y_next.XOR0~1    ; |controlunit|Y_next.XOR0~1    ; out              ;
+; |controlunit|Y_next.ADD0~2    ; |controlunit|Y_next.ADD0~2    ; out              ;
+; |controlunit|Y_next.XOR1_276  ; |controlunit|Y_next.XOR1_276  ; out              ;
+; |controlunit|comb~2           ; |controlunit|comb~2           ; out0             ;
+; |controlunit|Y_next.XOR0~2    ; |controlunit|Y_next.XOR0~2    ; out              ;
+; |controlunit|comb~3           ; |controlunit|comb~3           ; out0             ;
+; |controlunit|Y_next.MOV~1     ; |controlunit|Y_next.MOV~1     ; out              ;
+; |controlunit|comb~4           ; |controlunit|comb~4           ; out0             ;
+; |controlunit|Y_next.LOAD~0    ; |controlunit|Y_next.LOAD~0    ; out0             ;
+; |controlunit|Y_next.LOAD~1    ; |controlunit|Y_next.LOAD~1    ; out              ;
+; |controlunit|Y_next.XOR0_288  ; |controlunit|Y_next.XOR0_288  ; out              ;
+; |controlunit|comb~5           ; |controlunit|comb~5           ; out0             ;
+; |controlunit|Res              ; |controlunit|Res              ; out              ;
+; |controlunit|Data             ; |controlunit|Data             ; pin_out          ;
+; |controlunit|R1_in            ; |controlunit|R1_in            ; pin_out          ;
+; |controlunit|R2_in            ; |controlunit|R2_in            ; pin_out          ;
+; |controlunit|R2_out           ; |controlunit|R2_out           ; pin_out          ;
+; |controlunit|R3_in            ; |controlunit|R3_in            ; pin_out          ;
+; |controlunit|R3_out           ; |controlunit|R3_out           ; pin_out          ;
+; |controlunit|funct[0]         ; |controlunit|funct[0]         ; out              ;
+; |controlunit|funct[1]         ; |controlunit|funct[1]         ; out              ;
+; |controlunit|funct[2]         ; |controlunit|funct[2]         ; out              ;
+; |controlunit|funct[3]         ; |controlunit|funct[3]         ; out              ;
+; |controlunit|funct[4]         ; |controlunit|funct[4]         ; out              ;
+; |controlunit|funct[5]         ; |controlunit|funct[5]         ; out              ;
+; |controlunit|funct[6]         ; |controlunit|funct[6]         ; out              ;
+; |controlunit|funct[7]         ; |controlunit|funct[7]         ; out              ;
+; |controlunit|funct[8]         ; |controlunit|funct[8]         ; out              ;
+; |controlunit|funct[9]         ; |controlunit|funct[9]         ; out              ;
+; |controlunit|funct[10]        ; |controlunit|funct[10]        ; out              ;
+; |controlunit|funct[11]        ; |controlunit|funct[11]        ; out              ;
+; |controlunit|Y_present~1      ; |controlunit|Y_present~1      ; out0             ;
+; |controlunit|Y_present.LOAD~0 ; |controlunit|Y_present.LOAD~0 ; out0             ;
+; |controlunit|WideOr5~0        ; |controlunit|WideOr5~0        ; out0             ;
+; |controlunit|Y_present.MOV~0  ; |controlunit|Y_present.MOV~0  ; out0             ;
+; |controlunit|WideOr5~1        ; |controlunit|WideOr5~1        ; out0             ;
+; |controlunit|Y_present.XOR0~0 ; |controlunit|Y_present.XOR0~0 ; out0             ;
+; |controlunit|Ain~2            ; |controlunit|Ain~2            ; out0             ;
+; |controlunit|Y_present.XOR1~0 ; |controlunit|Y_present.XOR1~0 ; out0             ;
+; |controlunit|WideOr7~0        ; |controlunit|WideOr7~0        ; out0             ;
+; |controlunit|Y_present.XOR2~0 ; |controlunit|Y_present.XOR2~0 ; out0             ;
+; |controlunit|WideOr5~2        ; |controlunit|WideOr5~2        ; out0             ;
+; |controlunit|Y_present~9      ; |controlunit|Y_present~9      ; out0             ;
+; |controlunit|Selector0~0      ; |controlunit|Selector0~0      ; out0             ;
+; |controlunit|Selector2~0      ; |controlunit|Selector2~0      ; out0             ;
+; |controlunit|Selector4~2      ; |controlunit|Selector4~2      ; out0             ;
+; |controlunit|Selector5~1      ; |controlunit|Selector5~1      ; out0             ;
+; |controlunit|Selector6~0      ; |controlunit|Selector6~0      ; out0             ;
+; |controlunit|Selector6~1      ; |controlunit|Selector6~1      ; out0             ;
+; |controlunit|Selector6~2      ; |controlunit|Selector6~2      ; out0             ;
+; |controlunit|Selector7~0      ; |controlunit|Selector7~0      ; out0             ;
+; |controlunit|Selector7~1      ; |controlunit|Selector7~1      ; out0             ;
+; |controlunit|Selector7~2      ; |controlunit|Selector7~2      ; out0             ;
+; |controlunit|Selector9~0      ; |controlunit|Selector9~0      ; out0             ;
+; |controlunit|Selector11~0     ; |controlunit|Selector11~0     ; out0             ;
+; |controlunit|Selector13~0     ; |controlunit|Selector13~0     ; out0             ;
+; |controlunit|Equal0~0         ; |controlunit|Equal0~0         ; out0             ;
+; |controlunit|Equal1~0         ; |controlunit|Equal1~0         ; out0             ;
+; |controlunit|Equal2~0         ; |controlunit|Equal2~0         ; out0             ;
+; |controlunit|Equal3~0         ; |controlunit|Equal3~0         ; out0             ;
++-------------------------------+-------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++----------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                         ;
++-------------------------------+-------------------------------+------------------+
+; Node Name                     ; Output Port Name              ; Output Port Type ;
++-------------------------------+-------------------------------+------------------+
+; |controlunit|Y_next.XOR0~0    ; |controlunit|Y_next.XOR0~0    ; out              ;
+; |controlunit|Y_next.ADD0~1    ; |controlunit|Y_next.ADD0~1    ; out              ;
+; |controlunit|Y_next.ADD1~0    ; |controlunit|Y_next.ADD1~0    ; out0             ;
+; |controlunit|Y_next.ADD1~1    ; |controlunit|Y_next.ADD1~1    ; out0             ;
+; |controlunit|Y_next.ADD1~2    ; |controlunit|Y_next.ADD1~2    ; out0             ;
+; |controlunit|Y_next.XOR2_261  ; |controlunit|Y_next.XOR2_261  ; out              ;
+; |controlunit|Y_next.LOAD_312  ; |controlunit|Y_next.LOAD_312  ; out              ;
+; |controlunit|comb~0           ; |controlunit|comb~0           ; out0             ;
+; |controlunit|R1_in~0          ; |controlunit|R1_in~0          ; out              ;
+; |controlunit|R2_in~0          ; |controlunit|R2_in~0          ; out              ;
+; |controlunit|R3_in~0          ; |controlunit|R3_in~0          ; out              ;
+; |controlunit|Y_next.MOV_300   ; |controlunit|Y_next.MOV_300   ; out              ;
+; |controlunit|comb~1           ; |controlunit|comb~1           ; out0             ;
+; |controlunit|Y_present.LOAD   ; |controlunit|Y_present.LOAD   ; regout           ;
+; |controlunit|Y_present.MOV    ; |controlunit|Y_present.MOV    ; regout           ;
+; |controlunit|Y_present.XOR0   ; |controlunit|Y_present.XOR0   ; regout           ;
+; |controlunit|Y_present.XOR1   ; |controlunit|Y_present.XOR1   ; regout           ;
+; |controlunit|Y_present.XOR2   ; |controlunit|Y_present.XOR2   ; regout           ;
+; |controlunit|Y_next.MOV~0     ; |controlunit|Y_next.MOV~0     ; out              ;
+; |controlunit|Y_next.XOR0~1    ; |controlunit|Y_next.XOR0~1    ; out              ;
+; |controlunit|Y_next.ADD0~2    ; |controlunit|Y_next.ADD0~2    ; out              ;
+; |controlunit|Y_next.XOR1_276  ; |controlunit|Y_next.XOR1_276  ; out              ;
+; |controlunit|comb~2           ; |controlunit|comb~2           ; out0             ;
+; |controlunit|Y_next.XOR0~2    ; |controlunit|Y_next.XOR0~2    ; out              ;
+; |controlunit|comb~3           ; |controlunit|comb~3           ; out0             ;
+; |controlunit|Y_next.MOV~1     ; |controlunit|Y_next.MOV~1     ; out              ;
+; |controlunit|comb~4           ; |controlunit|comb~4           ; out0             ;
+; |controlunit|Y_next.LOAD~0    ; |controlunit|Y_next.LOAD~0    ; out0             ;
+; |controlunit|Y_next.LOAD~1    ; |controlunit|Y_next.LOAD~1    ; out              ;
+; |controlunit|Y_next.XOR0_288  ; |controlunit|Y_next.XOR0_288  ; out              ;
+; |controlunit|comb~5           ; |controlunit|comb~5           ; out0             ;
+; |controlunit|Data             ; |controlunit|Data             ; pin_out          ;
+; |controlunit|R1_in            ; |controlunit|R1_in            ; pin_out          ;
+; |controlunit|R2_in            ; |controlunit|R2_in            ; pin_out          ;
+; |controlunit|R2_out           ; |controlunit|R2_out           ; pin_out          ;
+; |controlunit|R3_in            ; |controlunit|R3_in            ; pin_out          ;
+; |controlunit|R3_out           ; |controlunit|R3_out           ; pin_out          ;
+; |controlunit|funct[0]         ; |controlunit|funct[0]         ; out              ;
+; |controlunit|funct[1]         ; |controlunit|funct[1]         ; out              ;
+; |controlunit|funct[2]         ; |controlunit|funct[2]         ; out              ;
+; |controlunit|funct[3]         ; |controlunit|funct[3]         ; out              ;
+; |controlunit|funct[4]         ; |controlunit|funct[4]         ; out              ;
+; |controlunit|funct[5]         ; |controlunit|funct[5]         ; out              ;
+; |controlunit|funct[6]         ; |controlunit|funct[6]         ; out              ;
+; |controlunit|funct[7]         ; |controlunit|funct[7]         ; out              ;
+; |controlunit|funct[8]         ; |controlunit|funct[8]         ; out              ;
+; |controlunit|funct[9]         ; |controlunit|funct[9]         ; out              ;
+; |controlunit|funct[10]        ; |controlunit|funct[10]        ; out              ;
+; |controlunit|funct[11]        ; |controlunit|funct[11]        ; out              ;
+; |controlunit|Y_present.LOAD~0 ; |controlunit|Y_present.LOAD~0 ; out0             ;
+; |controlunit|WideOr5~0        ; |controlunit|WideOr5~0        ; out0             ;
+; |controlunit|Y_present.MOV~0  ; |controlunit|Y_present.MOV~0  ; out0             ;
+; |controlunit|WideOr5~1        ; |controlunit|WideOr5~1        ; out0             ;
+; |controlunit|Y_present.XOR0~0 ; |controlunit|Y_present.XOR0~0 ; out0             ;
+; |controlunit|Ain~2            ; |controlunit|Ain~2            ; out0             ;
+; |controlunit|Y_present.XOR1~0 ; |controlunit|Y_present.XOR1~0 ; out0             ;
+; |controlunit|WideOr7~0        ; |controlunit|WideOr7~0        ; out0             ;
+; |controlunit|Y_present.XOR2~0 ; |controlunit|Y_present.XOR2~0 ; out0             ;
+; |controlunit|WideOr5~2        ; |controlunit|WideOr5~2        ; out0             ;
+; |controlunit|Selector0~0      ; |controlunit|Selector0~0      ; out0             ;
+; |controlunit|Selector2~0      ; |controlunit|Selector2~0      ; out0             ;
+; |controlunit|Selector4~2      ; |controlunit|Selector4~2      ; out0             ;
+; |controlunit|Selector5~1      ; |controlunit|Selector5~1      ; out0             ;
+; |controlunit|Selector6~0      ; |controlunit|Selector6~0      ; out0             ;
+; |controlunit|Selector6~1      ; |controlunit|Selector6~1      ; out0             ;
+; |controlunit|Selector6~2      ; |controlunit|Selector6~2      ; out0             ;
+; |controlunit|Selector7~0      ; |controlunit|Selector7~0      ; out0             ;
+; |controlunit|Selector7~1      ; |controlunit|Selector7~1      ; out0             ;
+; |controlunit|Selector7~2      ; |controlunit|Selector7~2      ; out0             ;
+; |controlunit|Selector9~0      ; |controlunit|Selector9~0      ; out0             ;
+; |controlunit|Selector11~0     ; |controlunit|Selector11~0     ; out0             ;
+; |controlunit|Selector13~0     ; |controlunit|Selector13~0     ; out0             ;
+; |controlunit|Equal0~0         ; |controlunit|Equal0~0         ; out0             ;
+; |controlunit|Equal1~0         ; |controlunit|Equal1~0         ; out0             ;
+; |controlunit|Equal2~0         ; |controlunit|Equal2~0         ; out0             ;
+; |controlunit|Equal3~0         ; |controlunit|Equal3~0         ; out0             ;
++-------------------------------+-------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Simulator
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Wed May 18 11:27:37 2016
+Info: Command: quartus_sim --simulation_results_format=VWF finalproject -c finalproject
+Info (324025): Using vector source file "C:/Users/ting0310/Documents/FinalProject/Waveform.vwf"
+Info (310003): Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info (310004): Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info (310002): Simulation partitioned into 1 sub-simulations
+Info (328053): Simulation coverage is      33.05 %
+Info (328052): Number of transitions in simulation is 444
+Info (324045): Vector file finalproject.sim.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II 64-Bit Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 321 megabytes
+    Info: Processing ended: Wed May 18 11:27:38 2016
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
+
+

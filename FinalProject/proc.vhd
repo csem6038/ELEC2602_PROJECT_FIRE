@@ -2,19 +2,37 @@ LIBRARY ieee;
 USE ieee.std_logic_1164.all;
 
 ENTITY proc IS
+--PORT (
+--
+--	Data : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+--	Reset, w : IN STD_LOGIC;
+--	Clock : IN STD_LOGIC;
+--	Function_in : IN STD_LOGIC_VECTOR(15 DOWNTO 0); --Added to have a function input to the control unit
+--	F, Rx, Ry : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+--	Done : OUT STD_LOGIC;
+--	BusWires : INOUT STD_LOGIC_VECTOR(15 DOWNTO 0));
+--	
+--END proc;
+
 PORT (
-	Data : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
-	Reset, w : IN STD_LOGIC;
-	Clock : IN STD_LOGIC;
-	Function_in : IN STD_LOGIC_VECTOR(15 DOWNTO 0); --Added to have a function input to the control unit
-	F, Rx, Ry : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
-	Done : OUT STD_LOGIC;
-	BusWires : INOUT STD_LOGIC_VECTOR(15 DOWNTO 0));
+
+	--Data : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+	--Reset, w : IN STD_LOGIC;
+	SW : IN STD_LOGIC_VECTOR(17 DOWNTO 0);
+	LEDR: OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+	HEX0,HEX1,HEX2,HEX3,HEX4,HEX5,HEX6,HEX7 : OUT STD_LOGIC_VECTOR(6 downto 0);
+	KEY0,KEY1,KEY2,KEY3 : IN STD_LOGIC
+	--Function_in : IN STD_LOGIC_VECTOR(15 DOWNTO 0); --Added to have a function input to the control unit
+	--F, Rx, Ry : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+--	Done : OUT STD_LOGIC; -- lel get kekd doesnt do shit
+	--BusWires : INOUT STD_LOGIC_VECTOR(15 DOWNTO 0));
+	);
 END proc;
 
 
 
 ARCHITECTURE Behaviour OF proc IS
+
 COMPONENT register16 IS -- n-bit register
 	PORT (Clk, Enable: IN STD_LOGIC;
 			Data_in: IN STD_LOGIC_VECTOR(15 downto 0);
@@ -33,6 +51,12 @@ COMPONENT Arithmetic_Logic_Unit IS  -- n-bit adder/sub
 			chosen_result : OUT STD_LOGIC_VECTOR(15 DOWNTO 0));
 END COMPONENT;
 
+COMPONENT hexdecode IS  -- n-bit adder/sub
+	PORT ( A : IN std_logic_vector(3 downto 0);
+			D : OUT std_logic_vector(0 to 6));
+			
+END COMPONENT;
+
 COMPONENT controlunit IS
 	 PORT (Clock, Res,w : in std_logic;
 		Ain,Gin,Gout,Data : out std_logic; -- Deleted Aout from here as it is not part of the schematic
@@ -47,14 +71,25 @@ COMPONENT controlunit IS
 		
 END COMPONENT;
 
-SIGNAL Rin, Rout : STD_LOGIC_VECTOR(0 TO 3);
+SIGNAL Rin, Rout : STD_LOGIC_VECTOR(3 DOWNTO 0);
 SIGNAL Ain, Gin, Gout : STD_LOGIC;
 SIGNAL AddXor, Extern : STD_LOGIC ;
 --register outputs
 SIGNAL R0, R1, R2, R3 : STD_LOGIC_VECTOR(15 DOWNTO 0) ;
 SIGNAL A, ALUout, G : STD_LOGIC_VECTOR(15 DOWNTO 0);
-BEGIN
+signal Clock : std_logic ;
+signal Reset : std_logic;
+signal W : std_logic;
+signal Function_in : std_logic_vector(15 downto 0);
+signal BusWires : STD_LOGIC_VECTOR(15 DOWNTO 0);
+signal F, Rx, Ry : std_logic;
 
+
+BEGIN
+	--Rin <= SW(15 downto 11);
+	Clock <= KEY0;
+	Function_in <= SW(15 downto 0);
+	W <= SW(16);
 		--Register Declarations--
 	regR0 : register16 PORT MAP(Clock, Rin(0), BusWires, R0);
 	regR1 : register16 PORT MAP(Clock, Rin(1), BusWires, R1);
@@ -63,6 +98,19 @@ BEGIN
 	regG : register16 PORT MAP(Clock, Gin, ALUout, G);
 	regA : register16 PORT MAP(Clock, Ain, BusWires, A);
 	
+	hexdec0 : hexdecode PORT MAP(R0 (15 downto 12),HEX0);
+	hexdec1 : hexdecode PORT MAP(R0 (11 downto 8),HEX1);
+	hexdec2 : hexdecode PORT MAP(R0 (7 downto 4),HEX2);
+	hexdec3 : hexdecode PORT MAP(R0 (3 downto 0),HEX3);
+	
+	hexdec4 : hexdecode PORT MAP(R1 (15 downto 12),HEX4);
+	hexdec5 : hexdecode PORT MAP(R1 (11 downto 8),HEX5);
+	hexdec6 : hexdecode PORT MAP(R1 (7 downto 4),HEX6);
+	hexdec7 : hexdecode PORT MAP(R1 (3 downto 0),HEX7);
+
+
+	
+	LEDR <= BusWires;
 	--Tristate Buffer Declarations--
 	triR0: trin PORT MAP(R0, Rout(0), BusWires);
 	triR1: trin PORT MAP(R1, Rout(1), BusWires);
