@@ -89,6 +89,11 @@ signal data : STD_LOGIC_VECTOR(15 downto 0);
 
 BEGIN
 	--Rin <= SW(15 downto 11);
+	
+	--R0<="0000000000000000";
+
+	--attribute keep: boolean;
+
 	Clock <= KEY0;
 	Function_in <= SW(15 downto 0);
 	W <= SW(16);

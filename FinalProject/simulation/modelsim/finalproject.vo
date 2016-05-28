@@ -16,7 +16,7 @@
 // PROGRAM "Quartus II 64-Bit"
 // VERSION "Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition"
 
-// DATE "05/28/2016 14:24:39"
+// DATE "05/28/2016 22:52:38"
 
 // 
 // Device: Altera EP2C35F672C6 Package FBGA672
@@ -396,6 +396,7 @@ wire \hexdec7|D~3_combout ;
 wire \hexdec7|D~4_combout ;
 wire \hexdec7|D~5_combout ;
 wire \hexdec7|D~6_combout ;
+wire [17:0] \SW~combout ;
 wire [15:0] \regR1|D ;
 wire [15:0] \regR2|D ;
 wire [15:0] \regR3|D ;
@@ -404,7 +405,6 @@ wire [15:0] \regA|D ;
 wire [15:0] \regR0|D ;
 wire [15:0] \ALU|xorres|RESULT ;
 wire [3:0] \cont|temp ;
-wire [17:0] \SW~combout ;
 
 
 // Location: LCFF_X56_Y10_N25
