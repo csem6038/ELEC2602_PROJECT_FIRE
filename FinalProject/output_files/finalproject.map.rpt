@@ -1,5 +1,5 @@
 Analysis & Synthesis report for finalproject
-Wed May 18 11:30:49 2016
+Wed May 25 11:56:09 2016
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -16,12 +16,12 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   8. State Machine - |proc|controlunit:cont|Y_present
   9. User-Specified and Inferred Latches
  10. General Register Statistics
- 11. Multiplexer Restructuring Statistics (Restructuring Performed)
- 12. Parameter Settings for User Entity Instance: trin:triR0
- 13. Parameter Settings for User Entity Instance: trin:triR1
- 14. Parameter Settings for User Entity Instance: trin:triR2
- 15. Parameter Settings for User Entity Instance: trin:triR3
- 16. Parameter Settings for User Entity Instance: trin:triG
+ 11. Parameter Settings for User Entity Instance: trin:triR0
+ 12. Parameter Settings for User Entity Instance: trin:triR1
+ 13. Parameter Settings for User Entity Instance: trin:triR2
+ 14. Parameter Settings for User Entity Instance: trin:triR3
+ 15. Parameter Settings for User Entity Instance: trin:triG
+ 16. Parameter Settings for User Entity Instance: trin:triD
  17. Port Connectivity Checks: "controlunit:cont"
  18. Port Connectivity Checks: "Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa15"
  19. Port Connectivity Checks: "Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa0"
@@ -52,16 +52,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed May 18 11:30:49 2016           ;
+; Analysis & Synthesis Status        ; Successful - Wed May 25 11:56:09 2016           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; finalproject                                    ;
 ; Top-level Entity Name              ; proc                                            ;
 ; Family                             ; Cyclone II                                      ;
 ; Total logic elements               ; 274                                             ;
-;     Total combinational functions  ; 210                                             ;
-;     Dedicated logic registers      ; 105                                             ;
-; Total registers                    ; 105                                             ;
-; Total pins                         ; 94                                              ;
+;     Total combinational functions  ; 189                                             ;
+;     Dedicated logic registers      ; 106                                             ;
+; Total registers                    ; 106                                             ;
+; Total pins                         ; 110                                             ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -76,7 +76,7 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP2C35F672C6       ;                    ;
 ; Top-level entity name                                                      ; proc               ; finalproject       ;
-; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
+; Family name                                                                ; Cyclone II         ; Cyclone V          ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
 ; Enable compact report table                                                ; Off                ; Off                ;
@@ -171,23 +171,23 @@ applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                               ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                        ; Library ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------------------+---------+
-; two_to_one_mux.vhd               ; yes             ; User VHDL File  ; C:/Users/ting0310/Documents/FinalProject/two_to_one_mux.vhd         ;         ;
-; sixteen_two_to_one_mux.vhd       ; yes             ; User VHDL File  ; C:/Users/ting0310/Documents/FinalProject/sixteen_two_to_one_mux.vhd ;         ;
-; sixteen_bit_xor.vhd              ; yes             ; User VHDL File  ; C:/Users/ting0310/Documents/FinalProject/sixteen_bit_xor.vhd        ;         ;
-; sixteen_bit_adder.vhd            ; yes             ; User VHDL File  ; C:/Users/ting0310/Documents/FinalProject/sixteen_bit_adder.vhd      ;         ;
-; bit_adder.vhd                    ; yes             ; User VHDL File  ; C:/Users/ting0310/Documents/FinalProject/bit_adder.vhd              ;         ;
-; Arithmetic_Logic_Unit.vhd        ; yes             ; User VHDL File  ; C:/Users/ting0310/Documents/FinalProject/Arithmetic_Logic_Unit.vhd  ;         ;
-; register16.vhd                   ; yes             ; User VHDL File  ; C:/Users/ting0310/Documents/FinalProject/register16.vhd             ;         ;
-; trin.vhd                         ; yes             ; User VHDL File  ; C:/Users/ting0310/Documents/FinalProject/trin.vhd                   ;         ;
-; controlunit.vhd                  ; yes             ; User VHDL File  ; C:/Users/ting0310/Documents/FinalProject/controlunit.vhd            ;         ;
-; proc.vhd                         ; yes             ; User VHDL File  ; C:/Users/ting0310/Documents/FinalProject/proc.vhd                   ;         ;
-; hexdecode.vhd                    ; yes             ; User VHDL File  ; C:/Users/ting0310/Documents/FinalProject/hexdecode.vhd              ;         ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                             ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                      ; Library ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------+---------+
+; two_to_one_mux.vhd               ; yes             ; User VHDL File  ; C:/Users/lfet7715/Desktop/FinalProject/two_to_one_mux.vhd         ;         ;
+; sixteen_two_to_one_mux.vhd       ; yes             ; User VHDL File  ; C:/Users/lfet7715/Desktop/FinalProject/sixteen_two_to_one_mux.vhd ;         ;
+; sixteen_bit_xor.vhd              ; yes             ; User VHDL File  ; C:/Users/lfet7715/Desktop/FinalProject/sixteen_bit_xor.vhd        ;         ;
+; sixteen_bit_adder.vhd            ; yes             ; User VHDL File  ; C:/Users/lfet7715/Desktop/FinalProject/sixteen_bit_adder.vhd      ;         ;
+; bit_adder.vhd                    ; yes             ; User VHDL File  ; C:/Users/lfet7715/Desktop/FinalProject/bit_adder.vhd              ;         ;
+; Arithmetic_Logic_Unit.vhd        ; yes             ; User VHDL File  ; C:/Users/lfet7715/Desktop/FinalProject/Arithmetic_Logic_Unit.vhd  ;         ;
+; register16.vhd                   ; yes             ; User VHDL File  ; C:/Users/lfet7715/Desktop/FinalProject/register16.vhd             ;         ;
+; trin.vhd                         ; yes             ; User VHDL File  ; C:/Users/lfet7715/Desktop/FinalProject/trin.vhd                   ;         ;
+; controlunit.vhd                  ; yes             ; User VHDL File  ; C:/Users/lfet7715/Desktop/FinalProject/controlunit.vhd            ;         ;
+; hexdecode.vhd                    ; yes             ; User VHDL File  ; C:/Users/lfet7715/Desktop/FinalProject/hexdecode.vhd              ;         ;
+; proc.vhd                         ; yes             ; User VHDL File  ; C:/Users/lfet7715/Desktop/FinalProject/proc.vhd                   ;         ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -197,94 +197,109 @@ applicable agreement for further details.
 +---------------------------------------------+-------+
 ; Estimated Total logic elements              ; 274   ;
 ;                                             ;       ;
-; Total combinational functions               ; 210   ;
+; Total combinational functions               ; 189   ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 134   ;
-;     -- 3 input functions                    ; 49    ;
-;     -- <=2 input functions                  ; 27    ;
+;     -- 4 input functions                    ; 143   ;
+;     -- 3 input functions                    ; 31    ;
+;     -- <=2 input functions                  ; 15    ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 210   ;
+;     -- normal mode                          ; 189   ;
 ;     -- arithmetic mode                      ; 0     ;
 ;                                             ;       ;
-; Total registers                             ; 105   ;
-;     -- Dedicated logic registers            ; 105   ;
+; Total registers                             ; 106   ;
+;     -- Dedicated logic registers            ; 106   ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
-; I/O pins                                    ; 94    ;
+; I/O pins                                    ; 110   ;
 ; Embedded Multiplier 9-bit elements          ; 0     ;
 ; Maximum fan-out node                        ; KEY0  ;
-; Maximum fan-out                             ; 105   ;
-; Total fan-out                               ; 1130  ;
-; Average fan-out                             ; 2.76  ;
+; Maximum fan-out                             ; 106   ;
+; Total fan-out                               ; 1107  ;
+; Average fan-out                             ; 2.73  ;
 +---------------------------------------------+-------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                        ;
-+--------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node                 ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                ; Library Name ;
-+--------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------+--------------+
-; |proc                                      ; 210 (0)           ; 105 (0)      ; 0           ; 0            ; 0       ; 0         ; 94   ; 0            ; |proc                                                              ; work         ;
-;    |Arithmetic_Logic_Unit:ALU|             ; 16 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU                                    ; work         ;
-;       |sixteen_bit_xor:xorres|             ; 15 (15)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_xor:xorres             ; work         ;
-;       |sixteen_two_to_one_mux:sixteen_mux| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_two_to_one_mux:sixteen_mux ; work         ;
-;    |controlunit:cont|                      ; 40 (40)           ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|controlunit:cont                                             ; work         ;
-;    |hexdecode:hexdec0|                     ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|hexdecode:hexdec0                                            ; work         ;
-;    |hexdecode:hexdec1|                     ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|hexdecode:hexdec1                                            ; work         ;
-;    |hexdecode:hexdec2|                     ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|hexdecode:hexdec2                                            ; work         ;
-;    |hexdecode:hexdec3|                     ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|hexdecode:hexdec3                                            ; work         ;
-;    |hexdecode:hexdec4|                     ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|hexdecode:hexdec4                                            ; work         ;
-;    |hexdecode:hexdec5|                     ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|hexdecode:hexdec5                                            ; work         ;
-;    |hexdecode:hexdec6|                     ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|hexdecode:hexdec6                                            ; work         ;
-;    |hexdecode:hexdec7|                     ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|hexdecode:hexdec7                                            ; work         ;
-;    |register16:regA|                       ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|register16:regA                                              ; work         ;
-;    |register16:regG|                       ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|register16:regG                                              ; work         ;
-;    |register16:regR0|                      ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|register16:regR0                                             ; work         ;
-;    |register16:regR1|                      ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|register16:regR1                                             ; work         ;
-;    |register16:regR2|                      ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|register16:regR2                                             ; work         ;
-;    |register16:regR3|                      ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|register16:regR3                                             ; work         ;
-;    |trin:triG|                             ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|trin:triG                                                    ; work         ;
-;    |trin:triR0|                            ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|trin:triR0                                                   ; work         ;
-;    |trin:triR1|                            ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|trin:triR1                                                   ; work         ;
-+--------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                  ;
++--------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                 ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                          ; Library Name ;
++--------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------+--------------+
+; |proc                                      ; 189 (0)           ; 106 (0)      ; 0           ; 0            ; 0       ; 0         ; 110  ; 0            ; |proc                                                                                        ; work         ;
+;    |Arithmetic_Logic_Unit:ALU|             ; 41 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU                                                              ; work         ;
+;       |sixteen_bit_adder:adderres|         ; 17 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres                                   ; work         ;
+;          |bit_adder:fa11|                  ; 3 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa11                    ; work         ;
+;             |two_to_one_mux:mux|           ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa11|two_to_one_mux:mux ; work         ;
+;          |bit_adder:fa12|                  ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa12                    ; work         ;
+;             |two_to_one_mux:mux|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa12|two_to_one_mux:mux ; work         ;
+;          |bit_adder:fa13|                  ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa13                    ; work         ;
+;             |two_to_one_mux:mux|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa13|two_to_one_mux:mux ; work         ;
+;          |bit_adder:fa1|                   ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa1                     ; work         ;
+;             |two_to_one_mux:mux|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa1|two_to_one_mux:mux  ; work         ;
+;          |bit_adder:fa3|                   ; 3 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa3                     ; work         ;
+;             |two_to_one_mux:mux|           ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa3|two_to_one_mux:mux  ; work         ;
+;          |bit_adder:fa4|                   ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa4                     ; work         ;
+;             |two_to_one_mux:mux|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa4|two_to_one_mux:mux  ; work         ;
+;          |bit_adder:fa5|                   ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa5                     ; work         ;
+;             |two_to_one_mux:mux|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa5|two_to_one_mux:mux  ; work         ;
+;          |bit_adder:fa7|                   ; 3 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa7                     ; work         ;
+;             |two_to_one_mux:mux|           ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa7|two_to_one_mux:mux  ; work         ;
+;          |bit_adder:fa8|                   ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa8                     ; work         ;
+;             |two_to_one_mux:mux|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa8|two_to_one_mux:mux  ; work         ;
+;          |bit_adder:fa9|                   ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa9                     ; work         ;
+;             |two_to_one_mux:mux|           ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa9|two_to_one_mux:mux  ; work         ;
+;       |sixteen_bit_xor:xorres|             ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_xor:xorres                                       ; work         ;
+;       |sixteen_two_to_one_mux:sixteen_mux| ; 17 (17)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_two_to_one_mux:sixteen_mux                           ; work         ;
+;    |controlunit:cont|                      ; 26 (26)           ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|controlunit:cont                                                                       ; work         ;
+;    |hexdecode:hexdec0|                     ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|hexdecode:hexdec0                                                                      ; work         ;
+;    |hexdecode:hexdec1|                     ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|hexdecode:hexdec1                                                                      ; work         ;
+;    |hexdecode:hexdec2|                     ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|hexdecode:hexdec2                                                                      ; work         ;
+;    |hexdecode:hexdec3|                     ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|hexdecode:hexdec3                                                                      ; work         ;
+;    |hexdecode:hexdec4|                     ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|hexdecode:hexdec4                                                                      ; work         ;
+;    |hexdecode:hexdec5|                     ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|hexdecode:hexdec5                                                                      ; work         ;
+;    |hexdecode:hexdec6|                     ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|hexdecode:hexdec6                                                                      ; work         ;
+;    |hexdecode:hexdec7|                     ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|hexdecode:hexdec7                                                                      ; work         ;
+;    |register16:regA|                       ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|register16:regA                                                                        ; work         ;
+;    |register16:regG|                       ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|register16:regG                                                                        ; work         ;
+;    |register16:regR0|                      ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|register16:regR0                                                                       ; work         ;
+;    |register16:regR1|                      ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|register16:regR1                                                                       ; work         ;
+;    |register16:regR2|                      ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|register16:regR2                                                                       ; work         ;
+;    |register16:regR3|                      ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|register16:regR3                                                                       ; work         ;
+;    |trin:triD|                             ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|trin:triD                                                                              ; work         ;
++--------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
 Encoding Type:  One-Hot
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |proc|controlunit:cont|Y_present                                                                                                                         ;
-+-----------------+----------------+----------------+----------------+----------------+----------------+----------------+---------------+----------------+-----------------+
-; Name            ; Y_present.ADD2 ; Y_present.ADD1 ; Y_present.ADD0 ; Y_present.XOR2 ; Y_present.XOR1 ; Y_present.XOR0 ; Y_present.MOV ; Y_present.LOAD ; Y_present.RESET ;
-+-----------------+----------------+----------------+----------------+----------------+----------------+----------------+---------------+----------------+-----------------+
-; Y_present.RESET ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0              ; 0               ;
-; Y_present.LOAD  ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 1              ; 1               ;
-; Y_present.MOV   ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1             ; 0              ; 1               ;
-; Y_present.XOR0  ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 0             ; 0              ; 1               ;
-; Y_present.XOR1  ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 0             ; 0              ; 1               ;
-; Y_present.XOR2  ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 0             ; 0              ; 1               ;
-; Y_present.ADD0  ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 0             ; 0              ; 1               ;
-; Y_present.ADD1  ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0              ; 1               ;
-; Y_present.ADD2  ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0              ; 1               ;
-+-----------------+----------------+----------------+----------------+----------------+----------------+----------------+---------------+----------------+-----------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |proc|controlunit:cont|Y_present                                                                                                                                            ;
++-----------------+----------------+----------------+----------------+----------------+----------------+----------------+---------------+-----------------+-----------------+-----------------+
+; Name            ; Y_present.ADD2 ; Y_present.ADD1 ; Y_present.ADD0 ; Y_present.XOR2 ; Y_present.XOR1 ; Y_present.XOR0 ; Y_present.MOV ; Y_present.LOAD1 ; Y_present.LOAD0 ; Y_present.RESET ;
++-----------------+----------------+----------------+----------------+----------------+----------------+----------------+---------------+-----------------+-----------------+-----------------+
+; Y_present.RESET ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0               ; 0               ; 0               ;
+; Y_present.LOAD0 ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0               ; 1               ; 1               ;
+; Y_present.LOAD1 ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 1               ; 0               ; 1               ;
+; Y_present.MOV   ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1             ; 0               ; 0               ; 1               ;
+; Y_present.XOR0  ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 0             ; 0               ; 0               ; 1               ;
+; Y_present.XOR1  ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 0             ; 0               ; 0               ; 1               ;
+; Y_present.XOR2  ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 0             ; 0               ; 0               ; 1               ;
+; Y_present.ADD0  ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 0             ; 0               ; 0               ; 1               ;
+; Y_present.ADD1  ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0               ; 0               ; 1               ;
+; Y_present.ADD2  ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0               ; 0               ; 1               ;
++-----------------+----------------+----------------+----------------+----------------+----------------+----------------+---------------+-----------------+-----------------+-----------------+
 
 
-+-----------------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                       ;
-+----------------------------------------------------+-----------------------------+------------------------+
-; Latch Name                                         ; Latch Enable Signal         ; Free of Timing Hazards ;
-+----------------------------------------------------+-----------------------------+------------------------+
-; controlunit:cont|Y_next.LOAD_312                   ; GND                         ; yes                    ;
-; controlunit:cont|Y_next.MOV_300                    ; GND                         ; yes                    ;
-; controlunit:cont|Y_next.XOR2_261                   ; controlunit:cont|Selector13 ; yes                    ;
-; controlunit:cont|Y_next.ADD2_219                   ; controlunit:cont|Selector13 ; yes                    ;
-; controlunit:cont|Y_next.XOR0_288                   ; GND                         ; yes                    ;
-; controlunit:cont|Y_next.ADD0_246                   ; GND                         ; yes                    ;
-; controlunit:cont|Y_next.XOR1_276                   ; controlunit:cont|Selector13 ; yes                    ;
-; controlunit:cont|Y_next.ADD1_234                   ; controlunit:cont|Selector13 ; yes                    ;
-; controlunit:cont|Y_next.RESET_327                  ; controlunit:cont|Selector13 ; yes                    ;
-; Number of user-specified and inferred latches = 9  ;                             ;                        ;
-+----------------------------------------------------+-----------------------------+------------------------+
++--------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                    ;
++----------------------------------------------------+--------------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal      ; Free of Timing Hazards ;
++----------------------------------------------------+--------------------------+------------------------+
+; controlunit:cont|temp[3]                           ; controlunit:cont|temp[2] ; yes                    ;
+; controlunit:cont|temp[2]                           ; controlunit:cont|temp[2] ; yes                    ;
+; controlunit:cont|temp[0]                           ; controlunit:cont|temp[2] ; yes                    ;
+; controlunit:cont|temp[1]                           ; controlunit:cont|temp[2] ; yes                    ;
+; Number of user-specified and inferred latches = 4  ;                          ;                        ;
++----------------------------------------------------+--------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
@@ -293,7 +308,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 105   ;
+; Total registers                              ; 106   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -301,15 +316,6 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Number of registers using Clock Enable       ; 96    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                   ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output         ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
-; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |proc|controlunit:cont|Y_next.ADD0 ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
 
 
 +---------------------------------------------------------+
@@ -362,12 +368,21 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++--------------------------------------------------------+
+; Parameter Settings for User Entity Instance: trin:triD ;
++----------------+-------+-------------------------------+
+; Parameter Name ; Value ; Type                          ;
++----------------+-------+-------------------------------+
+; N              ; 16    ; Signed Integer                ;
++----------------+-------+-------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +-------------------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "controlunit:cont"                                                                                        ;
 +------+--------+----------+----------------------------------------------------------------------------------------------------------+
 ; Port ; Type   ; Severity ; Details                                                                                                  ;
 +------+--------+----------+----------------------------------------------------------------------------------------------------------+
-; data ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                      ;
 ; done ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
 +------+--------+----------+----------------------------------------------------------------------------------------------------------+
 
@@ -405,7 +420,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed May 18 11:30:47 2016
+    Info: Processing started: Wed May 25 11:56:07 2016
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off finalproject -c finalproject
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file two_to_one_mux.vhd
@@ -438,15 +453,13 @@ Info (12021): Found 2 design units, including 1 entities, in source file trin.vh
 Info (12021): Found 2 design units, including 1 entities, in source file controlunit.vhd
     Info (12022): Found design unit 1: controlunit-Behavior
     Info (12023): Found entity 1: controlunit
-Info (12021): Found 2 design units, including 1 entities, in source file proc.vhd
-    Info (12022): Found design unit 1: proc-Behaviour
-    Info (12023): Found entity 1: proc
 Info (12021): Found 2 design units, including 1 entities, in source file hexdecode.vhd
     Info (12022): Found design unit 1: hexdecode-behaviour
     Info (12023): Found entity 1: hexdecode
+Info (12021): Found 2 design units, including 1 entities, in source file proc.vhd
+    Info (12022): Found design unit 1: proc-Behaviour
+    Info (12023): Found entity 1: proc
 Info (12127): Elaborating entity "proc" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at proc.vhd(76): used implicit default value for signal "AddXor" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10036): Verilog HDL or VHDL warning at proc.vhd(76): object "Extern" assigned a value but never read
 Warning (10541): VHDL Signal Declaration warning at proc.vhd(81): used implicit default value for signal "Reset" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
 Info (12128): Elaborating entity "register16" for hierarchy "register16:regR0"
 Info (12128): Elaborating entity "hexdecode" for hierarchy "hexdecode:hexdec0"
@@ -460,93 +473,88 @@ Info (12128): Elaborating entity "sixteen_two_to_one_mux" for hierarchy "Arithme
 Info (12128): Elaborating entity "controlunit" for hierarchy "controlunit:cont"
 Warning (10492): VHDL Process Statement warning at controlunit.vhd(29): signal "Res" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at controlunit.vhd(55): signal "Y_present" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at controlunit.vhd(57): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(58): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at controlunit.vhd(59): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(60): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at controlunit.vhd(61): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at controlunit.vhd(63): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at controlunit.vhd(69): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at controlunit.vhd(70): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at controlunit.vhd(71): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at controlunit.vhd(72): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at controlunit.vhd(78): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at controlunit.vhd(79): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at controlunit.vhd(80): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at controlunit.vhd(81): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at controlunit.vhd(83): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at controlunit.vhd(84): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at controlunit.vhd(85): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at controlunit.vhd(86): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(62): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(64): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(66): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(68): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(80): signal "temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(81): signal "temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(82): signal "temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(83): signal "temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(89): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(90): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(91): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(92): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at controlunit.vhd(94): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at controlunit.vhd(95): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at controlunit.vhd(96): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at controlunit.vhd(97): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at controlunit.vhd(103): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at controlunit.vhd(104): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at controlunit.vhd(105): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at controlunit.vhd(106): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at controlunit.vhd(111): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at controlunit.vhd(112): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at controlunit.vhd(113): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at controlunit.vhd(114): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at controlunit.vhd(122): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at controlunit.vhd(123): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(107): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(108): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(115): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(116): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(117): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(118): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at controlunit.vhd(124): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at controlunit.vhd(125): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at controlunit.vhd(132): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at controlunit.vhd(133): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at controlunit.vhd(134): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(126): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(127): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at controlunit.vhd(135): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at controlunit.vhd(143): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(136): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(137): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(138): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at controlunit.vhd(144): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at controlunit.vhd(145): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at controlunit.vhd(146): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10631): VHDL Process Statement warning at controlunit.vhd(26): inferring latch(es) for signal or variable "Y_next", which holds its previous value in one or more paths through the process
-Info (10041): Inferred latch for "Y_next.ADD2" at controlunit.vhd(26)
-Info (10041): Inferred latch for "Y_next.ADD1" at controlunit.vhd(26)
-Info (10041): Inferred latch for "Y_next.ADD0" at controlunit.vhd(26)
-Info (10041): Inferred latch for "Y_next.XOR2" at controlunit.vhd(26)
-Info (10041): Inferred latch for "Y_next.XOR1" at controlunit.vhd(26)
-Info (10041): Inferred latch for "Y_next.XOR0" at controlunit.vhd(26)
-Info (10041): Inferred latch for "Y_next.MOV" at controlunit.vhd(26)
-Info (10041): Inferred latch for "Y_next.LOAD" at controlunit.vhd(26)
-Info (10041): Inferred latch for "Y_next.RESET" at controlunit.vhd(26)
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(147): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(153): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(154): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(155): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(156): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at controlunit.vhd(26): inferring latch(es) for signal or variable "temp", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "temp[0]" at controlunit.vhd(26)
+Info (10041): Inferred latch for "temp[1]" at controlunit.vhd(26)
+Info (10041): Inferred latch for "temp[2]" at controlunit.vhd(26)
+Info (10041): Inferred latch for "temp[3]" at controlunit.vhd(26)
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
-    Warning (13047): Converted the fan-out from the tri-state buffer "trin:triR0|Q[0]" to the node "Arithmetic_Logic_Unit:ALU|sixteen_two_to_one_mux:sixteen_mux|CHOSEN[0]" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "trin:triR0|Q[1]" to the node "Arithmetic_Logic_Unit:ALU|sixteen_bit_xor:xorres|RESULT[1]" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "trin:triR0|Q[2]" to the node "Arithmetic_Logic_Unit:ALU|sixteen_bit_xor:xorres|RESULT[2]" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "trin:triR0|Q[3]" to the node "Arithmetic_Logic_Unit:ALU|sixteen_bit_xor:xorres|RESULT[3]" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "trin:triR0|Q[4]" to the node "Arithmetic_Logic_Unit:ALU|sixteen_bit_xor:xorres|RESULT[4]" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "trin:triR0|Q[5]" to the node "Arithmetic_Logic_Unit:ALU|sixteen_bit_xor:xorres|RESULT[5]" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "trin:triR0|Q[6]" to the node "Arithmetic_Logic_Unit:ALU|sixteen_bit_xor:xorres|RESULT[6]" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "trin:triR0|Q[7]" to the node "Arithmetic_Logic_Unit:ALU|sixteen_bit_xor:xorres|RESULT[7]" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "trin:triR0|Q[8]" to the node "Arithmetic_Logic_Unit:ALU|sixteen_bit_xor:xorres|RESULT[8]" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "trin:triR0|Q[9]" to the node "Arithmetic_Logic_Unit:ALU|sixteen_bit_xor:xorres|RESULT[9]" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "trin:triR0|Q[10]" to the node "Arithmetic_Logic_Unit:ALU|sixteen_bit_xor:xorres|RESULT[10]" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "trin:triR0|Q[11]" to the node "Arithmetic_Logic_Unit:ALU|sixteen_bit_xor:xorres|RESULT[11]" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "trin:triR0|Q[12]" to the node "Arithmetic_Logic_Unit:ALU|sixteen_bit_xor:xorres|RESULT[12]" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "trin:triR0|Q[13]" to the node "Arithmetic_Logic_Unit:ALU|sixteen_bit_xor:xorres|RESULT[13]" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "trin:triR0|Q[14]" to the node "Arithmetic_Logic_Unit:ALU|sixteen_bit_xor:xorres|RESULT[14]" into an OR gate
-    Warning (13047): Converted the fan-out from the tri-state buffer "trin:triR0|Q[15]" to the node "Arithmetic_Logic_Unit:ALU|sixteen_bit_xor:xorres|RESULT[15]" into an OR gate
+Warning (18029): Output pin "LEDR[0]" driven by bidirectional pin "BusWires[0]" cannot be tri-stated
+Warning (18029): Output pin "LEDR[1]" driven by bidirectional pin "BusWires[1]" cannot be tri-stated
+Warning (18029): Output pin "LEDR[2]" driven by bidirectional pin "BusWires[2]" cannot be tri-stated
+Warning (18029): Output pin "LEDR[3]" driven by bidirectional pin "BusWires[3]" cannot be tri-stated
+Warning (18029): Output pin "LEDR[4]" driven by bidirectional pin "BusWires[4]" cannot be tri-stated
+Warning (18029): Output pin "LEDR[5]" driven by bidirectional pin "BusWires[5]" cannot be tri-stated
+Warning (18029): Output pin "LEDR[6]" driven by bidirectional pin "BusWires[6]" cannot be tri-stated
+Warning (18029): Output pin "LEDR[7]" driven by bidirectional pin "BusWires[7]" cannot be tri-stated
+Warning (18029): Output pin "LEDR[8]" driven by bidirectional pin "BusWires[8]" cannot be tri-stated
+Warning (18029): Output pin "LEDR[9]" driven by bidirectional pin "BusWires[9]" cannot be tri-stated
+Warning (18029): Output pin "LEDR[10]" driven by bidirectional pin "BusWires[10]" cannot be tri-stated
+Warning (18029): Output pin "LEDR[11]" driven by bidirectional pin "BusWires[11]" cannot be tri-stated
+Warning (18029): Output pin "LEDR[12]" driven by bidirectional pin "BusWires[12]" cannot be tri-stated
+Warning (18029): Output pin "LEDR[13]" driven by bidirectional pin "BusWires[13]" cannot be tri-stated
+Warning (18029): Output pin "LEDR[14]" driven by bidirectional pin "BusWires[14]" cannot be tri-stated
+Warning (18029): Output pin "LEDR[15]" driven by bidirectional pin "BusWires[15]" cannot be tri-stated
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 9 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "SW[12]"
-    Warning (15610): No output dependent on input pin "SW[13]"
-    Warning (15610): No output dependent on input pin "SW[14]"
-    Warning (15610): No output dependent on input pin "SW[15]"
+Warning (21074): Design contains 5 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[16]"
     Warning (15610): No output dependent on input pin "SW[17]"
     Warning (15610): No output dependent on input pin "KEY1"
     Warning (15610): No output dependent on input pin "KEY2"
     Warning (15610): No output dependent on input pin "KEY3"
-Info (21057): Implemented 392 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 385 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 22 input pins
     Info (21059): Implemented 72 output pins
-    Info (21061): Implemented 298 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 74 warnings
-    Info: Peak virtual memory: 505 megabytes
-    Info: Processing ended: Wed May 18 11:30:49 2016
+    Info (21060): Implemented 16 bidirectional pins
+    Info (21061): Implemented 275 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 71 warnings
+    Info: Peak virtual memory: 501 megabytes
+    Info: Processing ended: Wed May 25 11:56:09 2016
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 

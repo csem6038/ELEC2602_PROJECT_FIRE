@@ -21,12 +21,12 @@ PORT (
 	SW : IN STD_LOGIC_VECTOR(17 DOWNTO 0);
 	LEDR: OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
 	HEX0,HEX1,HEX2,HEX3,HEX4,HEX5,HEX6,HEX7 : OUT STD_LOGIC_VECTOR(6 downto 0);
-	KEY0,KEY1,KEY2,KEY3 : IN STD_LOGIC
+	KEY0,KEY1,KEY2,KEY3 : IN STD_LOGIC;
 	--Function_in : IN STD_LOGIC_VECTOR(15 DOWNTO 0); --Added to have a function input to the control unit
 	--F, Rx, Ry : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
 --	Done : OUT STD_LOGIC; -- lel get kekd doesnt do shit
-	--BusWires : INOUT STD_LOGIC_VECTOR(15 DOWNTO 0));
-	);
+	BusWires : INOUT STD_LOGIC_VECTOR(15 DOWNTO 0)
+);
 END proc;
 
 
@@ -62,7 +62,7 @@ COMPONENT controlunit IS
 		Ain,Gin,Gout,Data : out std_logic; -- Deleted Aout from here as it is not part of the schematic
 		
 		R0_in, R0_out, R1_in,R1_out,
-		R2_in, R2_out, R3_in,R3_out: out std_logic;
+		R2_in, R2_out, R3_in,R3_out, ALU: out std_logic;
 		
 		
 		funct: in std_logic_vector(15 downto 0)
@@ -81,8 +81,9 @@ signal Clock : std_logic ;
 signal Reset : std_logic;
 signal W : std_logic;
 signal Function_in : std_logic_vector(15 downto 0);
-signal BusWires : STD_LOGIC_VECTOR(15 DOWNTO 0);
+--signal BusWires : STD_LOGIC_VECTOR(15 DOWNTO 0);
 signal F, Rx, Ry : std_logic;
+signal data : STD_LOGIC_VECTOR(15 downto 0);
 
 
 BEGIN
@@ -97,6 +98,7 @@ BEGIN
 	regR3 : register16 PORT MAP(Clock, Rin(3), BusWires, R3);
 	regG : register16 PORT MAP(Clock, Gin, ALUout, G);
 	regA : register16 PORT MAP(Clock, Ain, BusWires, A);
+	--dataIN : register16 PORT MAP(Clock, Extern, SW(15 downto 0), data);
 	
 	hexdec0 : hexdecode PORT MAP(R0 (15 downto 12),HEX0);
 	hexdec1 : hexdecode PORT MAP(R0 (11 downto 8),HEX1);
@@ -110,6 +112,7 @@ BEGIN
 
 
 	
+	--
 	LEDR <= BusWires;
 	--Tristate Buffer Declarations--
 	triR0: trin PORT MAP(R0, Rout(0), BusWires);
@@ -117,6 +120,7 @@ BEGIN
 	triR2: trin PORT MAP(R2, Rout(2), BusWires);
 	triR3: trin PORT MAP(R3, Rout(3), BusWires);
 	triG : trin PORT MAP(G, Gout, BusWires);
+	triD : trin PORT MAP(SW(15 downto 0), Extern, BusWires);
 	--triData : trin PORT MAP(Data, Extern, BusWires);
 	
 	--ALU Declaration--
@@ -124,6 +128,6 @@ BEGIN
 	
 	--Control Circuit Declaration--
 	cont : controlunit PORT MAP(Clock, Reset, W, Ain, Gin, Gout, Extern, Rin(0), Rout(0), Rin(1), Rout(1),
-			Rin(2), Rout(2), Rin(3), Rout(3), Function_in);
+			Rin(2), Rout(2), Rin(3), Rout(3),AddXor,Function_in);
 	--
 END Behaviour;

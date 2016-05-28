@@ -1,12 +1,13 @@
 
 State Machine - |proc|controlunit:cont|Y_present
-Name Y_present.ADD2 Y_present.ADD1 Y_present.ADD0 Y_present.XOR2 Y_present.XOR1 Y_present.XOR0 Y_present.MOV Y_present.LOAD Y_present.RESET 
-Y_present.RESET 0 0 0 0 0 0 0 0 0 
-Y_present.LOAD 0 0 0 0 0 0 0 1 1 
-Y_present.MOV 0 0 0 0 0 0 1 0 1 
-Y_present.XOR0 0 0 0 0 0 1 0 0 1 
-Y_present.XOR1 0 0 0 0 1 0 0 0 1 
-Y_present.XOR2 0 0 0 1 0 0 0 0 1 
-Y_present.ADD0 0 0 1 0 0 0 0 0 1 
-Y_present.ADD1 0 1 0 0 0 0 0 0 1 
-Y_present.ADD2 1 0 0 0 0 0 0 0 1 
+Name Y_present.ADD2 Y_present.ADD1 Y_present.ADD0 Y_present.XOR2 Y_present.XOR1 Y_present.XOR0 Y_present.MOV Y_present.LOAD1 Y_present.LOAD0 Y_present.RESET 
+Y_present.RESET 0 0 0 0 0 0 0 0 0 0 
+Y_present.LOAD0 0 0 0 0 0 0 0 0 1 1 
+Y_present.LOAD1 0 0 0 0 0 0 0 1 0 1 
+Y_present.MOV 0 0 0 0 0 0 1 0 0 1 
+Y_present.XOR0 0 0 0 0 0 1 0 0 0 1 
+Y_present.XOR1 0 0 0 0 1 0 0 0 0 1 
+Y_present.XOR2 0 0 0 1 0 0 0 0 0 1 
+Y_present.ADD0 0 0 1 0 0 0 0 0 0 1 
+Y_present.ADD1 0 1 0 0 0 0 0 0 0 1 
+Y_present.ADD2 1 0 0 0 0 0 0 0 0 1 
