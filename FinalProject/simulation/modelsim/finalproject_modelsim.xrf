@@ -1,4 +1,5 @@
 vendor_name = ModelSim
+source_file = 1, C:/Users/Tom/Documents/Apps/gitzone/ELEC2602/FinalProject/WF_ALU.vwf
 source_file = 1, C:/Users/Tom/Documents/Apps/gitzone/ELEC2602/FinalProject/two_to_one_mux.vhd
 source_file = 1, C:/Users/Tom/Documents/Apps/gitzone/ELEC2602/FinalProject/sixteen_two_to_one_mux.vhd
 source_file = 1, C:/Users/Tom/Documents/Apps/gitzone/ELEC2602/FinalProject/sixteen_bit_xor.vhd
@@ -10,11 +11,8 @@ source_file = 1, C:/Users/Tom/Documents/Apps/gitzone/ELEC2602/FinalProject/trist
 source_file = 1, C:/Users/Tom/Documents/Apps/gitzone/ELEC2602/FinalProject/trin.vhd
 source_file = 1, C:/Users/Tom/Documents/Apps/gitzone/ELEC2602/FinalProject/controlunit.vhd
 source_file = 1, C:/Users/Tom/Documents/Apps/gitzone/ELEC2602/FinalProject/hexdecode.vhd
-source_file = 1, C:/Users/Tom/Documents/Apps/gitzone/ELEC2602/FinalProject/Waveform.vwf
 source_file = 1, C:/Users/Tom/Documents/Apps/gitzone/ELEC2602/FinalProject/Waveform3.vwf
-source_file = 1, C:/Users/Tom/Documents/Apps/gitzone/ELEC2602/FinalProject/Waveform4.vwf
 source_file = 1, C:/Users/Tom/Documents/Apps/gitzone/ELEC2602/FinalProject/proc.vhd
-source_file = 1, C:/Users/Tom/Documents/Apps/gitzone/ELEC2602/FinalProject/Waveform6.vwf
 source_file = 1, C:/Users/Tom/Documents/Apps/gitzone/ELEC2602/FinalProject/ALU.vwf
 source_file = 1, C:/Users/Tom/Documents/Apps/gitzone/ELEC2602/FinalProject/ControlCircuit.vwf
 source_file = 1, C:/Users/Tom/Documents/Apps/gitzone/ELEC2602/FinalProject/Waveform8.vwf

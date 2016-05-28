@@ -46,28 +46,13 @@ set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
-set_global_assignment -name VHDL_FILE two_to_one_mux.vhd
-set_global_assignment -name VHDL_FILE sixteen_two_to_one_mux.vhd
-set_global_assignment -name VHDL_FILE sixteen_bit_xor.vhd
-set_global_assignment -name VHDL_FILE sixteen_bit_adder.vhd
-set_global_assignment -name VHDL_FILE bit_adder.vhd
-set_global_assignment -name VHDL_FILE Arithmetic_Logic_Unit.vhd
-set_global_assignment -name VHDL_FILE register16.vhd
-set_global_assignment -name VHDL_FILE tristate.vhd
-set_global_assignment -name VHDL_FILE trin.vhd
-set_global_assignment -name VHDL_FILE controlunit.vhd
-set_global_assignment -name VHDL_FILE hexdecode.vhd
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
 set_global_assignment -name SIMULATION_MODE FUNCTIONAL
 set_global_assignment -name VECTOR_OUTPUT_FORMAT VWF
 set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST ON -section_id eda_simulation
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform3.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform4.vwf
-set_global_assignment -name VHDL_FILE proc.vhd
 set_location_assignment PIN_N25 -to SW[0]
 set_location_assignment PIN_N26 -to SW[1]
 set_location_assignment PIN_P25 -to SW[2]
@@ -493,12 +478,25 @@ set_location_assignment PIN_V24 -to GPIO_1[32]
 set_location_assignment PIN_V23 -to GPIO_1[33]
 set_location_assignment PIN_W25 -to GPIO_1[34]
 set_location_assignment PIN_W23 -to GPIO_1[35]
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform6.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE ALU.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE ControlCircuit.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform8.vwf
-set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "C:/Users/Tom/Documents/Apps/gitzone/ELEC2602/FinalProject/ControlCircuit.vwf"
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name VECTOR_WAVEFORM_FILE WF_ALU.vwf
+set_global_assignment -name VHDL_FILE two_to_one_mux.vhd
+set_global_assignment -name VHDL_FILE sixteen_two_to_one_mux.vhd
+set_global_assignment -name VHDL_FILE sixteen_bit_xor.vhd
+set_global_assignment -name VHDL_FILE sixteen_bit_adder.vhd
+set_global_assignment -name VHDL_FILE bit_adder.vhd
+set_global_assignment -name VHDL_FILE Arithmetic_Logic_Unit.vhd
+set_global_assignment -name VHDL_FILE register16.vhd
+set_global_assignment -name VHDL_FILE tristate.vhd
+set_global_assignment -name VHDL_FILE trin.vhd
+set_global_assignment -name VHDL_FILE controlunit.vhd
+set_global_assignment -name VHDL_FILE hexdecode.vhd
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform3.vwf
+set_global_assignment -name VHDL_FILE proc.vhd
+set_global_assignment -name VECTOR_WAVEFORM_FILE ALU.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE ControlCircuit.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform8.vwf
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "C:/Users/Tom/Documents/Apps/gitzone/ELEC2602/FinalProject/Waveform8.vwf"

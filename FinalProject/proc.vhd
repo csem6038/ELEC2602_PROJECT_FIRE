@@ -62,7 +62,8 @@ COMPONENT controlunit IS
 		Ain,Gin,Gout,Data : out std_logic; -- Deleted Aout from here as it is not part of the schematic
 		
 		R0_in, R0_out, R1_in,R1_out,
-		R2_in, R2_out, R3_in,R3_out, ALU: out std_logic;
+		R2_in, R2_out, R3_in,R3_out,
+		ALU: out std_logic;
 		
 		
 		funct: in std_logic_vector(15 downto 0)
