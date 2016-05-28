@@ -1,5 +1,5 @@
 EDA Netlist Writer report for finalproject
-Wed May 25 11:58:38 2016
+Sat May 28 13:32:39 2016
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -8,7 +8,9 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
 ---------------------
   1. Legal Notice
   2. EDA Netlist Writer Summary
-  3. EDA Netlist Writer Messages
+  3. Simulation Settings
+  4. Simulation Generated Files
+  5. EDA Netlist Writer Messages
 
 
 
@@ -31,14 +33,45 @@ applicable agreement for further details.
 
 
 
-+---------------------------------------------------------------+
-; EDA Netlist Writer Summary                                    ;
-+---------------------------+-----------------------------------+
-; EDA Netlist Writer Status ; Failed - Wed May 25 11:58:38 2016 ;
-; Revision Name             ; finalproject                      ;
-; Top-level Entity Name     ; proc                              ;
-; Family                    ; Cyclone II                        ;
-+---------------------------+-----------------------------------+
++-------------------------------------------------------------------+
+; EDA Netlist Writer Summary                                        ;
++---------------------------+---------------------------------------+
+; EDA Netlist Writer Status ; Successful - Sat May 28 13:32:39 2016 ;
+; Revision Name             ; finalproject                          ;
+; Top-level Entity Name     ; proc                                  ;
+; Family                    ; Cyclone II                            ;
+; Simulation Files Creation ; Successful                            ;
++---------------------------+---------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Simulation Settings                                                                                                           ;
++---------------------------------------------------------------------------------------------------+---------------------------+
+; Option                                                                                            ; Setting                   ;
++---------------------------------------------------------------------------------------------------+---------------------------+
+; Tool Name                                                                                         ; ModelSim-Altera (Verilog) ;
+; Generate netlist for functional simulation only                                                   ; On                        ;
+; Truncate long hierarchy paths                                                                     ; Off                       ;
+; Map illegal HDL characters                                                                        ; Off                       ;
+; Flatten buses into individual nodes                                                               ; Off                       ;
+; Maintain hierarchy                                                                                ; Off                       ;
+; Bring out device-wide set/reset signals as ports                                                  ; Off                       ;
+; Enable glitch filtering                                                                           ; Off                       ;
+; Do not write top level VHDL entity                                                                ; Off                       ;
+; Disable detection of setup and hold time violations in the input registers of bi-directional pins ; Off                       ;
+; Architecture name in VHDL output netlist                                                          ; structure                 ;
+; Generate third-party EDA tool command script for RTL functional simulation                        ; Off                       ;
+; Generate third-party EDA tool command script for gate-level simulation                            ; Off                       ;
++---------------------------------------------------------------------------------------------------+---------------------------+
+
+
++-----------------------------------------------------------------------------------------------+
+; Simulation Generated Files                                                                    ;
++-----------------------------------------------------------------------------------------------+
+; Generated Files                                                                               ;
++-----------------------------------------------------------------------------------------------+
+; C:/Users/Tom/Documents/Apps/gitzone/ELEC2602/FinalProject/simulation/modelsim/finalproject.vo ;
++-----------------------------------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -47,15 +80,13 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit EDA Netlist Writer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed May 25 11:58:38 2016
-Info: Command: quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog finalproject -c finalproject --vector_source=C:/Users/lfet7715/Desktop/FinalProject/Waveform8.vwf --testbench_file=./simulation/qsim/finalproject.vt
-Error (201009): Bus port "LEDR" specified in vector source file has width of 16, which does not match width 18 of top level port of same name
-Error (201009): Bus port "LEDR" specified in vector source file has width of 16, which does not match width 18 of top level port of same name
-Info (201000): Generated Verilog Test Bench File ./simulation/qsim/finalproject.vt for simulation
-Error: Quartus II 64-Bit EDA Netlist Writer was unsuccessful. 2 errors, 0 warnings
-    Error: Peak virtual memory: 392 megabytes
-    Error: Processing ended: Wed May 25 11:58:38 2016
-    Error: Elapsed time: 00:00:00
-    Error: Total CPU time (on all processors): 00:00:00
+    Info: Processing started: Sat May 28 13:32:39 2016
+Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off finalproject -c finalproject
+Info (204019): Generated file finalproject.vo in folder "C:/Users/Tom/Documents/Apps/gitzone/ELEC2602/FinalProject/simulation/modelsim/" for EDA simulation tool
+Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 406 megabytes
+    Info: Processing ended: Sat May 28 13:32:40 2016
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
 
 

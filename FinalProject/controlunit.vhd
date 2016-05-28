@@ -102,20 +102,21 @@ ARCHITECTURE Behavior OF controlunit IS
 				
 			WHEN ADD0 =>
 				Ain <= '1';
-				R0_out <= funct(11);
-				R1_out <= funct(10);
-				R2_out <= funct(9);
-				R3_out <= funct(8);
+				R0_out <= funct(7);
+				R1_out <= funct(6);
+				R2_out <= funct(5);
+				R3_out <= funct(4);
+				
 				ALU <= '0';
 				Y_next <= ADD1;
 				
 			WHEN ADD1 =>
 				Gin<='1';
-
-				R0_out <= funct(7);
-				R1_out <= funct(6);
-				R2_out <= funct(5);
-				R3_out <= funct(4);
+				R0_out <= funct(11);
+				R1_out <= funct(10);
+				R2_out <= funct(9);
+				R3_out <= funct(8);
+				
 				ALU <= '0';
 				Y_next <= ADD2;
 				
@@ -132,19 +133,21 @@ ARCHITECTURE Behavior OF controlunit IS
 				
 			WHEN XOR0 =>
 				Ain <= '1';
-				R0_out <= funct(11);
-				R1_out <= funct(10);
-				R2_out <= funct(9);
-				R3_out <= funct(8);
+				R0_out <= funct(7);
+				R1_out <= funct(6);
+				R2_out <= funct(5);
+				R3_out <= funct(4);
 				ALU <= '1';
 				Y_next <= XOR1;	
 				
 			WHEN XOR1 =>
 				Gin<='1';
-				R0_out <= funct(7);
-				R1_out <= funct(6);
-				R2_out <= funct(5);
-				R3_out <= funct(4);
+				R0_out <= funct(11);
+				R1_out <= funct(10);
+				R2_out <= funct(9);
+				R3_out <= funct(8);
+				
+				
 				ALU <= '1';
 				Y_next <= XOR2;
 				
