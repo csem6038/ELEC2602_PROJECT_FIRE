@@ -5,7 +5,9 @@ ENTITY controlunit IS
 		Ain,Gin,Gout,Data,Done : out std_logic; --deleted Aout from this file in all spaces marked by ***
 		
 		R0_in, R0_out, R1_in,R1_out,
-		R2_in, R2_out, R3_in,R3_out, ALU: out std_logic;
+		R2_in, R2_out, R3_in,R3_out,
+	
+		ALU: out std_logic;
 		
 		funct: in std_logic_vector(15 downto 0)
 
@@ -16,7 +18,7 @@ END controlunit;
 ARCHITECTURE Behavior OF controlunit IS
 	--SIGNAL Res, Clock, K : std_logic ;
 	 
-	TYPE State_type IS (RESET, LOAD0, LOAD1, MOV, XOR0, XOR1, XOR2, ADD0, ADD1, ADD2);
+	TYPE State_type IS (RESET, LOAD0, LOAD1, MOV, XOR0, XOR1, XOR2, ADD0, ADD1, ADD2,NOP);
 	SIGNAL Y_present, Y_next : State_type;
 	SIGNAL temp: std_logic_vector(3 downto 0);
 	--SIGNAL	Rx, Ry:  std_logic_vector(3 downto 0);
@@ -67,10 +69,16 @@ ARCHITECTURE Behavior OF controlunit IS
 					Y_next <= ADD0;	
 				ELSIF (funct(3 downto 0)="0001") THEN
 					Y_next <= XOR0;
+					--NOP
+				ELSIF (funct(3 downto 0)="0000") THEN
+					Y_next <= NOP;
 				ELSE
 					Y_next <= RESET;
 				END IF;
-					
+			WHEN NOP =>
+				
+				Y_next <= RESET;	
+				Done <='1';
 			WHEN LOAD0 =>
 				
 				Y_next <= LOAD1;

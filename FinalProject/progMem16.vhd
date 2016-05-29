@@ -6,7 +6,7 @@ USE ieee.numeric_std.all;
 
 ENTITY progMem16 IS
 GENERIC ( S : INTEGER := 16;  -- Memory locations (less than or equal to 2^N) 
-          N : INTEGER := 8 ); -- Address bits
+          N : INTEGER := 16 ); -- Address bits
                               -- Data bits fixed at 16
 port(
   clock        : in std_logic;
@@ -23,9 +23,21 @@ ARCHITECTURE behavioural OF progMem16  IS
   FUNCTION initialize_ram RETURN mem IS
   VARIABLE result : mem;
   BEGIN
-    -- Enter your own program here
+    -- Sample program 1 :D 
     -- result(0) := "0000000000000000”; --LOAD R0
     -- ...
+	 --result(0) := "0000000000000000"; --reset
+
+	 result(0) := "0000000010001000"; --LOAD R0
+	-- result(1) := "0000000010001000"; --BLANK
+
+	 result(1) := "0000000000000010"; -- Store data 2
+	 result(2) := "0000000000000000"; --BLANK
+
+	 result(3) := "0001000001000100"; -- MOV R1, R0
+	 result(4) := "0000010010000010"; -- ADD R0, R1
+	 result(5) := "0000010010000001"; -- XOR R0, R1
+
     return result;
   END initialize_ram;
 

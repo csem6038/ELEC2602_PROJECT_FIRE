@@ -478,11 +478,6 @@ set_location_assignment PIN_V24 -to GPIO_1[32]
 set_location_assignment PIN_V23 -to GPIO_1[33]
 set_location_assignment PIN_W25 -to GPIO_1[34]
 set_location_assignment PIN_W23 -to GPIO_1[35]
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
-set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "C:/Users/Tom/Documents/Apps/gitzone/ELEC2602/FinalProject/Waveform8.vwf"
 set_global_assignment -name VHDL_FILE progMem16.vhd
 set_global_assignment -name VECTOR_WAVEFORM_FILE WF_ALU.vwf
 set_global_assignment -name VHDL_FILE two_to_one_mux.vhd
@@ -501,3 +496,11 @@ set_global_assignment -name VHDL_FILE proc.vhd
 set_global_assignment -name VECTOR_WAVEFORM_FILE ALU.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE ControlCircuit.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform8.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE RAMsimulation.vwf
+set_global_assignment -name VHDL_FILE PC.vhd
+set_global_assignment -name VECTOR_WAVEFORM_FILE PCsimulation.vwf
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "C:/Users/Tom/Documents/Apps/gitzone/ELEC2602/FinalProject/RAMsimulation.vwf"

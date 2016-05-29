@@ -3,35 +3,75 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow Model Setup 'KEY0'
-Slack : -4.873
-TNS   : -277.714
+Slack : -5.040
+TNS   : -318.363
+
+Type  : Slow Model Setup 'controlunit:cont|Y_present.ADD2'
+Slack : -1.619
+TNS   : -15.810
+
+Type  : Slow Model Setup 'controlunit:cont|Y_present.RESET'
+Slack : -0.625
+TNS   : -0.636
 
 Type  : Slow Model Hold 'KEY0'
-Slack : -1.231
-TNS   : -1.250
+Slack : -2.554
+TNS   : -47.481
+
+Type  : Slow Model Hold 'controlunit:cont|Y_present.RESET'
+Slack : -0.069
+TNS   : -0.069
+
+Type  : Slow Model Hold 'controlunit:cont|Y_present.ADD2'
+Slack : 0.391
+TNS   : 0.000
 
 Type  : Slow Model Minimum Pulse Width 'KEY0'
 Slack : -1.380
-TNS   : -107.380
+TNS   : -114.380
 
-Type  : Slow Model Minimum Pulse Width 'SW[0]'
-Slack : -1.380
-TNS   : -1.380
+Type  : Slow Model Minimum Pulse Width 'controlunit:cont|Y_present.ADD2'
+Slack : -0.500
+TNS   : -16.000
+
+Type  : Slow Model Minimum Pulse Width 'controlunit:cont|Y_present.RESET'
+Slack : 0.500
+TNS   : 0.000
 
 Type  : Fast Model Setup 'KEY0'
-Slack : -1.521
-TNS   : -78.358
+Slack : -1.589
+TNS   : -83.548
+
+Type  : Fast Model Setup 'controlunit:cont|Y_present.ADD2'
+Slack : -0.223
+TNS   : -0.826
+
+Type  : Fast Model Setup 'controlunit:cont|Y_present.RESET'
+Slack : 0.215
+TNS   : 0.000
 
 Type  : Fast Model Hold 'KEY0'
-Slack : -0.928
-TNS   : -1.873
+Slack : -1.595
+TNS   : -49.778
+
+Type  : Fast Model Hold 'controlunit:cont|Y_present.RESET'
+Slack : 0.145
+TNS   : 0.000
+
+Type  : Fast Model Hold 'controlunit:cont|Y_present.ADD2'
+Slack : 0.215
+TNS   : 0.000
 
 Type  : Fast Model Minimum Pulse Width 'KEY0'
 Slack : -1.380
-TNS   : -107.380
+TNS   : -114.380
 
-Type  : Fast Model Minimum Pulse Width 'SW[0]'
-Slack : -1.380
-TNS   : -1.380
+Type  : Fast Model Minimum Pulse Width 'controlunit:cont|Y_present.ADD2'
+Slack : -0.500
+TNS   : -16.000
+
+Type  : Fast Model Minimum Pulse Width 'controlunit:cont|Y_present.RESET'
+Slack : 0.500
+TNS   : 0.000
 
 ------------------------------------------------------------
