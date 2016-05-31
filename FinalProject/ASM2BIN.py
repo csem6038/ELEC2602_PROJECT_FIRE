@@ -4,6 +4,10 @@ load="1000"
 mov="0100"
 add="0010"
 xor="0001"
+sub="1001"
+_or="1010"
+_and="1100"
+_nand="1011"
 
 R0="1000"
 R1="0100"
@@ -55,6 +59,14 @@ while(1):
         binary.append(add)
     elif (command[0]=="XOR"):
         binary.append(xor)
+    elif (command[0]=="SUB"):
+        binary.append(sub)
+    elif (command[0]=="OR"):
+        binary.append(_or)
+    elif (command[0]=="AND"):
+        binary.append(_and)
+    elif (command[0]=="NAND"):
+        binary.append(_nand)
 
     s = ''.join(binary)
     print(s)
