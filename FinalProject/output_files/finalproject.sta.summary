@@ -3,75 +3,75 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow Model Setup 'KEY0'
-Slack : -5.040
-TNS   : -318.363
-
-Type  : Slow Model Setup 'controlunit:cont|Y_present.ADD2'
-Slack : -1.619
-TNS   : -15.810
+Slack : -4.788
+TNS   : -253.707
 
 Type  : Slow Model Setup 'controlunit:cont|Y_present.RESET'
-Slack : -0.625
-TNS   : -0.636
+Slack : -2.178
+TNS   : -25.966
+
+Type  : Slow Model Setup 'controlunit:cont|Y_present.ADD0'
+Slack : -2.032
+TNS   : -22.053
 
 Type  : Slow Model Hold 'KEY0'
-Slack : -2.554
-TNS   : -47.481
+Slack : -2.265
+TNS   : -25.699
 
 Type  : Slow Model Hold 'controlunit:cont|Y_present.RESET'
-Slack : -0.069
-TNS   : -0.069
+Slack : 0.072
+TNS   : 0.000
 
-Type  : Slow Model Hold 'controlunit:cont|Y_present.ADD2'
+Type  : Slow Model Hold 'controlunit:cont|Y_present.ADD0'
 Slack : 0.391
 TNS   : 0.000
 
 Type  : Slow Model Minimum Pulse Width 'KEY0'
 Slack : -1.380
-TNS   : -114.380
+TNS   : -117.380
 
-Type  : Slow Model Minimum Pulse Width 'controlunit:cont|Y_present.ADD2'
+Type  : Slow Model Minimum Pulse Width 'controlunit:cont|Y_present.ADD0'
 Slack : -0.500
 TNS   : -16.000
 
 Type  : Slow Model Minimum Pulse Width 'controlunit:cont|Y_present.RESET'
-Slack : 0.500
-TNS   : 0.000
+Slack : -0.500
+TNS   : -16.000
 
 Type  : Fast Model Setup 'KEY0'
-Slack : -1.589
-TNS   : -83.548
-
-Type  : Fast Model Setup 'controlunit:cont|Y_present.ADD2'
-Slack : -0.223
-TNS   : -0.826
+Slack : -1.478
+TNS   : -59.018
 
 Type  : Fast Model Setup 'controlunit:cont|Y_present.RESET'
-Slack : 0.215
-TNS   : 0.000
+Slack : -0.733
+TNS   : -6.743
+
+Type  : Fast Model Setup 'controlunit:cont|Y_present.ADD0'
+Slack : -0.699
+TNS   : -6.233
 
 Type  : Fast Model Hold 'KEY0'
-Slack : -1.595
-TNS   : -49.778
+Slack : -1.506
+TNS   : -20.474
 
 Type  : Fast Model Hold 'controlunit:cont|Y_present.RESET'
 Slack : 0.145
 TNS   : 0.000
 
-Type  : Fast Model Hold 'controlunit:cont|Y_present.ADD2'
+Type  : Fast Model Hold 'controlunit:cont|Y_present.ADD0'
 Slack : 0.215
 TNS   : 0.000
 
 Type  : Fast Model Minimum Pulse Width 'KEY0'
 Slack : -1.380
-TNS   : -114.380
+TNS   : -117.380
 
-Type  : Fast Model Minimum Pulse Width 'controlunit:cont|Y_present.ADD2'
+Type  : Fast Model Minimum Pulse Width 'controlunit:cont|Y_present.ADD0'
 Slack : -0.500
 TNS   : -16.000
 
 Type  : Fast Model Minimum Pulse Width 'controlunit:cont|Y_present.RESET'
-Slack : 0.500
-TNS   : 0.000
+Slack : -0.500
+TNS   : -16.000
 
 ------------------------------------------------------------

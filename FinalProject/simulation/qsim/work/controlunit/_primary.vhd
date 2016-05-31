@@ -5,6 +5,7 @@ entity controlunit is
         Clock           : in     vl_logic;
         Res             : in     vl_logic;
         w               : in     vl_logic;
+        datastring      : in     vl_logic_vector(15 downto 0);
         Ain             : out    vl_logic;
         Gin             : out    vl_logic;
         Gout            : out    vl_logic;

@@ -28,15 +28,30 @@ ARCHITECTURE behavioural OF progMem16  IS
     -- ...
 	 --result(0) := "0000000000000000"; --reset
 
-	 result(0) := "0000000010001000"; --LOAD R0
-	-- result(1) := "0000000010001000"; --BLANK
+--	 result(0) := "0000000010001000"; --LOAD R0
+--	 result(1) := "0000000000000010"; --2
+--	 result(2) := "0000000001001000"; --LOAD R0
+--	 result(3) := "0000000000001111"; --15
 
-	 result(1) := "0000000000000010"; -- Store data 2
-	 result(2) := "0000000000000000"; --BLANK
+	 --result(1) := "0000000000000010"; -- Store data 2 --or 16
+	 --result(2) := "0000000000000000"; --BLANK
+	
+	
+	 --result(2) := "0000100001000100"; -- MOV R1, R0
+	-- result(4) := "0000010010000010"; -- ADD R0, R1
+	-- result(4) := "0000010010000001"; -- XOR R0, R1
+	 --result(5) := "0000000000000000"; --RETURN
 
-	 result(3) := "0001000001000100"; -- MOV R1, R0
-	 result(4) := "0000010010000010"; -- ADD R0, R1
-	 result(5) := "0000010010000001"; -- XOR R0, R1
+	 
+	 --MULTILOAD
+	 	result(0) := "0000000010001000"; -- LOAD R0
+	 	result(1) := "0000000000000100"; -- 4
+	 	result(2) := "0000000001001000"; -- LOAD R1
+	 	result(3) := "0000000000000011"; -- 3
+	 	result(4) := "0000000000101000"; -- LOAD R2
+	 	result(5) := "0000000000000011"; -- 3
+	 	result(6) := "0000001001000010"; -- ADD R1, R2
+	 	result(7) := "0000010010000010"; -- ADD R0, R1
 
     return result;
   END initialize_ram;
@@ -46,9 +61,6 @@ BEGIN
   PROCESS (clock)
   BEGIN
     IF clock'event and clock = '1' THEN
-      IF write_enable = '1' THEN
-        raMem(to_integer(unsigned(write_addr))) <= data_in;
-      END IF;
       data_out <= raMem(to_integer(unsigned(read_addr)));
     END IF;
   END PROCESS;

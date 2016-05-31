@@ -5,7 +5,7 @@
 		<CBX_INST_ENTRY INSTANCE_NAME="|proc|progMem16:RAM|lpm_mux:raMem_rtl_15" CBX_FILE_NAME="mux_t4d.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|proc|progMem16:RAM|lpm_mux:raMem_rtl_2" CBX_FILE_NAME="mux_joc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|proc|progMem16:RAM|lpm_mux:raMem_rtl_6" CBX_FILE_NAME="mux_joc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|proc|progMem16:RAM|lpm_mux:raMem_rtl_12" CBX_FILE_NAME="mux_joc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|proc|progMem16:RAM|lpm_mux:raMem_rtl_12" CBX_FILE_NAME="mux_t4d.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|proc|progMem16:RAM|lpm_mux:raMem_rtl_3" CBX_FILE_NAME="mux_joc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|proc|progMem16:RAM|lpm_mux:raMem_rtl_7" CBX_FILE_NAME="mux_joc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|proc|progMem16:RAM|lpm_mux:raMem_rtl_0" CBX_FILE_NAME="mux_joc.tdf"/>
@@ -15,7 +15,7 @@
 		<CBX_INST_ENTRY INSTANCE_NAME="|proc|progMem16:RAM|lpm_mux:raMem_rtl_1" CBX_FILE_NAME="mux_joc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|proc|progMem16:RAM|lpm_mux:raMem_rtl_10" CBX_FILE_NAME="mux_joc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|proc|progMem16:RAM|lpm_mux:raMem_rtl_14" CBX_FILE_NAME="mux_t4d.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|proc|progMem16:RAM|lpm_mux:raMem_rtl_5" CBX_FILE_NAME="mux_t4d.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|proc|progMem16:RAM|lpm_mux:raMem_rtl_9" CBX_FILE_NAME="mux_t4d.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|proc|progMem16:RAM|lpm_mux:raMem_rtl_5" CBX_FILE_NAME="mux_joc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|proc|progMem16:RAM|lpm_mux:raMem_rtl_9" CBX_FILE_NAME="mux_joc.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

@@ -11,6 +11,23 @@ ARCHITECTURE BEHAVIOUR of PC IS
 
 SIGNAL tempPC : std_logic_vector(15 DOWNTO 0);
 
+--BEGIN
+--    PROCESS (reset, clk) 
+--        BEGIN
+--            IF(reset='1') THEN
+--					tempPC <= "0000000000000000"; --resets value of program counter
+--				ELSE
+--					tempPC<=tempPC+"0000000000000001"; -- increments program counter
+--				END IF;
+----            ELSIF (clk'event and clk = '1') THEN --working version
+----					--IF(nextCount = '1') THEN
+----						tempPC<=tempPC+"0000000000000001"; -- increments program counter
+----					--END IF;
+----				END IF;
+--	END PROCESS;
+--	PC_out<=tempPC; --output of the program counter
+--END;
+
 BEGIN
     PROCESS (nextCount, reset, clk) 
         BEGIN
@@ -18,9 +35,7 @@ BEGIN
 					tempPC <= "0000000000000000"; --resets value of program counter
 
             ELSIF (clk'event and clk = '1') THEN
-					--IF(nextCount = '1') THEN
 						tempPC<=tempPC+"0000000000000001"; -- increments program counter
-					--END IF;
 				END IF;
 	END PROCESS;
 	PC_out<=tempPC; --output of the program counter

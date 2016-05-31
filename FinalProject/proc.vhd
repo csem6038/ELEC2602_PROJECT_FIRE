@@ -20,6 +20,7 @@ PORT (
 	--Reset, w : IN STD_LOGIC;
 	SW : IN STD_LOGIC_VECTOR(17 DOWNTO 0);
 	LEDR: OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+	--LEDG: OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
 	HEX0,HEX1,HEX2,HEX3,HEX4,HEX5,HEX6,HEX7 : OUT STD_LOGIC_VECTOR(6 downto 0);
 	KEY0,KEY1,KEY2,KEY3 : IN STD_LOGIC;
 	--Function_in : IN STD_LOGIC_VECTOR(15 DOWNTO 0); --Added to have a function input to the control unit
@@ -93,7 +94,7 @@ END COMPONENT;
 
 SIGNAL Rin, Rout : STD_LOGIC_VECTOR(3 DOWNTO 0);
 SIGNAL Ain, Gin, Gout : STD_LOGIC;
-SIGNAL AddXor, Extern : STD_LOGIC ;
+SIGNAL AddXor, Data : STD_LOGIC ;
 --register outputs
 SIGNAL R0, R1, R2, R3 : STD_LOGIC_VECTOR(15 DOWNTO 0) ;
 SIGNAL A, ALUout, G : STD_LOGIC_VECTOR(15 DOWNTO 0);
@@ -103,15 +104,17 @@ signal W : std_logic;
 signal Function_in : std_logic_vector(15 downto 0);
 --signal BusWires : STD_LOGIC_VECTOR(15 DOWNTO 0);
 signal F, Rx, Ry : std_logic;
-signal data : STD_LOGIC_VECTOR(15 downto 0);
 signal RAMout : STD_LOGIC_VECTOR(15 downto 0);
 signal BLANK : STD_LOGIC_VECTOR(15 downto 0);
-signal sample: STD_LOGIC_VECTOR(15 downto 0);
+signal sample,values: STD_LOGIC_VECTOR(15 downto 0);
 --signal count: STD_LOGIC_VECTOR(15 downto 0);
 signal Done: std_logic;
+signal display1 : std_logic_vector(15 downto 0);
+signal display2 : std_logic_vector(15 downto 0);
+signal multiclock: std_logic;
 ATTRIBUTE keep : boolean;
-ATTRIBUTE keep of Function_in,Done : SIGNAL IS true;
-
+ATTRIBUTE keep of Function_in,Done,Extern,count,Rin,R0,R1,Rin,Rout,Data : SIGNAL IS true;
+signal tick: std_logic;
 BEGIN
 	--Rin <= SW(15 downto 11);
 	
@@ -123,19 +126,20 @@ BEGIN
 	Clock <= KEY0;
 	W <= SW(16);
 	Reset <= SW(17);
-	--count <= "0000000000000001";
+
 	BLANK <= "0000000000000000";
 	sample <= "0001000001000100";
+	
+	multiclock <= Done;
+	
 	RAM : progMem16 PORT MAP(Clock,BLANK,BLANK,count,'0',RAMout);
-	pcounter : PC PORT MAP(done,Reset,done,count);
+	pcounter : PC PORT MAP(multiclock,Reset,Done,count);
+	
+	
 	--Function_in <= SW(15 downto 0);
-	Function_in <= RAMout;
-	
-	
---		Function_in <= "0001000001000100" WHEN KEY1='1' ELSE
---			"0000000000000010";
 
-	--Function_in <= "0001000001000100";
+	Function_in <= RAMout;
+	--data <='1';
 	
 		--Register Declarations--
 	regR0 : register16 PORT MAP(Clock, Rin(0), BusWires, R0);
@@ -144,36 +148,40 @@ BEGIN
 	regR3 : register16 PORT MAP(Clock, Rin(3), BusWires, R3);
 	regG : register16 PORT MAP(Clock, Gin, ALUout, G);
 	regA : register16 PORT MAP(Clock, Ain, BusWires, A);
-	--dataIN : register16 PORT MAP(Clock, Extern, SW(15 downto 0), data);
+	--regI : register16 PORT MAP(Clock, )
+
+display1 <= R0 WHEN KEY1='0' ELSE R2;
+
+display2 <= R1 WHEN KEY1='0' ELSE R3;
 	
-	hexdec0 : hexdecode PORT MAP(R0 (15 downto 12),HEX0);
-	hexdec1 : hexdecode PORT MAP(R0 (11 downto 8),HEX1);
-	hexdec2 : hexdecode PORT MAP(R0 (7 downto 4),HEX2);
-	hexdec3 : hexdecode PORT MAP(R0 (3 downto 0),HEX3);
+	hexdec0 : hexdecode PORT MAP(display1 (15 downto 12),HEX3);
+	hexdec1 : hexdecode PORT MAP(display1 (11 downto 8),HEX2);
+	hexdec2 : hexdecode PORT MAP(display1 (7 downto 4),HEX1);
+	hexdec3 : hexdecode PORT MAP(display1 (3 downto 0),HEX0);
 	
-	hexdec4 : hexdecode PORT MAP(R1 (15 downto 12),HEX4);
-	hexdec5 : hexdecode PORT MAP(R1 (11 downto 8),HEX5);
-	hexdec6 : hexdecode PORT MAP(R1 (7 downto 4),HEX6);
-	hexdec7 : hexdecode PORT MAP(R1 (3 downto 0),HEX7);
+	hexdec4 : hexdecode PORT MAP(display2 (15 downto 12),HEX7);
+	hexdec5 : hexdecode PORT MAP(display2 (11 downto 8),HEX6);
+	hexdec6 : hexdecode PORT MAP(display2 (7 downto 4),HEX5);
+	hexdec7 : hexdecode PORT MAP(display2 (3 downto 0),HEX4);
 
 
-	
 	--
-	LEDR <= BusWires;
+	LEDR <= BusWires;--BusWires;
+	--LEDG <= R0;
 	--Tristate Buffer Declarations--
 	triR0: trin PORT MAP(R0, Rout(0), BusWires);
 	triR1: trin PORT MAP(R1, Rout(1), BusWires);
 	triR2: trin PORT MAP(R2, Rout(2), BusWires);
 	triR3: trin PORT MAP(R3, Rout(3), BusWires);
 	triG : trin PORT MAP(G, Gout, BusWires);
-	triD : trin PORT MAP(Function_in(15 downto 0), Extern, BusWires);
+	triD : trin PORT MAP(Function_in(15 downto 0), data, BusWires);  --always on lel
 	--triData : trin PORT MAP(Data, Extern, BusWires);
 	
 	--ALU Declaration--
 	ALU : Arithmetic_Logic_Unit PORT MAP(A, BusWires, AddXor, ALUout);
 	
 	--Control Circuit Declaration--
-	cont : controlunit PORT MAP(Clock, Reset, W, Ain, Gin, Gout, Extern,done, Rin(0), Rout(0), Rin(1), Rout(1),
+	cont : controlunit PORT MAP(Clock, Reset, W, Ain, Gin, Gout, Data,Done, Rin(0), Rout(0), Rin(1), Rout(1),
 			Rin(2), Rout(2), Rin(3), Rout(3),AddXor,Function_in);
 	--
 END Behaviour;

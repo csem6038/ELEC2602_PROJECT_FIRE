@@ -3,6 +3,7 @@ use verilog.vl_types.all;
 entity controlunit_vlg_sample_tst is
     port(
         Clock           : in     vl_logic;
+        datastring      : in     vl_logic_vector(15 downto 0);
         funct           : in     vl_logic_vector(15 downto 0);
         Res             : in     vl_logic;
         w               : in     vl_logic;
