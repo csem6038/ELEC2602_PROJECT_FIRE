@@ -67,7 +67,7 @@ END COMPONENT;
 	
 COMPONENT Arithmetic_Logic_Unit IS  -- n-bit adder/sub
 	PORT( num1, num2 : IN STD_LOGIC_VECTOR (15 DOWNTO 0);
-			sel : IN STD_LOGIC;
+			sel : IN STD_LOGIC_VECTOR(3 downto 0);
 			chosen_result : OUT STD_LOGIC_VECTOR(15 DOWNTO 0));
 END COMPONENT;
 
@@ -82,8 +82,8 @@ COMPONENT controlunit IS
 		Ain,Gin,Gout,Data,Done : out std_logic; -- Deleted Aout from here as it is not part of the schematic
 		
 		R0_in, R0_out, R1_in,R1_out,
-		R2_in, R2_out, R3_in,R3_out,
-		ALU: out std_logic;
+		R2_in, R2_out, R3_in,R3_out : out std_logic;
+		ALU: out std_logic_vector(3 downto 0);
 		
 		
 		funct: in std_logic_vector(15 downto 0)
@@ -94,7 +94,9 @@ END COMPONENT;
 
 SIGNAL Rin, Rout : STD_LOGIC_VECTOR(3 DOWNTO 0);
 SIGNAL Ain, Gin, Gout : STD_LOGIC;
-SIGNAL AddXor, Data : STD_LOGIC ;
+SIGNAL Data : STD_LOGIC ;
+SIGNAL ALUselect : STD_LOGIC_VECTOR(3 downto 0);
+
 --register outputs
 SIGNAL R0, R1, R2, R3 : STD_LOGIC_VECTOR(15 DOWNTO 0) ;
 SIGNAL A, ALUout, G : STD_LOGIC_VECTOR(15 DOWNTO 0);
@@ -178,10 +180,10 @@ display2 <= R1 WHEN KEY1='0' ELSE R3;
 	--triData : trin PORT MAP(Data, Extern, BusWires);
 	
 	--ALU Declaration--
-	ALU : Arithmetic_Logic_Unit PORT MAP(A, BusWires, AddXor, ALUout);
+	ALU : Arithmetic_Logic_Unit PORT MAP(A, BusWires, ALUselect, ALUout);
 	
 	--Control Circuit Declaration--
 	cont : controlunit PORT MAP(Clock, Reset, W, Ain, Gin, Gout, Data,Done, Rin(0), Rout(0), Rin(1), Rout(1),
-			Rin(2), Rout(2), Rin(3), Rout(3),AddXor,Function_in);
+			Rin(2), Rout(2), Rin(3), Rout(3),ALUselect,Function_in);
 	--
 END Behaviour;

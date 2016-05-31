@@ -6,9 +6,9 @@ ENTITY controlunit IS
 		Ain,Gin,Gout,Data,Done : out std_logic; --deleted Aout from this file in all spaces marked by ***
 		
 		R0_in, R0_out, R1_in,R1_out,
-		R2_in, R2_out, R3_in,R3_out,
+		R2_in, R2_out, R3_in,R3_out : out std_logic;
 	
-		ALU: out std_logic;
+		ALU: out std_logic_vector(3 downto 0);
 		
 		funct: in std_logic_vector(15 downto 0)
 
@@ -19,7 +19,7 @@ END controlunit;
 ARCHITECTURE Behavior OF controlunit IS
 	--SIGNAL Res, Clock, K : std_logic ;
 	 
-	TYPE State_type IS (RESET, LOAD0, LOAD1, MOV, XOR0, XOR1, XOR2, ADD0, ADD1, ADD2,NOP,LOADU,CLEAN);
+	TYPE State_type IS (RESET, LOAD0, LOAD1, MOV, XOR0, XOR1, XOR2, ADD0, ADD1, ADD2, SUB0, SUB1, SUB2, OR0, OR1, OR2, AND0, AND1, AND2, NAND0, NAND1, NAND2, NOP,LOADU,CLEAN);
 	SIGNAL Y_present, Y_next : State_type;
 	SIGNAL temp: std_logic_vector(3 downto 0);
 	SIGNAL dataround: std_logic;
@@ -44,7 +44,7 @@ ARCHITECTURE Behavior OF controlunit IS
 		Ain<='0';
 		Gin<='0';
 		Gout<='0';
-		ALU <= '0';
+		ALU <= "0000";
 		Data<='0';
 		Done <='0';
 		dataround <= '0';
@@ -84,6 +84,14 @@ ARCHITECTURE Behavior OF controlunit IS
 					Y_next <= ADD0;	
 				ELSIF (funct(3 downto 0)="0001") THEN
 					Y_next <= XOR0;
+				ELSIF (funct(3 downto 0)="1001") THEN
+					Y_next <= SUB0;
+				ELSIF (funct(3 downto 0)="1010") THEN
+					Y_next <= OR0;
+				ELSIF (funct(3 downto 0)="1100") THEN
+					Y_next <= AND0;
+				ELSIF (funct(3 downto 0)="1011") THEN
+					Y_next <= NAND0;
 
 --				ELSIF (funct(3 downto 0)="1111") THEN --this makes it work with 1111 lol
 --					Data<='1';
@@ -108,7 +116,7 @@ ARCHITECTURE Behavior OF controlunit IS
 				Ain<='0';
 				Gin<='0';
 				Gout<='0';
-				ALU <= '0';
+				ALU <= "0000";
 				Data<='0';
 				Done <='0';
 				
@@ -182,7 +190,7 @@ ARCHITECTURE Behavior OF controlunit IS
 				R2_out <= funct(5);
 				R3_out <= funct(4);
 				
-				ALU <= '0';
+				ALU <= "0000";
 				Y_next <= ADD1;
 				
 			WHEN ADD1 =>
@@ -192,7 +200,7 @@ ARCHITECTURE Behavior OF controlunit IS
 				R2_out <= funct(9);
 				R3_out <= funct(8);
 				
-				ALU <= '0';
+				ALU <= "0000";
 				Y_next <= ADD2;
 				
 			WHEN ADD2 =>
@@ -201,7 +209,7 @@ ARCHITECTURE Behavior OF controlunit IS
 				R1_in <= funct(6);
 				R2_in <= funct(5);
 				R3_in <= funct(4);
-				ALU <= '0';
+				ALU <= "0000";
 				Done <= '1';
 
 				Y_next <= RESET;
@@ -212,7 +220,7 @@ ARCHITECTURE Behavior OF controlunit IS
 				R1_out <= funct(6);
 				R2_out <= funct(5);
 				R3_out <= funct(4);
-				ALU <= '1';
+				ALU <= "0001";
 				Y_next <= XOR1;	
 				
 			WHEN XOR1 =>
@@ -223,7 +231,7 @@ ARCHITECTURE Behavior OF controlunit IS
 				R3_out <= funct(8);
 				
 				
-				ALU <= '1';
+				ALU <= "0001";
 				Y_next <= XOR2;
 				
 			WHEN XOR2 =>
@@ -232,7 +240,131 @@ ARCHITECTURE Behavior OF controlunit IS
 				R1_in <= funct(6);
 				R2_in <= funct(5);
 				R3_in <= funct(4);
-				ALU <= '1';
+				ALU <= "0001";
+				Done <= '1';
+
+				Y_next <= RESET;
+				
+			WHEN SUB0 =>
+				Ain <= '1';
+				R0_out <= funct(7);
+				R1_out <= funct(6);
+				R2_out <= funct(5);
+				R3_out <= funct(4);
+				ALU <= "0010";
+				Y_next <= SUB1;	
+				
+			WHEN SUB1 =>
+				Gin<='1';
+				R0_out <= funct(11);
+				R1_out <= funct(10);
+				R2_out <= funct(9);
+				R3_out <= funct(8);
+				
+				
+				ALU <= "0010";
+				Y_next <= SUB2;
+				
+			WHEN SUB2 =>
+				Gout<='1';
+				R0_in <= funct(7);
+				R1_in <= funct(6);
+				R2_in <= funct(5);
+				R3_in <= funct(4);
+				ALU <= "0010";
+				Done <= '1';
+
+				Y_next <= RESET;
+		
+			WHEN OR0 =>
+				Ain <= '1';
+				R0_out <= funct(7);
+				R1_out <= funct(6);
+				R2_out <= funct(5);
+				R3_out <= funct(4);
+				ALU <= "0100";
+				Y_next <= OR1;	
+				
+			WHEN OR1 =>
+				Gin<='1';
+				R0_out <= funct(11);
+				R1_out <= funct(10);
+				R2_out <= funct(9);
+				R3_out <= funct(8);
+				
+				
+				ALU <= "0100";
+				Y_next <= OR2;
+				
+			WHEN OR2 =>
+				Gout<='1';
+				R0_in <= funct(7);
+				R1_in <= funct(6);
+				R2_in <= funct(5);
+				R3_in <= funct(4);
+				ALU <= "0100";
+				Done <= '1';
+
+				Y_next <= RESET;
+				
+			WHEN NAND0 =>
+				Ain <= '1';
+				R0_out <= funct(7);
+				R1_out <= funct(6);
+				R2_out <= funct(5);
+				R3_out <= funct(4);
+				ALU <= "1000";
+				Y_next <= NAND1;	
+				
+			WHEN NAND1 =>
+				Gin<='1';
+				R0_out <= funct(11);
+				R1_out <= funct(10);
+				R2_out <= funct(9);
+				R3_out <= funct(8);
+				
+				
+				ALU <= "1000";
+				Y_next <= NAND2;
+				
+			WHEN NAND2 =>
+				Gout<='1';
+				R0_in <= funct(7);
+				R1_in <= funct(6);
+				R2_in <= funct(5);
+				R3_in <= funct(4);
+				ALU <= "1000";
+				Done <= '1';
+
+				Y_next <= RESET;	
+				
+			WHEN AND0 =>
+				Ain <= '1';
+				R0_out <= funct(7);
+				R1_out <= funct(6);
+				R2_out <= funct(5);
+				R3_out <= funct(4);
+				ALU <= "1001";
+				Y_next <= AND1;	
+				
+			WHEN AND1 =>
+				Gin<='1';
+				R0_out <= funct(11);
+				R1_out <= funct(10);
+				R2_out <= funct(9);
+				R3_out <= funct(8);
+				
+				
+				ALU <= "1001";
+				Y_next <= AND2;
+				
+			WHEN AND2 =>
+				Gout<='1';
+				R0_in <= funct(7);
+				R1_in <= funct(6);
+				R2_in <= funct(5);
+				R3_in <= funct(4);
+				ALU <= "1001";
 				Done <= '1';
 
 				Y_next <= RESET;	

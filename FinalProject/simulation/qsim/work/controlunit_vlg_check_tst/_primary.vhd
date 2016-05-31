@@ -3,7 +3,7 @@ use verilog.vl_types.all;
 entity controlunit_vlg_check_tst is
     port(
         Ain             : in     vl_logic;
-        ALU             : in     vl_logic;
+        ALU             : in     vl_logic_vector(3 downto 0);
         Data            : in     vl_logic;
         Done            : in     vl_logic;
         Gin             : in     vl_logic;

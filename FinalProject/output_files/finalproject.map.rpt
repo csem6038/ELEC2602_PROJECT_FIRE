@@ -1,5 +1,5 @@
 Analysis & Synthesis report for finalproject
-Wed Jun 01 00:12:42 2016
+Wed Jun 01 01:32:55 2016
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -17,20 +17,23 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   9. User-Specified and Inferred Latches
  10. Registers Removed During Synthesis
  11. General Register Statistics
- 12. Source assignments for Top-level Entity: |proc
- 13. Parameter Settings for User Entity Instance: progMem16:RAM
- 14. Parameter Settings for User Entity Instance: trin:triR0
- 15. Parameter Settings for User Entity Instance: trin:triR1
- 16. Parameter Settings for User Entity Instance: trin:triR2
- 17. Parameter Settings for User Entity Instance: trin:triR3
- 18. Parameter Settings for User Entity Instance: trin:triG
- 19. Parameter Settings for User Entity Instance: trin:triD
- 20. Port Connectivity Checks: "controlunit:cont"
- 21. Port Connectivity Checks: "Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa15"
- 22. Port Connectivity Checks: "Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa0"
- 23. Port Connectivity Checks: "progMem16:RAM"
- 24. Elapsed Time Per Partition
- 25. Analysis & Synthesis Messages
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Source assignments for Top-level Entity: |proc
+ 14. Parameter Settings for User Entity Instance: progMem16:RAM
+ 15. Parameter Settings for User Entity Instance: trin:triR0
+ 16. Parameter Settings for User Entity Instance: trin:triR1
+ 17. Parameter Settings for User Entity Instance: trin:triR2
+ 18. Parameter Settings for User Entity Instance: trin:triR3
+ 19. Parameter Settings for User Entity Instance: trin:triG
+ 20. Parameter Settings for User Entity Instance: trin:triD
+ 21. Port Connectivity Checks: "controlunit:cont"
+ 22. Port Connectivity Checks: "Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add1"
+ 23. Port Connectivity Checks: "Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_xor:xor1"
+ 24. Port Connectivity Checks: "Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa15"
+ 25. Port Connectivity Checks: "Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa0"
+ 26. Port Connectivity Checks: "progMem16:RAM"
+ 27. Elapsed Time Per Partition
+ 28. Analysis & Synthesis Messages
 
 
 
@@ -56,15 +59,15 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Jun 01 00:12:42 2016           ;
+; Analysis & Synthesis Status        ; Successful - Wed Jun 01 01:32:55 2016           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; finalproject                                    ;
 ; Top-level Entity Name              ; proc                                            ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 398                                             ;
-;     Total combinational functions  ; 312                                             ;
-;     Dedicated logic registers      ; 132                                             ;
-; Total registers                    ; 132                                             ;
+; Total logic elements               ; 547                                             ;
+;     Total combinational functions  ; 453                                             ;
+;     Dedicated logic registers      ; 141                                             ;
+; Total registers                    ; 141                                             ;
 ; Total pins                         ; 126                                             ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
@@ -169,25 +172,29 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                              ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                       ; Library ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------+---------+
-; progMem16.vhd                    ; yes             ; User VHDL File  ; C:/Users/Tom/Documents/Uni/Elec2602/Working Proj Hacked/progMem16.vhd              ;         ;
-; two_to_one_mux.vhd               ; yes             ; User VHDL File  ; C:/Users/Tom/Documents/Uni/Elec2602/Working Proj Hacked/two_to_one_mux.vhd         ;         ;
-; sixteen_two_to_one_mux.vhd       ; yes             ; User VHDL File  ; C:/Users/Tom/Documents/Uni/Elec2602/Working Proj Hacked/sixteen_two_to_one_mux.vhd ;         ;
-; sixteen_bit_xor.vhd              ; yes             ; User VHDL File  ; C:/Users/Tom/Documents/Uni/Elec2602/Working Proj Hacked/sixteen_bit_xor.vhd        ;         ;
-; sixteen_bit_adder.vhd            ; yes             ; User VHDL File  ; C:/Users/Tom/Documents/Uni/Elec2602/Working Proj Hacked/sixteen_bit_adder.vhd      ;         ;
-; bit_adder.vhd                    ; yes             ; User VHDL File  ; C:/Users/Tom/Documents/Uni/Elec2602/Working Proj Hacked/bit_adder.vhd              ;         ;
-; Arithmetic_Logic_Unit.vhd        ; yes             ; User VHDL File  ; C:/Users/Tom/Documents/Uni/Elec2602/Working Proj Hacked/Arithmetic_Logic_Unit.vhd  ;         ;
-; register16.vhd                   ; yes             ; User VHDL File  ; C:/Users/Tom/Documents/Uni/Elec2602/Working Proj Hacked/register16.vhd             ;         ;
-; trin.vhd                         ; yes             ; User VHDL File  ; C:/Users/Tom/Documents/Uni/Elec2602/Working Proj Hacked/trin.vhd                   ;         ;
-; controlunit.vhd                  ; yes             ; User VHDL File  ; C:/Users/Tom/Documents/Uni/Elec2602/Working Proj Hacked/controlunit.vhd            ;         ;
-; hexdecode.vhd                    ; yes             ; User VHDL File  ; C:/Users/Tom/Documents/Uni/Elec2602/Working Proj Hacked/hexdecode.vhd              ;         ;
-; proc.vhd                         ; yes             ; User VHDL File  ; C:/Users/Tom/Documents/Uni/Elec2602/Working Proj Hacked/proc.vhd                   ;         ;
-; PC.vhd                           ; yes             ; User VHDL File  ; C:/Users/Tom/Documents/Uni/Elec2602/Working Proj Hacked/PC.vhd                     ;         ;
-+----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                   ;
++----------------------------------+-----------------+-----------------------+-----------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type             ; File Name with Absolute Path                                                      ; Library ;
++----------------------------------+-----------------+-----------------------+-----------------------------------------------------------------------------------+---------+
+; progMem16.vhd                    ; yes             ; User VHDL File        ; C:/Users/Tom/Documents/Uni/Elec2602/Working proj -luke/progMem16.vhd              ;         ;
+; two_to_one_mux.vhd               ; yes             ; User VHDL File        ; C:/Users/Tom/Documents/Uni/Elec2602/Working proj -luke/two_to_one_mux.vhd         ;         ;
+; sixteen_two_to_one_mux.vhd       ; yes             ; User VHDL File        ; C:/Users/Tom/Documents/Uni/Elec2602/Working proj -luke/sixteen_two_to_one_mux.vhd ;         ;
+; sixteen_bit_xor.vhd              ; yes             ; User VHDL File        ; C:/Users/Tom/Documents/Uni/Elec2602/Working proj -luke/sixteen_bit_xor.vhd        ;         ;
+; sixteen_bit_adder.vhd            ; yes             ; User VHDL File        ; C:/Users/Tom/Documents/Uni/Elec2602/Working proj -luke/sixteen_bit_adder.vhd      ;         ;
+; bit_adder.vhd                    ; yes             ; User VHDL File        ; C:/Users/Tom/Documents/Uni/Elec2602/Working proj -luke/bit_adder.vhd              ;         ;
+; Arithmetic_Logic_Unit.vhd        ; yes             ; User VHDL File        ; C:/Users/Tom/Documents/Uni/Elec2602/Working proj -luke/Arithmetic_Logic_Unit.vhd  ;         ;
+; register16.vhd                   ; yes             ; User VHDL File        ; C:/Users/Tom/Documents/Uni/Elec2602/Working proj -luke/register16.vhd             ;         ;
+; trin.vhd                         ; yes             ; User VHDL File        ; C:/Users/Tom/Documents/Uni/Elec2602/Working proj -luke/trin.vhd                   ;         ;
+; controlunit.vhd                  ; yes             ; User VHDL File        ; C:/Users/Tom/Documents/Uni/Elec2602/Working proj -luke/controlunit.vhd            ;         ;
+; hexdecode.vhd                    ; yes             ; User VHDL File        ; C:/Users/Tom/Documents/Uni/Elec2602/Working proj -luke/hexdecode.vhd              ;         ;
+; proc.vhd                         ; yes             ; User VHDL File        ; C:/Users/Tom/Documents/Uni/Elec2602/Working proj -luke/proc.vhd                   ;         ;
+; PC.vhd                           ; yes             ; User VHDL File        ; C:/Users/Tom/Documents/Uni/Elec2602/Working proj -luke/PC.vhd                     ;         ;
+; sixteen_bit_nand.vhd             ; yes             ; User VHDL File        ; C:/Users/Tom/Documents/Uni/Elec2602/Working proj -luke/sixteen_bit_nand.vhd       ;         ;
+; sixteen_bit_or.vhd               ; yes             ; User VHDL File        ; C:/Users/Tom/Documents/Uni/Elec2602/Working proj -luke/sixteen_bit_or.vhd         ;         ;
+; sixteen_bit_and.vhd              ; yes             ; User VHDL File        ; C:/Users/Tom/Documents/Uni/Elec2602/Working proj -luke/sixteen_bit_and.vhd        ;         ;
+; sixteen_bit_sub.vhd              ; yes             ; Auto-Found VHDL File  ; C:/Users/Tom/Documents/Uni/Elec2602/Working proj -luke/sixteen_bit_sub.vhd        ;         ;
++----------------------------------+-----------------+-----------------------+-----------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -195,103 +202,156 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 398   ;
+; Estimated Total logic elements              ; 547   ;
 ;                                             ;       ;
-; Total combinational functions               ; 312   ;
+; Total combinational functions               ; 453   ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 154   ;
-;     -- 3 input functions                    ; 63    ;
-;     -- <=2 input functions                  ; 95    ;
+;     -- 4 input functions                    ; 258   ;
+;     -- 3 input functions                    ; 80    ;
+;     -- <=2 input functions                  ; 115   ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 298   ;
+;     -- normal mode                          ; 439   ;
 ;     -- arithmetic mode                      ; 14    ;
 ;                                             ;       ;
-; Total registers                             ; 132   ;
-;     -- Dedicated logic registers            ; 132   ;
+; Total registers                             ; 141   ;
+;     -- Dedicated logic registers            ; 141   ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
 ; I/O pins                                    ; 126   ;
 ; Embedded Multiplier 9-bit elements          ; 0     ;
 ; Maximum fan-out node                        ; KEY0  ;
-; Maximum fan-out                             ; 116   ;
-; Total fan-out                               ; 1428  ;
-; Average fan-out                             ; 2.51  ;
+; Maximum fan-out                             ; 125   ;
+; Total fan-out                               ; 1963  ;
+; Average fan-out                             ; 2.73  ;
 +---------------------------------------------+-------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                  ;
-+--------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node                 ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                          ; Library Name ;
-+--------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------+--------------+
-; |proc                                      ; 312 (106)         ; 132 (0)      ; 0           ; 0            ; 0       ; 0         ; 126  ; 0            ; |proc                                                                                        ; work         ;
-;    |Arithmetic_Logic_Unit:ALU|             ; 41 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU                                                              ; work         ;
-;       |sixteen_bit_adder:adderres|         ; 17 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres                                   ; work         ;
-;          |bit_adder:fa11|                  ; 3 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa11                    ; work         ;
-;             |two_to_one_mux:mux|           ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa11|two_to_one_mux:mux ; work         ;
-;          |bit_adder:fa12|                  ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa12                    ; work         ;
-;             |two_to_one_mux:mux|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa12|two_to_one_mux:mux ; work         ;
-;          |bit_adder:fa13|                  ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa13                    ; work         ;
-;             |two_to_one_mux:mux|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa13|two_to_one_mux:mux ; work         ;
-;          |bit_adder:fa1|                   ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa1                     ; work         ;
-;             |two_to_one_mux:mux|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa1|two_to_one_mux:mux  ; work         ;
-;          |bit_adder:fa3|                   ; 3 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa3                     ; work         ;
-;             |two_to_one_mux:mux|           ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa3|two_to_one_mux:mux  ; work         ;
-;          |bit_adder:fa4|                   ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa4                     ; work         ;
-;             |two_to_one_mux:mux|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa4|two_to_one_mux:mux  ; work         ;
-;          |bit_adder:fa5|                   ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa5                     ; work         ;
-;             |two_to_one_mux:mux|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa5|two_to_one_mux:mux  ; work         ;
-;          |bit_adder:fa7|                   ; 3 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa7                     ; work         ;
-;             |two_to_one_mux:mux|           ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa7|two_to_one_mux:mux  ; work         ;
-;          |bit_adder:fa8|                   ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa8                     ; work         ;
-;             |two_to_one_mux:mux|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa8|two_to_one_mux:mux  ; work         ;
-;          |bit_adder:fa9|                   ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa9                     ; work         ;
-;             |two_to_one_mux:mux|           ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa9|two_to_one_mux:mux  ; work         ;
-;       |sixteen_bit_xor:xorres|             ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_xor:xorres                                       ; work         ;
-;       |sixteen_two_to_one_mux:sixteen_mux| ; 17 (17)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_two_to_one_mux:sixteen_mux                           ; work         ;
-;    |PC:pcounter|                           ; 16 (16)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|PC:pcounter                                                                            ; work         ;
-;    |controlunit:cont|                      ; 18 (18)           ; 11 (11)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|controlunit:cont                                                                       ; work         ;
-;    |hexdecode:hexdec0|                     ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|hexdecode:hexdec0                                                                      ; work         ;
-;    |hexdecode:hexdec1|                     ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|hexdecode:hexdec1                                                                      ; work         ;
-;    |hexdecode:hexdec2|                     ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|hexdecode:hexdec2                                                                      ; work         ;
-;    |hexdecode:hexdec3|                     ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|hexdecode:hexdec3                                                                      ; work         ;
-;    |hexdecode:hexdec4|                     ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|hexdecode:hexdec4                                                                      ; work         ;
-;    |hexdecode:hexdec5|                     ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|hexdecode:hexdec5                                                                      ; work         ;
-;    |hexdecode:hexdec6|                     ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|hexdecode:hexdec6                                                                      ; work         ;
-;    |hexdecode:hexdec7|                     ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|hexdecode:hexdec7                                                                      ; work         ;
-;    |progMem16:RAM|                         ; 9 (9)             ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|progMem16:RAM                                                                          ; work         ;
-;    |register16:regA|                       ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|register16:regA                                                                        ; work         ;
-;    |register16:regG|                       ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|register16:regG                                                                        ; work         ;
-;    |register16:regR0|                      ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|register16:regR0                                                                       ; work         ;
-;    |register16:regR1|                      ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|register16:regR1                                                                       ; work         ;
-;    |register16:regR2|                      ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|register16:regR2                                                                       ; work         ;
-;    |register16:regR3|                      ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|register16:regR3                                                                       ; work         ;
-;    |trin:triD|                             ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|trin:triD                                                                              ; work         ;
-+--------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                           ;
++-------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node          ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                          ; Library Name ;
++-------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------+--------------+
+; |proc                               ; 453 (106)         ; 141 (0)      ; 0           ; 0            ; 0       ; 0         ; 126  ; 0            ; |proc                                                                                                        ; work         ;
+;    |Arithmetic_Logic_Unit:ALU|      ; 155 (89)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU                                                                              ; work         ;
+;       |sixteen_bit_adder:adderres|  ; 18 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres                                                   ; work         ;
+;          |bit_adder:fa10|           ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa10                                    ; work         ;
+;             |two_to_one_mux:mux|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa10|two_to_one_mux:mux                 ; work         ;
+;          |bit_adder:fa12|           ; 3 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa12                                    ; work         ;
+;             |two_to_one_mux:mux|    ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa12|two_to_one_mux:mux                 ; work         ;
+;          |bit_adder:fa13|           ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa13                                    ; work         ;
+;             |two_to_one_mux:mux|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa13|two_to_one_mux:mux                 ; work         ;
+;          |bit_adder:fa15|           ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa15                                    ; work         ;
+;          |bit_adder:fa1|            ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa1                                     ; work         ;
+;             |two_to_one_mux:mux|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa1|two_to_one_mux:mux                  ; work         ;
+;          |bit_adder:fa2|            ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa2                                     ; work         ;
+;             |two_to_one_mux:mux|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa2|two_to_one_mux:mux                  ; work         ;
+;          |bit_adder:fa4|            ; 3 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa4                                     ; work         ;
+;             |two_to_one_mux:mux|    ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa4|two_to_one_mux:mux                  ; work         ;
+;          |bit_adder:fa5|            ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa5                                     ; work         ;
+;             |two_to_one_mux:mux|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa5|two_to_one_mux:mux                  ; work         ;
+;          |bit_adder:fa6|            ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa6                                     ; work         ;
+;             |two_to_one_mux:mux|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa6|two_to_one_mux:mux                  ; work         ;
+;          |bit_adder:fa7|            ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa7                                     ; work         ;
+;             |two_to_one_mux:mux|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa7|two_to_one_mux:mux                  ; work         ;
+;          |bit_adder:fa9|            ; 3 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa9                                     ; work         ;
+;             |two_to_one_mux:mux|    ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa9|two_to_one_mux:mux                  ; work         ;
+;       |sixteen_bit_sub:sub|         ; 42 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub                                                          ; work         ;
+;          |sixteen_bit_adder:add1|   ; 13 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add1                                   ; work         ;
+;             |bit_adder:fa11|        ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add1|bit_adder:fa11                    ; work         ;
+;             |bit_adder:fa12|        ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add1|bit_adder:fa12                    ; work         ;
+;                |two_to_one_mux:mux| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add1|bit_adder:fa12|two_to_one_mux:mux ; work         ;
+;             |bit_adder:fa13|        ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add1|bit_adder:fa13                    ; work         ;
+;             |bit_adder:fa2|         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add1|bit_adder:fa2                     ; work         ;
+;             |bit_adder:fa3|         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add1|bit_adder:fa3                     ; work         ;
+;             |bit_adder:fa4|         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add1|bit_adder:fa4                     ; work         ;
+;             |bit_adder:fa6|         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add1|bit_adder:fa6                     ; work         ;
+;             |bit_adder:fa8|         ; 3 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add1|bit_adder:fa8                     ; work         ;
+;                |two_to_one_mux:mux| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add1|bit_adder:fa8|two_to_one_mux:mux  ; work         ;
+;             |bit_adder:fa9|         ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add1|bit_adder:fa9                     ; work         ;
+;                |two_to_one_mux:mux| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add1|bit_adder:fa9|two_to_one_mux:mux  ; work         ;
+;          |sixteen_bit_adder:add2|   ; 29 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add2                                   ; work         ;
+;             |bit_adder:fa10|        ; 3 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add2|bit_adder:fa10                    ; work         ;
+;                |two_to_one_mux:mux| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add2|bit_adder:fa10|two_to_one_mux:mux ; work         ;
+;             |bit_adder:fa11|        ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add2|bit_adder:fa11                    ; work         ;
+;                |two_to_one_mux:mux| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add2|bit_adder:fa11|two_to_one_mux:mux ; work         ;
+;             |bit_adder:fa12|        ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add2|bit_adder:fa12                    ; work         ;
+;                |two_to_one_mux:mux| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add2|bit_adder:fa12|two_to_one_mux:mux ; work         ;
+;             |bit_adder:fa13|        ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add2|bit_adder:fa13                    ; work         ;
+;             |bit_adder:fa14|        ; 4 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add2|bit_adder:fa14                    ; work         ;
+;                |two_to_one_mux:mux| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add2|bit_adder:fa14|two_to_one_mux:mux ; work         ;
+;             |bit_adder:fa15|        ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add2|bit_adder:fa15                    ; work         ;
+;             |bit_adder:fa1|         ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add2|bit_adder:fa1                     ; work         ;
+;                |two_to_one_mux:mux| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add2|bit_adder:fa1|two_to_one_mux:mux  ; work         ;
+;             |bit_adder:fa2|         ; 1 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add2|bit_adder:fa2                     ; work         ;
+;                |two_to_one_mux:mux| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add2|bit_adder:fa2|two_to_one_mux:mux  ; work         ;
+;             |bit_adder:fa3|         ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add2|bit_adder:fa3                     ; work         ;
+;                |two_to_one_mux:mux| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add2|bit_adder:fa3|two_to_one_mux:mux  ; work         ;
+;             |bit_adder:fa5|         ; 4 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add2|bit_adder:fa5                     ; work         ;
+;                |two_to_one_mux:mux| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add2|bit_adder:fa5|two_to_one_mux:mux  ; work         ;
+;             |bit_adder:fa6|         ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add2|bit_adder:fa6                     ; work         ;
+;                |two_to_one_mux:mux| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add2|bit_adder:fa6|two_to_one_mux:mux  ; work         ;
+;             |bit_adder:fa7|         ; 2 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add2|bit_adder:fa7                     ; work         ;
+;                |two_to_one_mux:mux| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add2|bit_adder:fa7|two_to_one_mux:mux  ; work         ;
+;             |bit_adder:fa8|         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add2|bit_adder:fa8                     ; work         ;
+;             |bit_adder:fa9|         ; 4 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add2|bit_adder:fa9                     ; work         ;
+;                |two_to_one_mux:mux| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add2|bit_adder:fa9|two_to_one_mux:mux  ; work         ;
+;       |sixteen_bit_xor:xorres|      ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_xor:xorres                                                       ; work         ;
+;    |PC:pcounter|                    ; 16 (16)           ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|PC:pcounter                                                                                            ; work         ;
+;    |controlunit:cont|               ; 30 (30)           ; 23 (23)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|controlunit:cont                                                                                       ; work         ;
+;    |hexdecode:hexdec0|              ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|hexdecode:hexdec0                                                                                      ; work         ;
+;    |hexdecode:hexdec1|              ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|hexdecode:hexdec1                                                                                      ; work         ;
+;    |hexdecode:hexdec2|              ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|hexdecode:hexdec2                                                                                      ; work         ;
+;    |hexdecode:hexdec3|              ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|hexdecode:hexdec3                                                                                      ; work         ;
+;    |hexdecode:hexdec4|              ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|hexdecode:hexdec4                                                                                      ; work         ;
+;    |hexdecode:hexdec5|              ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|hexdecode:hexdec5                                                                                      ; work         ;
+;    |hexdecode:hexdec6|              ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|hexdecode:hexdec6                                                                                      ; work         ;
+;    |hexdecode:hexdec7|              ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|hexdecode:hexdec7                                                                                      ; work         ;
+;    |progMem16:RAM|                  ; 6 (6)             ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|progMem16:RAM                                                                                          ; work         ;
+;    |register16:regA|                ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|register16:regA                                                                                        ; work         ;
+;    |register16:regG|                ; 2 (2)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|register16:regG                                                                                        ; work         ;
+;    |register16:regR0|               ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|register16:regR0                                                                                       ; work         ;
+;    |register16:regR1|               ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|register16:regR1                                                                                       ; work         ;
+;    |register16:regR2|               ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|register16:regR2                                                                                       ; work         ;
+;    |register16:regR3|               ; 0 (0)             ; 16 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|register16:regR3                                                                                       ; work         ;
+;    |trin:triD|                      ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|trin:triD                                                                                              ; work         ;
+;    |trin:triG|                      ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |proc|trin:triG                                                                                              ; work         ;
++-------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
 Encoding Type:  One-Hot
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |proc|controlunit:cont|Y_present                                                                                                                                                                                                ;
-+-----------------+-----------------+-----------------+---------------+----------------+----------------+----------------+----------------+----------------+----------------+---------------+-----------------+-----------------+-----------------+
-; Name            ; Y_present.CLEAN ; Y_present.LOADU ; Y_present.NOP ; Y_present.ADD2 ; Y_present.ADD1 ; Y_present.ADD0 ; Y_present.XOR2 ; Y_present.XOR1 ; Y_present.XOR0 ; Y_present.MOV ; Y_present.LOAD1 ; Y_present.LOAD0 ; Y_present.RESET ;
-+-----------------+-----------------+-----------------+---------------+----------------+----------------+----------------+----------------+----------------+----------------+---------------+-----------------+-----------------+-----------------+
-; Y_present.RESET ; 0               ; 0               ; 0             ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0               ; 0               ; 0               ;
-; Y_present.LOAD0 ; 0               ; 0               ; 0             ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0               ; 1               ; 1               ;
-; Y_present.LOAD1 ; 0               ; 0               ; 0             ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 1               ; 0               ; 1               ;
-; Y_present.MOV   ; 0               ; 0               ; 0             ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1             ; 0               ; 0               ; 1               ;
-; Y_present.XOR0  ; 0               ; 0               ; 0             ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 0             ; 0               ; 0               ; 1               ;
-; Y_present.XOR1  ; 0               ; 0               ; 0             ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 0             ; 0               ; 0               ; 1               ;
-; Y_present.XOR2  ; 0               ; 0               ; 0             ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 0             ; 0               ; 0               ; 1               ;
-; Y_present.ADD0  ; 0               ; 0               ; 0             ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 0             ; 0               ; 0               ; 1               ;
-; Y_present.ADD1  ; 0               ; 0               ; 0             ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0               ; 0               ; 1               ;
-; Y_present.ADD2  ; 0               ; 0               ; 0             ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0               ; 0               ; 1               ;
-; Y_present.NOP   ; 0               ; 0               ; 1             ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0               ; 0               ; 1               ;
-; Y_present.LOADU ; 0               ; 1               ; 0             ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0               ; 0               ; 1               ;
-; Y_present.CLEAN ; 1               ; 0               ; 0             ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0               ; 0               ; 1               ;
-+-----------------+-----------------+-----------------+---------------+----------------+----------------+----------------+----------------+----------------+----------------+---------------+-----------------+-----------------+-----------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |proc|controlunit:cont|Y_present                                                                                                                                                                                                                                                                                                                                                                                                            ;
++-----------------+-----------------+-----------------+---------------+-----------------+-----------------+-----------------+----------------+----------------+----------------+---------------+---------------+---------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+---------------+-----------------+-----------------+-----------------+
+; Name            ; Y_present.CLEAN ; Y_present.LOADU ; Y_present.NOP ; Y_present.NAND2 ; Y_present.NAND1 ; Y_present.NAND0 ; Y_present.AND2 ; Y_present.AND1 ; Y_present.AND0 ; Y_present.OR2 ; Y_present.OR1 ; Y_present.OR0 ; Y_present.SUB2 ; Y_present.SUB1 ; Y_present.SUB0 ; Y_present.ADD2 ; Y_present.ADD1 ; Y_present.ADD0 ; Y_present.XOR2 ; Y_present.XOR1 ; Y_present.XOR0 ; Y_present.MOV ; Y_present.LOAD1 ; Y_present.LOAD0 ; Y_present.RESET ;
++-----------------+-----------------+-----------------+---------------+-----------------+-----------------+-----------------+----------------+----------------+----------------+---------------+---------------+---------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+---------------+-----------------+-----------------+-----------------+
+; Y_present.RESET ; 0               ; 0               ; 0             ; 0               ; 0               ; 0               ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0               ; 0               ; 0               ;
+; Y_present.LOAD0 ; 0               ; 0               ; 0             ; 0               ; 0               ; 0               ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0               ; 1               ; 1               ;
+; Y_present.LOAD1 ; 0               ; 0               ; 0             ; 0               ; 0               ; 0               ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 1               ; 0               ; 1               ;
+; Y_present.MOV   ; 0               ; 0               ; 0             ; 0               ; 0               ; 0               ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1             ; 0               ; 0               ; 1               ;
+; Y_present.XOR0  ; 0               ; 0               ; 0             ; 0               ; 0               ; 0               ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 0             ; 0               ; 0               ; 1               ;
+; Y_present.XOR1  ; 0               ; 0               ; 0             ; 0               ; 0               ; 0               ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 0             ; 0               ; 0               ; 1               ;
+; Y_present.XOR2  ; 0               ; 0               ; 0             ; 0               ; 0               ; 0               ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 0             ; 0               ; 0               ; 1               ;
+; Y_present.ADD0  ; 0               ; 0               ; 0             ; 0               ; 0               ; 0               ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 0             ; 0               ; 0               ; 1               ;
+; Y_present.ADD1  ; 0               ; 0               ; 0             ; 0               ; 0               ; 0               ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0               ; 0               ; 1               ;
+; Y_present.ADD2  ; 0               ; 0               ; 0             ; 0               ; 0               ; 0               ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0               ; 0               ; 1               ;
+; Y_present.SUB0  ; 0               ; 0               ; 0             ; 0               ; 0               ; 0               ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0               ; 0               ; 1               ;
+; Y_present.SUB1  ; 0               ; 0               ; 0             ; 0               ; 0               ; 0               ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0               ; 0               ; 1               ;
+; Y_present.SUB2  ; 0               ; 0               ; 0             ; 0               ; 0               ; 0               ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0               ; 0               ; 1               ;
+; Y_present.OR0   ; 0               ; 0               ; 0             ; 0               ; 0               ; 0               ; 0              ; 0              ; 0              ; 0             ; 0             ; 1             ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0               ; 0               ; 1               ;
+; Y_present.OR1   ; 0               ; 0               ; 0             ; 0               ; 0               ; 0               ; 0              ; 0              ; 0              ; 0             ; 1             ; 0             ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0               ; 0               ; 1               ;
+; Y_present.OR2   ; 0               ; 0               ; 0             ; 0               ; 0               ; 0               ; 0              ; 0              ; 0              ; 1             ; 0             ; 0             ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0               ; 0               ; 1               ;
+; Y_present.AND0  ; 0               ; 0               ; 0             ; 0               ; 0               ; 0               ; 0              ; 0              ; 1              ; 0             ; 0             ; 0             ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0               ; 0               ; 1               ;
+; Y_present.AND1  ; 0               ; 0               ; 0             ; 0               ; 0               ; 0               ; 0              ; 1              ; 0              ; 0             ; 0             ; 0             ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0               ; 0               ; 1               ;
+; Y_present.AND2  ; 0               ; 0               ; 0             ; 0               ; 0               ; 0               ; 1              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0               ; 0               ; 1               ;
+; Y_present.NAND0 ; 0               ; 0               ; 0             ; 0               ; 0               ; 1               ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0               ; 0               ; 1               ;
+; Y_present.NAND1 ; 0               ; 0               ; 0             ; 0               ; 1               ; 0               ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0               ; 0               ; 1               ;
+; Y_present.NAND2 ; 0               ; 0               ; 0             ; 1               ; 0               ; 0               ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0               ; 0               ; 1               ;
+; Y_present.NOP   ; 0               ; 0               ; 1             ; 0               ; 0               ; 0               ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0               ; 0               ; 1               ;
+; Y_present.LOADU ; 0               ; 1               ; 0             ; 0               ; 0               ; 0               ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0               ; 0               ; 1               ;
+; Y_present.CLEAN ; 1               ; 0               ; 0             ; 0               ; 0               ; 0               ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0               ; 0               ; 1               ;
++-----------------+-----------------+-----------------+---------------+-----------------+-----------------+-----------------+----------------+----------------+----------------+---------------+---------------+---------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+---------------+-----------------+-----------------+-----------------+
 
 
 +--------------------------------------------------------------------------------------------------------+
@@ -308,16 +368,17 @@ Encoding Type:  One-Hot
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
-+--------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                             ;
-+---------------------------------------+----------------------------------------+
-; Register name                         ; Reason for Removal                     ;
-+---------------------------------------+----------------------------------------+
-; progMem16:RAM|data_out[4,8,11..15]    ; Stuck at GND due to stuck port data_in ;
-; controlunit:cont|Y_present.LOADU      ; Stuck at GND due to stuck port data_in ;
-; controlunit:cont|Y_present.CLEAN      ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 9 ;                                        ;
-+---------------------------------------+----------------------------------------+
++---------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                              ;
++----------------------------------------+----------------------------------------+
+; Register name                          ; Reason for Removal                     ;
++----------------------------------------+----------------------------------------+
+; progMem16:RAM|data_out[4,5,8,9,11..15] ; Stuck at GND due to stuck port data_in ;
+; progMem16:RAM|data_out[10]             ; Merged with progMem16:RAM|data_out[2]  ;
+; controlunit:cont|Y_present.LOADU       ; Stuck at GND due to stuck port data_in ;
+; controlunit:cont|Y_present.CLEAN       ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 12 ;                                        ;
++----------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -325,14 +386,23 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 132   ;
+; Total registers                              ; 141   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 27    ;
+; Number of registers using Asynchronous Clear ; 39    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 96    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
+; 6:1                ; 15 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; Yes        ; |proc|register16:regG|D[13] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------+
 
 
 +---------------------------------------------------------------+
@@ -571,6 +641,25 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
++--------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add1" ;
++----------+-------+----------+--------------------------------------------------------------------+
+; Port     ; Type  ; Severity ; Details                                                            ;
++----------+-------+----------+--------------------------------------------------------------------+
+; a[15..1] ; Input ; Info     ; Stuck at GND                                                       ;
+; a[0]     ; Input ; Info     ; Stuck at VCC                                                       ;
++----------+-------+----------+--------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_xor:xor1" ;
++------+-------+----------+----------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                              ;
++------+-------+----------+----------------------------------------------------------------------+
+; a    ; Input ; Info     ; Stuck at VCC                                                         ;
++------+-------+----------+----------------------------------------------------------------------+
+
+
 +----------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa15"                ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
@@ -605,7 +694,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -615,7 +704,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed Jun 01 00:12:40 2016
+    Info: Processing started: Wed Jun 01 01:32:52 2016
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off finalproject -c finalproject
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file progmem16.vhd
@@ -663,14 +752,14 @@ Info (12021): Found 2 design units, including 1 entities, in source file pc.vhd
 Info (12021): Found 2 design units, including 1 entities, in source file sixteen_bit_nand.vhd
     Info (12022): Found design unit 1: sixteen_bit_nand-structure
     Info (12023): Found entity 1: sixteen_bit_nand
-Info (12021): Found 2 design units, including 1 entities, in source file sixteen_bit_and.vhd
-    Info (12022): Found design unit 1: sixteen_bit_and-structure
-    Info (12023): Found entity 1: sixteen_bit_and
 Info (12021): Found 2 design units, including 1 entities, in source file sixteen_bit_or.vhd
     Info (12022): Found design unit 1: sixteen_bit_or-structure
     Info (12023): Found entity 1: sixteen_bit_or
+Info (12021): Found 2 design units, including 1 entities, in source file sixteen_bit_and.vhd
+    Info (12022): Found design unit 1: sixteen_bit_and-structure
+    Info (12023): Found entity 1: sixteen_bit_and
 Info (12127): Elaborating entity "proc" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at proc.vhd(109): object "sample" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at proc.vhd(111): object "sample" assigned a value but never read
 Info (12128): Elaborating entity "progMem16" for hierarchy "progMem16:RAM"
 Info (12128): Elaborating entity "PC" for hierarchy "PC:pcounter"
 Info (12128): Elaborating entity "register16" for hierarchy "register16:regR0"
@@ -682,6 +771,13 @@ Info (12128): Elaborating entity "bit_adder" for hierarchy "Arithmetic_Logic_Uni
 Info (12128): Elaborating entity "two_to_one_mux" for hierarchy "Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres|bit_adder:fa0|two_to_one_mux:mux"
 Info (12128): Elaborating entity "sixteen_bit_xor" for hierarchy "Arithmetic_Logic_Unit:ALU|sixteen_bit_xor:xorres"
 Info (12128): Elaborating entity "sixteen_two_to_one_mux" for hierarchy "Arithmetic_Logic_Unit:ALU|sixteen_two_to_one_mux:sixteen_mux"
+Warning (12125): Using design file sixteen_bit_sub.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: sixteen_bit_sub-Structure
+    Info (12023): Found entity 1: sixteen_bit_sub
+Info (12128): Elaborating entity "sixteen_bit_sub" for hierarchy "Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub"
+Info (12128): Elaborating entity "sixteen_bit_or" for hierarchy "Arithmetic_Logic_Unit:ALU|sixteen_bit_or:Qor"
+Info (12128): Elaborating entity "sixteen_bit_nand" for hierarchy "Arithmetic_Logic_Unit:ALU|sixteen_bit_nand:Qnand"
+Info (12128): Elaborating entity "sixteen_bit_and" for hierarchy "Arithmetic_Logic_Unit:ALU|sixteen_bit_and:Qand"
 Info (12128): Elaborating entity "controlunit" for hierarchy "controlunit:cont"
 Warning (10036): Verilog HDL or VHDL warning at controlunit.vhd(25): object "dataround" assigned a value but never read
 Warning (10492): VHDL Process Statement warning at controlunit.vhd(33): signal "Res" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
@@ -693,42 +789,94 @@ Warning (10492): VHDL Process Statement warning at controlunit.vhd(77): signal "
 Warning (10492): VHDL Process Statement warning at controlunit.vhd(81): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at controlunit.vhd(83): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at controlunit.vhd(85): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at controlunit.vhd(152): signal "temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at controlunit.vhd(153): signal "temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at controlunit.vhd(154): signal "temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at controlunit.vhd(155): signal "temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at controlunit.vhd(164): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at controlunit.vhd(165): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at controlunit.vhd(166): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at controlunit.vhd(167): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at controlunit.vhd(169): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at controlunit.vhd(170): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at controlunit.vhd(171): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(87): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(89): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(91): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(93): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(160): signal "temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(161): signal "temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(162): signal "temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(163): signal "temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at controlunit.vhd(172): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(173): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(174): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(175): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(177): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(178): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(179): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at controlunit.vhd(180): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at controlunit.vhd(181): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at controlunit.vhd(182): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at controlunit.vhd(183): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(188): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(189): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at controlunit.vhd(190): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at controlunit.vhd(191): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at controlunit.vhd(192): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at controlunit.vhd(193): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(198): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(199): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at controlunit.vhd(200): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at controlunit.vhd(201): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at controlunit.vhd(202): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at controlunit.vhd(203): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(208): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(209): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(210): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at controlunit.vhd(211): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at controlunit.vhd(212): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at controlunit.vhd(213): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at controlunit.vhd(214): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(219): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at controlunit.vhd(220): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at controlunit.vhd(221): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at controlunit.vhd(222): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at controlunit.vhd(223): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(228): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(229): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(230): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at controlunit.vhd(231): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at controlunit.vhd(232): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at controlunit.vhd(233): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at controlunit.vhd(234): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(239): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(240): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(241): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(242): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(250): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(251): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(252): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(253): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(259): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(260): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(261): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(262): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(270): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(271): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(272): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(273): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(281): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(282): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(283): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(284): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(290): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(291): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(292): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(293): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(301): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(302): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(303): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(304): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(312): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(313): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(314): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(315): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(321): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(322): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(323): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(324): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(332): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(333): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(334): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(335): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(343): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(344): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(345): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(346): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(352): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(353): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(354): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(355): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(363): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(364): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(365): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at controlunit.vhd(366): signal "funct" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10631): VHDL Process Statement warning at controlunit.vhd(42): inferring latch(es) for signal or variable "temp", which holds its previous value in one or more paths through the process
 Info (10041): Inferred latch for "temp[0]" at controlunit.vhd(42)
 Info (10041): Inferred latch for "temp[1]" at controlunit.vhd(42)
@@ -736,7 +884,7 @@ Info (10041): Inferred latch for "temp[2]" at controlunit.vhd(42)
 Info (10041): Inferred latch for "temp[3]" at controlunit.vhd(42)
 Info (276014): Found 1 instances of uninferred RAM logic
     Info (276004): RAM logic "progMem16:RAM|raMem" is uninferred due to inappropriate RAM size
-Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/Users/Tom/Documents/Uni/Elec2602/Working Proj Hacked/db/finalproject.ram0_progMem16_504370d5.hdl.mif" contains "don't care" values -- overwriting them with 0s
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/Users/Tom/Documents/Uni/Elec2602/Working proj -luke/db/finalproject.ram0_progMem16_504370d5.hdl.mif" contains "don't care" values -- overwriting them with 0s
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13034): The following nodes have both tri-state and non-tri-state drivers
     Warning (13035): Inserted always-enabled tri-state buffer between "Count[0]" and its non-tri-state driver.
@@ -881,15 +1029,15 @@ Warning (21074): Design contains 19 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[16]"
     Warning (15610): No output dependent on input pin "KEY2"
     Warning (15610): No output dependent on input pin "KEY3"
-Info (21057): Implemented 525 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 674 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 22 input pins
     Info (21059): Implemented 72 output pins
     Info (21060): Implemented 32 bidirectional pins
-    Info (21061): Implemented 399 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 121 warnings
-    Info: Peak virtual memory: 533 megabytes
-    Info: Processing ended: Wed Jun 01 00:12:42 2016
-    Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:02
+    Info (21061): Implemented 548 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 174 warnings
+    Info: Peak virtual memory: 538 megabytes
+    Info: Processing ended: Wed Jun 01 01:32:55 2016
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:03
 
 

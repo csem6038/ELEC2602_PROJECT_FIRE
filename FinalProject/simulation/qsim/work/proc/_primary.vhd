@@ -16,7 +16,7 @@ entity proc is
         KEY1            : in     vl_logic;
         KEY2            : in     vl_logic;
         KEY3            : in     vl_logic;
-        Done            : inout  vl_logic;
+        Count           : inout  vl_logic_vector(15 downto 0);
         BusWires        : inout  vl_logic_vector(15 downto 0)
     );
 end proc;

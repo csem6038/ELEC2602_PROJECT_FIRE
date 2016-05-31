@@ -1,16 +1,28 @@
 
 State Machine - |proc|controlunit:cont|Y_present
-Name Y_present.CLEAN Y_present.LOADU Y_present.NOP Y_present.ADD2 Y_present.ADD1 Y_present.ADD0 Y_present.XOR2 Y_present.XOR1 Y_present.XOR0 Y_present.MOV Y_present.LOAD1 Y_present.LOAD0 Y_present.RESET 
-Y_present.RESET 0 0 0 0 0 0 0 0 0 0 0 0 0 
-Y_present.LOAD0 0 0 0 0 0 0 0 0 0 0 0 1 1 
-Y_present.LOAD1 0 0 0 0 0 0 0 0 0 0 1 0 1 
-Y_present.MOV 0 0 0 0 0 0 0 0 0 1 0 0 1 
-Y_present.XOR0 0 0 0 0 0 0 0 0 1 0 0 0 1 
-Y_present.XOR1 0 0 0 0 0 0 0 1 0 0 0 0 1 
-Y_present.XOR2 0 0 0 0 0 0 1 0 0 0 0 0 1 
-Y_present.ADD0 0 0 0 0 0 1 0 0 0 0 0 0 1 
-Y_present.ADD1 0 0 0 0 1 0 0 0 0 0 0 0 1 
-Y_present.ADD2 0 0 0 1 0 0 0 0 0 0 0 0 1 
-Y_present.NOP 0 0 1 0 0 0 0 0 0 0 0 0 1 
-Y_present.LOADU 0 1 0 0 0 0 0 0 0 0 0 0 1 
-Y_present.CLEAN 1 0 0 0 0 0 0 0 0 0 0 0 1 
+Name Y_present.CLEAN Y_present.LOADU Y_present.NOP Y_present.NAND2 Y_present.NAND1 Y_present.NAND0 Y_present.AND2 Y_present.AND1 Y_present.AND0 Y_present.OR2 Y_present.OR1 Y_present.OR0 Y_present.SUB2 Y_present.SUB1 Y_present.SUB0 Y_present.ADD2 Y_present.ADD1 Y_present.ADD0 Y_present.XOR2 Y_present.XOR1 Y_present.XOR0 Y_present.MOV Y_present.LOAD1 Y_present.LOAD0 Y_present.RESET 
+Y_present.RESET 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Y_present.LOAD0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+Y_present.LOAD1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+Y_present.MOV 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+Y_present.XOR0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+Y_present.XOR1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+Y_present.XOR2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+Y_present.ADD0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+Y_present.ADD1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+Y_present.ADD2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+Y_present.SUB0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+Y_present.SUB1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+Y_present.SUB2 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+Y_present.OR0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+Y_present.OR1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+Y_present.OR2 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+Y_present.AND0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+Y_present.AND1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+Y_present.AND2 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+Y_present.NAND0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+Y_present.NAND1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+Y_present.NAND2 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+Y_present.NOP 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+Y_present.LOADU 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+Y_present.CLEAN 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 

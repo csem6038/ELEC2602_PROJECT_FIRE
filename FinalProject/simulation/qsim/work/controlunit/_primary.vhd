@@ -19,7 +19,7 @@ entity controlunit is
         R2_out          : out    vl_logic;
         R3_in           : out    vl_logic;
         R3_out          : out    vl_logic;
-        ALU             : out    vl_logic;
+        ALU             : out    vl_logic_vector(3 downto 0);
         funct           : in     vl_logic_vector(15 downto 0)
     );
 end controlunit;

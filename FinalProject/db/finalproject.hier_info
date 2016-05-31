@@ -1429,85 +1429,229 @@ Q[15] <= Q[15]~15.DB_MAX_OUTPUT_PORT_TYPE
 |proc|Arithmetic_Logic_Unit:ALU
 num1[0] => sixteen_bit_adder:adderres.A[0]
 num1[0] => sixteen_bit_xor:xorres.A[0]
+num1[0] => sixteen_bit_sub:sub.A[0]
+num1[0] => sixteen_bit_or:Qor.A[0]
+num1[0] => sixteen_bit_nand:Qnand.A[0]
+num1[0] => sixteen_bit_and:Qand.A[0]
 num1[1] => sixteen_bit_adder:adderres.A[1]
 num1[1] => sixteen_bit_xor:xorres.A[1]
+num1[1] => sixteen_bit_sub:sub.A[1]
+num1[1] => sixteen_bit_or:Qor.A[1]
+num1[1] => sixteen_bit_nand:Qnand.A[1]
+num1[1] => sixteen_bit_and:Qand.A[1]
 num1[2] => sixteen_bit_adder:adderres.A[2]
 num1[2] => sixteen_bit_xor:xorres.A[2]
+num1[2] => sixteen_bit_sub:sub.A[2]
+num1[2] => sixteen_bit_or:Qor.A[2]
+num1[2] => sixteen_bit_nand:Qnand.A[2]
+num1[2] => sixteen_bit_and:Qand.A[2]
 num1[3] => sixteen_bit_adder:adderres.A[3]
 num1[3] => sixteen_bit_xor:xorres.A[3]
+num1[3] => sixteen_bit_sub:sub.A[3]
+num1[3] => sixteen_bit_or:Qor.A[3]
+num1[3] => sixteen_bit_nand:Qnand.A[3]
+num1[3] => sixteen_bit_and:Qand.A[3]
 num1[4] => sixteen_bit_adder:adderres.A[4]
 num1[4] => sixteen_bit_xor:xorres.A[4]
+num1[4] => sixteen_bit_sub:sub.A[4]
+num1[4] => sixteen_bit_or:Qor.A[4]
+num1[4] => sixteen_bit_nand:Qnand.A[4]
+num1[4] => sixteen_bit_and:Qand.A[4]
 num1[5] => sixteen_bit_adder:adderres.A[5]
 num1[5] => sixteen_bit_xor:xorres.A[5]
+num1[5] => sixteen_bit_sub:sub.A[5]
+num1[5] => sixteen_bit_or:Qor.A[5]
+num1[5] => sixteen_bit_nand:Qnand.A[5]
+num1[5] => sixteen_bit_and:Qand.A[5]
 num1[6] => sixteen_bit_adder:adderres.A[6]
 num1[6] => sixteen_bit_xor:xorres.A[6]
+num1[6] => sixteen_bit_sub:sub.A[6]
+num1[6] => sixteen_bit_or:Qor.A[6]
+num1[6] => sixteen_bit_nand:Qnand.A[6]
+num1[6] => sixteen_bit_and:Qand.A[6]
 num1[7] => sixteen_bit_adder:adderres.A[7]
 num1[7] => sixteen_bit_xor:xorres.A[7]
+num1[7] => sixteen_bit_sub:sub.A[7]
+num1[7] => sixteen_bit_or:Qor.A[7]
+num1[7] => sixteen_bit_nand:Qnand.A[7]
+num1[7] => sixteen_bit_and:Qand.A[7]
 num1[8] => sixteen_bit_adder:adderres.A[8]
 num1[8] => sixteen_bit_xor:xorres.A[8]
+num1[8] => sixteen_bit_sub:sub.A[8]
+num1[8] => sixteen_bit_or:Qor.A[8]
+num1[8] => sixteen_bit_nand:Qnand.A[8]
+num1[8] => sixteen_bit_and:Qand.A[8]
 num1[9] => sixteen_bit_adder:adderres.A[9]
 num1[9] => sixteen_bit_xor:xorres.A[9]
+num1[9] => sixteen_bit_sub:sub.A[9]
+num1[9] => sixteen_bit_or:Qor.A[9]
+num1[9] => sixteen_bit_nand:Qnand.A[9]
+num1[9] => sixteen_bit_and:Qand.A[9]
 num1[10] => sixteen_bit_adder:adderres.A[10]
 num1[10] => sixteen_bit_xor:xorres.A[10]
+num1[10] => sixteen_bit_sub:sub.A[10]
+num1[10] => sixteen_bit_or:Qor.A[10]
+num1[10] => sixteen_bit_nand:Qnand.A[10]
+num1[10] => sixteen_bit_and:Qand.A[10]
 num1[11] => sixteen_bit_adder:adderres.A[11]
 num1[11] => sixteen_bit_xor:xorres.A[11]
+num1[11] => sixteen_bit_sub:sub.A[11]
+num1[11] => sixteen_bit_or:Qor.A[11]
+num1[11] => sixteen_bit_nand:Qnand.A[11]
+num1[11] => sixteen_bit_and:Qand.A[11]
 num1[12] => sixteen_bit_adder:adderres.A[12]
 num1[12] => sixteen_bit_xor:xorres.A[12]
+num1[12] => sixteen_bit_sub:sub.A[12]
+num1[12] => sixteen_bit_or:Qor.A[12]
+num1[12] => sixteen_bit_nand:Qnand.A[12]
+num1[12] => sixteen_bit_and:Qand.A[12]
 num1[13] => sixteen_bit_adder:adderres.A[13]
 num1[13] => sixteen_bit_xor:xorres.A[13]
+num1[13] => sixteen_bit_sub:sub.A[13]
+num1[13] => sixteen_bit_or:Qor.A[13]
+num1[13] => sixteen_bit_nand:Qnand.A[13]
+num1[13] => sixteen_bit_and:Qand.A[13]
 num1[14] => sixteen_bit_adder:adderres.A[14]
 num1[14] => sixteen_bit_xor:xorres.A[14]
+num1[14] => sixteen_bit_sub:sub.A[14]
+num1[14] => sixteen_bit_or:Qor.A[14]
+num1[14] => sixteen_bit_nand:Qnand.A[14]
+num1[14] => sixteen_bit_and:Qand.A[14]
 num1[15] => sixteen_bit_adder:adderres.A[15]
 num1[15] => sixteen_bit_xor:xorres.A[15]
+num1[15] => sixteen_bit_sub:sub.A[15]
+num1[15] => sixteen_bit_or:Qor.A[15]
+num1[15] => sixteen_bit_nand:Qnand.A[15]
+num1[15] => sixteen_bit_and:Qand.A[15]
 num2[0] => sixteen_bit_adder:adderres.B[0]
 num2[0] => sixteen_bit_xor:xorres.B[0]
+num2[0] => sixteen_bit_sub:sub.B[0]
+num2[0] => sixteen_bit_or:Qor.B[0]
+num2[0] => sixteen_bit_nand:Qnand.B[0]
+num2[0] => sixteen_bit_and:Qand.B[0]
 num2[1] => sixteen_bit_adder:adderres.B[1]
 num2[1] => sixteen_bit_xor:xorres.B[1]
+num2[1] => sixteen_bit_sub:sub.B[1]
+num2[1] => sixteen_bit_or:Qor.B[1]
+num2[1] => sixteen_bit_nand:Qnand.B[1]
+num2[1] => sixteen_bit_and:Qand.B[1]
 num2[2] => sixteen_bit_adder:adderres.B[2]
 num2[2] => sixteen_bit_xor:xorres.B[2]
+num2[2] => sixteen_bit_sub:sub.B[2]
+num2[2] => sixteen_bit_or:Qor.B[2]
+num2[2] => sixteen_bit_nand:Qnand.B[2]
+num2[2] => sixteen_bit_and:Qand.B[2]
 num2[3] => sixteen_bit_adder:adderres.B[3]
 num2[3] => sixteen_bit_xor:xorres.B[3]
+num2[3] => sixteen_bit_sub:sub.B[3]
+num2[3] => sixteen_bit_or:Qor.B[3]
+num2[3] => sixteen_bit_nand:Qnand.B[3]
+num2[3] => sixteen_bit_and:Qand.B[3]
 num2[4] => sixteen_bit_adder:adderres.B[4]
 num2[4] => sixteen_bit_xor:xorres.B[4]
+num2[4] => sixteen_bit_sub:sub.B[4]
+num2[4] => sixteen_bit_or:Qor.B[4]
+num2[4] => sixteen_bit_nand:Qnand.B[4]
+num2[4] => sixteen_bit_and:Qand.B[4]
 num2[5] => sixteen_bit_adder:adderres.B[5]
 num2[5] => sixteen_bit_xor:xorres.B[5]
+num2[5] => sixteen_bit_sub:sub.B[5]
+num2[5] => sixteen_bit_or:Qor.B[5]
+num2[5] => sixteen_bit_nand:Qnand.B[5]
+num2[5] => sixteen_bit_and:Qand.B[5]
 num2[6] => sixteen_bit_adder:adderres.B[6]
 num2[6] => sixteen_bit_xor:xorres.B[6]
+num2[6] => sixteen_bit_sub:sub.B[6]
+num2[6] => sixteen_bit_or:Qor.B[6]
+num2[6] => sixteen_bit_nand:Qnand.B[6]
+num2[6] => sixteen_bit_and:Qand.B[6]
 num2[7] => sixteen_bit_adder:adderres.B[7]
 num2[7] => sixteen_bit_xor:xorres.B[7]
+num2[7] => sixteen_bit_sub:sub.B[7]
+num2[7] => sixteen_bit_or:Qor.B[7]
+num2[7] => sixteen_bit_nand:Qnand.B[7]
+num2[7] => sixteen_bit_and:Qand.B[7]
 num2[8] => sixteen_bit_adder:adderres.B[8]
 num2[8] => sixteen_bit_xor:xorres.B[8]
+num2[8] => sixteen_bit_sub:sub.B[8]
+num2[8] => sixteen_bit_or:Qor.B[8]
+num2[8] => sixteen_bit_nand:Qnand.B[8]
+num2[8] => sixteen_bit_and:Qand.B[8]
 num2[9] => sixteen_bit_adder:adderres.B[9]
 num2[9] => sixteen_bit_xor:xorres.B[9]
+num2[9] => sixteen_bit_sub:sub.B[9]
+num2[9] => sixteen_bit_or:Qor.B[9]
+num2[9] => sixteen_bit_nand:Qnand.B[9]
+num2[9] => sixteen_bit_and:Qand.B[9]
 num2[10] => sixteen_bit_adder:adderres.B[10]
 num2[10] => sixteen_bit_xor:xorres.B[10]
+num2[10] => sixteen_bit_sub:sub.B[10]
+num2[10] => sixteen_bit_or:Qor.B[10]
+num2[10] => sixteen_bit_nand:Qnand.B[10]
+num2[10] => sixteen_bit_and:Qand.B[10]
 num2[11] => sixteen_bit_adder:adderres.B[11]
 num2[11] => sixteen_bit_xor:xorres.B[11]
+num2[11] => sixteen_bit_sub:sub.B[11]
+num2[11] => sixteen_bit_or:Qor.B[11]
+num2[11] => sixteen_bit_nand:Qnand.B[11]
+num2[11] => sixteen_bit_and:Qand.B[11]
 num2[12] => sixteen_bit_adder:adderres.B[12]
 num2[12] => sixteen_bit_xor:xorres.B[12]
+num2[12] => sixteen_bit_sub:sub.B[12]
+num2[12] => sixteen_bit_or:Qor.B[12]
+num2[12] => sixteen_bit_nand:Qnand.B[12]
+num2[12] => sixteen_bit_and:Qand.B[12]
 num2[13] => sixteen_bit_adder:adderres.B[13]
 num2[13] => sixteen_bit_xor:xorres.B[13]
+num2[13] => sixteen_bit_sub:sub.B[13]
+num2[13] => sixteen_bit_or:Qor.B[13]
+num2[13] => sixteen_bit_nand:Qnand.B[13]
+num2[13] => sixteen_bit_and:Qand.B[13]
 num2[14] => sixteen_bit_adder:adderres.B[14]
 num2[14] => sixteen_bit_xor:xorres.B[14]
+num2[14] => sixteen_bit_sub:sub.B[14]
+num2[14] => sixteen_bit_or:Qor.B[14]
+num2[14] => sixteen_bit_nand:Qnand.B[14]
+num2[14] => sixteen_bit_and:Qand.B[14]
 num2[15] => sixteen_bit_adder:adderres.B[15]
 num2[15] => sixteen_bit_xor:xorres.B[15]
-sel => sixteen_two_to_one_mux:sixteen_mux.selection
-chosen_result[0] <= sixteen_two_to_one_mux:sixteen_mux.CHOSEN[0]
-chosen_result[1] <= sixteen_two_to_one_mux:sixteen_mux.CHOSEN[1]
-chosen_result[2] <= sixteen_two_to_one_mux:sixteen_mux.CHOSEN[2]
-chosen_result[3] <= sixteen_two_to_one_mux:sixteen_mux.CHOSEN[3]
-chosen_result[4] <= sixteen_two_to_one_mux:sixteen_mux.CHOSEN[4]
-chosen_result[5] <= sixteen_two_to_one_mux:sixteen_mux.CHOSEN[5]
-chosen_result[6] <= sixteen_two_to_one_mux:sixteen_mux.CHOSEN[6]
-chosen_result[7] <= sixteen_two_to_one_mux:sixteen_mux.CHOSEN[7]
-chosen_result[8] <= sixteen_two_to_one_mux:sixteen_mux.CHOSEN[8]
-chosen_result[9] <= sixteen_two_to_one_mux:sixteen_mux.CHOSEN[9]
-chosen_result[10] <= sixteen_two_to_one_mux:sixteen_mux.CHOSEN[10]
-chosen_result[11] <= sixteen_two_to_one_mux:sixteen_mux.CHOSEN[11]
-chosen_result[12] <= sixteen_two_to_one_mux:sixteen_mux.CHOSEN[12]
-chosen_result[13] <= sixteen_two_to_one_mux:sixteen_mux.CHOSEN[13]
-chosen_result[14] <= sixteen_two_to_one_mux:sixteen_mux.CHOSEN[14]
-chosen_result[15] <= sixteen_two_to_one_mux:sixteen_mux.CHOSEN[15]
+num2[15] => sixteen_bit_sub:sub.B[15]
+num2[15] => sixteen_bit_or:Qor.B[15]
+num2[15] => sixteen_bit_nand:Qnand.B[15]
+num2[15] => sixteen_bit_and:Qand.B[15]
+sel[0] => sixteen_two_to_one_mux:sixteen_mux.selection
+sel[0] => Equal0.IN3
+sel[0] => Equal1.IN2
+sel[0] => Equal2.IN2
+sel[0] => Equal3.IN2
+sel[1] => Equal0.IN1
+sel[1] => Equal1.IN1
+sel[1] => Equal2.IN1
+sel[1] => Equal3.IN3
+sel[2] => Equal0.IN0
+sel[2] => Equal1.IN0
+sel[2] => Equal2.IN3
+sel[2] => Equal3.IN1
+sel[3] => Equal0.IN2
+sel[3] => Equal1.IN3
+sel[3] => Equal2.IN0
+sel[3] => Equal3.IN0
+chosen_result[0] <= chosen_result~63.DB_MAX_OUTPUT_PORT_TYPE
+chosen_result[1] <= chosen_result~62.DB_MAX_OUTPUT_PORT_TYPE
+chosen_result[2] <= chosen_result~61.DB_MAX_OUTPUT_PORT_TYPE
+chosen_result[3] <= chosen_result~60.DB_MAX_OUTPUT_PORT_TYPE
+chosen_result[4] <= chosen_result~59.DB_MAX_OUTPUT_PORT_TYPE
+chosen_result[5] <= chosen_result~58.DB_MAX_OUTPUT_PORT_TYPE
+chosen_result[6] <= chosen_result~57.DB_MAX_OUTPUT_PORT_TYPE
+chosen_result[7] <= chosen_result~56.DB_MAX_OUTPUT_PORT_TYPE
+chosen_result[8] <= chosen_result~55.DB_MAX_OUTPUT_PORT_TYPE
+chosen_result[9] <= chosen_result~54.DB_MAX_OUTPUT_PORT_TYPE
+chosen_result[10] <= chosen_result~53.DB_MAX_OUTPUT_PORT_TYPE
+chosen_result[11] <= chosen_result~52.DB_MAX_OUTPUT_PORT_TYPE
+chosen_result[12] <= chosen_result~51.DB_MAX_OUTPUT_PORT_TYPE
+chosen_result[13] <= chosen_result~50.DB_MAX_OUTPUT_PORT_TYPE
+chosen_result[14] <= chosen_result~49.DB_MAX_OUTPUT_PORT_TYPE
+chosen_result[15] <= chosen_result~48.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_adder:adderres
@@ -1951,6 +2095,907 @@ CHOSEN[14] <= CHOSEN~1.DB_MAX_OUTPUT_PORT_TYPE
 CHOSEN[15] <= CHOSEN~0.DB_MAX_OUTPUT_PORT_TYPE
 
 
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub
+A[0] => sixteen_bit_adder:add2.A[0]
+A[1] => sixteen_bit_adder:add2.A[1]
+A[2] => sixteen_bit_adder:add2.A[2]
+A[3] => sixteen_bit_adder:add2.A[3]
+A[4] => sixteen_bit_adder:add2.A[4]
+A[5] => sixteen_bit_adder:add2.A[5]
+A[6] => sixteen_bit_adder:add2.A[6]
+A[7] => sixteen_bit_adder:add2.A[7]
+A[8] => sixteen_bit_adder:add2.A[8]
+A[9] => sixteen_bit_adder:add2.A[9]
+A[10] => sixteen_bit_adder:add2.A[10]
+A[11] => sixteen_bit_adder:add2.A[11]
+A[12] => sixteen_bit_adder:add2.A[12]
+A[13] => sixteen_bit_adder:add2.A[13]
+A[14] => sixteen_bit_adder:add2.A[14]
+A[15] => sixteen_bit_adder:add2.A[15]
+B[0] => sixteen_bit_xor:xor1.B[0]
+B[1] => sixteen_bit_xor:xor1.B[1]
+B[2] => sixteen_bit_xor:xor1.B[2]
+B[3] => sixteen_bit_xor:xor1.B[3]
+B[4] => sixteen_bit_xor:xor1.B[4]
+B[5] => sixteen_bit_xor:xor1.B[5]
+B[6] => sixteen_bit_xor:xor1.B[6]
+B[7] => sixteen_bit_xor:xor1.B[7]
+B[8] => sixteen_bit_xor:xor1.B[8]
+B[9] => sixteen_bit_xor:xor1.B[9]
+B[10] => sixteen_bit_xor:xor1.B[10]
+B[11] => sixteen_bit_xor:xor1.B[11]
+B[12] => sixteen_bit_xor:xor1.B[12]
+B[13] => sixteen_bit_xor:xor1.B[13]
+B[14] => sixteen_bit_xor:xor1.B[14]
+B[15] => sixteen_bit_xor:xor1.B[15]
+RESULT[0] <= sixteen_bit_adder:add2.RESULT[0]
+RESULT[1] <= sixteen_bit_adder:add2.RESULT[1]
+RESULT[2] <= sixteen_bit_adder:add2.RESULT[2]
+RESULT[3] <= sixteen_bit_adder:add2.RESULT[3]
+RESULT[4] <= sixteen_bit_adder:add2.RESULT[4]
+RESULT[5] <= sixteen_bit_adder:add2.RESULT[5]
+RESULT[6] <= sixteen_bit_adder:add2.RESULT[6]
+RESULT[7] <= sixteen_bit_adder:add2.RESULT[7]
+RESULT[8] <= sixteen_bit_adder:add2.RESULT[8]
+RESULT[9] <= sixteen_bit_adder:add2.RESULT[9]
+RESULT[10] <= sixteen_bit_adder:add2.RESULT[10]
+RESULT[11] <= sixteen_bit_adder:add2.RESULT[11]
+RESULT[12] <= sixteen_bit_adder:add2.RESULT[12]
+RESULT[13] <= sixteen_bit_adder:add2.RESULT[13]
+RESULT[14] <= sixteen_bit_adder:add2.RESULT[14]
+RESULT[15] <= sixteen_bit_adder:add2.RESULT[15]
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_xor:xor1
+A[0] => RESULT~0.IN0
+A[1] => RESULT~1.IN0
+A[2] => RESULT~2.IN0
+A[3] => RESULT~3.IN0
+A[4] => RESULT~4.IN0
+A[5] => RESULT~5.IN0
+A[6] => RESULT~6.IN0
+A[7] => RESULT~7.IN0
+A[8] => RESULT~8.IN0
+A[9] => RESULT~9.IN0
+A[10] => RESULT~10.IN0
+A[11] => RESULT~11.IN0
+A[12] => RESULT~12.IN0
+A[13] => RESULT~13.IN0
+A[14] => RESULT~14.IN0
+A[15] => RESULT~15.IN0
+B[0] => RESULT~0.IN1
+B[1] => RESULT~1.IN1
+B[2] => RESULT~2.IN1
+B[3] => RESULT~3.IN1
+B[4] => RESULT~4.IN1
+B[5] => RESULT~5.IN1
+B[6] => RESULT~6.IN1
+B[7] => RESULT~7.IN1
+B[8] => RESULT~8.IN1
+B[9] => RESULT~9.IN1
+B[10] => RESULT~10.IN1
+B[11] => RESULT~11.IN1
+B[12] => RESULT~12.IN1
+B[13] => RESULT~13.IN1
+B[14] => RESULT~14.IN1
+B[15] => RESULT~15.IN1
+RESULT[0] <= RESULT~0.DB_MAX_OUTPUT_PORT_TYPE
+RESULT[1] <= RESULT~1.DB_MAX_OUTPUT_PORT_TYPE
+RESULT[2] <= RESULT~2.DB_MAX_OUTPUT_PORT_TYPE
+RESULT[3] <= RESULT~3.DB_MAX_OUTPUT_PORT_TYPE
+RESULT[4] <= RESULT~4.DB_MAX_OUTPUT_PORT_TYPE
+RESULT[5] <= RESULT~5.DB_MAX_OUTPUT_PORT_TYPE
+RESULT[6] <= RESULT~6.DB_MAX_OUTPUT_PORT_TYPE
+RESULT[7] <= RESULT~7.DB_MAX_OUTPUT_PORT_TYPE
+RESULT[8] <= RESULT~8.DB_MAX_OUTPUT_PORT_TYPE
+RESULT[9] <= RESULT~9.DB_MAX_OUTPUT_PORT_TYPE
+RESULT[10] <= RESULT~10.DB_MAX_OUTPUT_PORT_TYPE
+RESULT[11] <= RESULT~11.DB_MAX_OUTPUT_PORT_TYPE
+RESULT[12] <= RESULT~12.DB_MAX_OUTPUT_PORT_TYPE
+RESULT[13] <= RESULT~13.DB_MAX_OUTPUT_PORT_TYPE
+RESULT[14] <= RESULT~14.DB_MAX_OUTPUT_PORT_TYPE
+RESULT[15] <= RESULT~15.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add1
+A[0] => bit_adder:fa0.A
+A[1] => bit_adder:fa1.A
+A[2] => bit_adder:fa2.A
+A[3] => bit_adder:fa3.A
+A[4] => bit_adder:fa4.A
+A[5] => bit_adder:fa5.A
+A[6] => bit_adder:fa6.A
+A[7] => bit_adder:fa7.A
+A[8] => bit_adder:fa8.A
+A[9] => bit_adder:fa9.A
+A[10] => bit_adder:fa10.A
+A[11] => bit_adder:fa11.A
+A[12] => bit_adder:fa12.A
+A[13] => bit_adder:fa13.A
+A[14] => bit_adder:fa14.A
+A[15] => bit_adder:fa15.A
+B[0] => bit_adder:fa0.B
+B[1] => bit_adder:fa1.B
+B[2] => bit_adder:fa2.B
+B[3] => bit_adder:fa3.B
+B[4] => bit_adder:fa4.B
+B[5] => bit_adder:fa5.B
+B[6] => bit_adder:fa6.B
+B[7] => bit_adder:fa7.B
+B[8] => bit_adder:fa8.B
+B[9] => bit_adder:fa9.B
+B[10] => bit_adder:fa10.B
+B[11] => bit_adder:fa11.B
+B[12] => bit_adder:fa12.B
+B[13] => bit_adder:fa13.B
+B[14] => bit_adder:fa14.B
+B[15] => bit_adder:fa15.B
+RESULT[0] <= bit_adder:fa0.result
+RESULT[1] <= bit_adder:fa1.result
+RESULT[2] <= bit_adder:fa2.result
+RESULT[3] <= bit_adder:fa3.result
+RESULT[4] <= bit_adder:fa4.result
+RESULT[5] <= bit_adder:fa5.result
+RESULT[6] <= bit_adder:fa6.result
+RESULT[7] <= bit_adder:fa7.result
+RESULT[8] <= bit_adder:fa8.result
+RESULT[9] <= bit_adder:fa9.result
+RESULT[10] <= bit_adder:fa10.result
+RESULT[11] <= bit_adder:fa11.result
+RESULT[12] <= bit_adder:fa12.result
+RESULT[13] <= bit_adder:fa13.result
+RESULT[14] <= bit_adder:fa14.result
+RESULT[15] <= bit_adder:fa15.result
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add1|bit_adder:fa0
+A => inter.IN0
+B => inter.IN1
+B => two_to_one_mux:mux.a
+Cin => result~0.IN1
+Cin => two_to_one_mux:mux.b
+result <= result~0.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= two_to_one_mux:mux.res
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add1|bit_adder:fa0|two_to_one_mux:mux
+a => res~0.DATAB
+b => res~0.DATAA
+sel => res~0.OUTPUTSELECT
+res <= res~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add1|bit_adder:fa1
+A => inter.IN0
+B => inter.IN1
+B => two_to_one_mux:mux.a
+Cin => result~0.IN1
+Cin => two_to_one_mux:mux.b
+result <= result~0.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= two_to_one_mux:mux.res
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add1|bit_adder:fa1|two_to_one_mux:mux
+a => res~0.DATAB
+b => res~0.DATAA
+sel => res~0.OUTPUTSELECT
+res <= res~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add1|bit_adder:fa2
+A => inter.IN0
+B => inter.IN1
+B => two_to_one_mux:mux.a
+Cin => result~0.IN1
+Cin => two_to_one_mux:mux.b
+result <= result~0.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= two_to_one_mux:mux.res
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add1|bit_adder:fa2|two_to_one_mux:mux
+a => res~0.DATAB
+b => res~0.DATAA
+sel => res~0.OUTPUTSELECT
+res <= res~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add1|bit_adder:fa3
+A => inter.IN0
+B => inter.IN1
+B => two_to_one_mux:mux.a
+Cin => result~0.IN1
+Cin => two_to_one_mux:mux.b
+result <= result~0.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= two_to_one_mux:mux.res
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add1|bit_adder:fa3|two_to_one_mux:mux
+a => res~0.DATAB
+b => res~0.DATAA
+sel => res~0.OUTPUTSELECT
+res <= res~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add1|bit_adder:fa4
+A => inter.IN0
+B => inter.IN1
+B => two_to_one_mux:mux.a
+Cin => result~0.IN1
+Cin => two_to_one_mux:mux.b
+result <= result~0.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= two_to_one_mux:mux.res
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add1|bit_adder:fa4|two_to_one_mux:mux
+a => res~0.DATAB
+b => res~0.DATAA
+sel => res~0.OUTPUTSELECT
+res <= res~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add1|bit_adder:fa5
+A => inter.IN0
+B => inter.IN1
+B => two_to_one_mux:mux.a
+Cin => result~0.IN1
+Cin => two_to_one_mux:mux.b
+result <= result~0.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= two_to_one_mux:mux.res
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add1|bit_adder:fa5|two_to_one_mux:mux
+a => res~0.DATAB
+b => res~0.DATAA
+sel => res~0.OUTPUTSELECT
+res <= res~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add1|bit_adder:fa6
+A => inter.IN0
+B => inter.IN1
+B => two_to_one_mux:mux.a
+Cin => result~0.IN1
+Cin => two_to_one_mux:mux.b
+result <= result~0.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= two_to_one_mux:mux.res
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add1|bit_adder:fa6|two_to_one_mux:mux
+a => res~0.DATAB
+b => res~0.DATAA
+sel => res~0.OUTPUTSELECT
+res <= res~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add1|bit_adder:fa7
+A => inter.IN0
+B => inter.IN1
+B => two_to_one_mux:mux.a
+Cin => result~0.IN1
+Cin => two_to_one_mux:mux.b
+result <= result~0.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= two_to_one_mux:mux.res
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add1|bit_adder:fa7|two_to_one_mux:mux
+a => res~0.DATAB
+b => res~0.DATAA
+sel => res~0.OUTPUTSELECT
+res <= res~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add1|bit_adder:fa8
+A => inter.IN0
+B => inter.IN1
+B => two_to_one_mux:mux.a
+Cin => result~0.IN1
+Cin => two_to_one_mux:mux.b
+result <= result~0.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= two_to_one_mux:mux.res
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add1|bit_adder:fa8|two_to_one_mux:mux
+a => res~0.DATAB
+b => res~0.DATAA
+sel => res~0.OUTPUTSELECT
+res <= res~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add1|bit_adder:fa9
+A => inter.IN0
+B => inter.IN1
+B => two_to_one_mux:mux.a
+Cin => result~0.IN1
+Cin => two_to_one_mux:mux.b
+result <= result~0.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= two_to_one_mux:mux.res
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add1|bit_adder:fa9|two_to_one_mux:mux
+a => res~0.DATAB
+b => res~0.DATAA
+sel => res~0.OUTPUTSELECT
+res <= res~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add1|bit_adder:fa10
+A => inter.IN0
+B => inter.IN1
+B => two_to_one_mux:mux.a
+Cin => result~0.IN1
+Cin => two_to_one_mux:mux.b
+result <= result~0.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= two_to_one_mux:mux.res
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add1|bit_adder:fa10|two_to_one_mux:mux
+a => res~0.DATAB
+b => res~0.DATAA
+sel => res~0.OUTPUTSELECT
+res <= res~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add1|bit_adder:fa11
+A => inter.IN0
+B => inter.IN1
+B => two_to_one_mux:mux.a
+Cin => result~0.IN1
+Cin => two_to_one_mux:mux.b
+result <= result~0.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= two_to_one_mux:mux.res
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add1|bit_adder:fa11|two_to_one_mux:mux
+a => res~0.DATAB
+b => res~0.DATAA
+sel => res~0.OUTPUTSELECT
+res <= res~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add1|bit_adder:fa12
+A => inter.IN0
+B => inter.IN1
+B => two_to_one_mux:mux.a
+Cin => result~0.IN1
+Cin => two_to_one_mux:mux.b
+result <= result~0.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= two_to_one_mux:mux.res
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add1|bit_adder:fa12|two_to_one_mux:mux
+a => res~0.DATAB
+b => res~0.DATAA
+sel => res~0.OUTPUTSELECT
+res <= res~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add1|bit_adder:fa13
+A => inter.IN0
+B => inter.IN1
+B => two_to_one_mux:mux.a
+Cin => result~0.IN1
+Cin => two_to_one_mux:mux.b
+result <= result~0.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= two_to_one_mux:mux.res
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add1|bit_adder:fa13|two_to_one_mux:mux
+a => res~0.DATAB
+b => res~0.DATAA
+sel => res~0.OUTPUTSELECT
+res <= res~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add1|bit_adder:fa14
+A => inter.IN0
+B => inter.IN1
+B => two_to_one_mux:mux.a
+Cin => result~0.IN1
+Cin => two_to_one_mux:mux.b
+result <= result~0.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= two_to_one_mux:mux.res
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add1|bit_adder:fa14|two_to_one_mux:mux
+a => res~0.DATAB
+b => res~0.DATAA
+sel => res~0.OUTPUTSELECT
+res <= res~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add1|bit_adder:fa15
+A => inter.IN0
+B => inter.IN1
+B => two_to_one_mux:mux.a
+Cin => result~0.IN1
+Cin => two_to_one_mux:mux.b
+result <= result~0.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= two_to_one_mux:mux.res
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add1|bit_adder:fa15|two_to_one_mux:mux
+a => res~0.DATAB
+b => res~0.DATAA
+sel => res~0.OUTPUTSELECT
+res <= res~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add2
+A[0] => bit_adder:fa0.A
+A[1] => bit_adder:fa1.A
+A[2] => bit_adder:fa2.A
+A[3] => bit_adder:fa3.A
+A[4] => bit_adder:fa4.A
+A[5] => bit_adder:fa5.A
+A[6] => bit_adder:fa6.A
+A[7] => bit_adder:fa7.A
+A[8] => bit_adder:fa8.A
+A[9] => bit_adder:fa9.A
+A[10] => bit_adder:fa10.A
+A[11] => bit_adder:fa11.A
+A[12] => bit_adder:fa12.A
+A[13] => bit_adder:fa13.A
+A[14] => bit_adder:fa14.A
+A[15] => bit_adder:fa15.A
+B[0] => bit_adder:fa0.B
+B[1] => bit_adder:fa1.B
+B[2] => bit_adder:fa2.B
+B[3] => bit_adder:fa3.B
+B[4] => bit_adder:fa4.B
+B[5] => bit_adder:fa5.B
+B[6] => bit_adder:fa6.B
+B[7] => bit_adder:fa7.B
+B[8] => bit_adder:fa8.B
+B[9] => bit_adder:fa9.B
+B[10] => bit_adder:fa10.B
+B[11] => bit_adder:fa11.B
+B[12] => bit_adder:fa12.B
+B[13] => bit_adder:fa13.B
+B[14] => bit_adder:fa14.B
+B[15] => bit_adder:fa15.B
+RESULT[0] <= bit_adder:fa0.result
+RESULT[1] <= bit_adder:fa1.result
+RESULT[2] <= bit_adder:fa2.result
+RESULT[3] <= bit_adder:fa3.result
+RESULT[4] <= bit_adder:fa4.result
+RESULT[5] <= bit_adder:fa5.result
+RESULT[6] <= bit_adder:fa6.result
+RESULT[7] <= bit_adder:fa7.result
+RESULT[8] <= bit_adder:fa8.result
+RESULT[9] <= bit_adder:fa9.result
+RESULT[10] <= bit_adder:fa10.result
+RESULT[11] <= bit_adder:fa11.result
+RESULT[12] <= bit_adder:fa12.result
+RESULT[13] <= bit_adder:fa13.result
+RESULT[14] <= bit_adder:fa14.result
+RESULT[15] <= bit_adder:fa15.result
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add2|bit_adder:fa0
+A => inter.IN0
+B => inter.IN1
+B => two_to_one_mux:mux.a
+Cin => result~0.IN1
+Cin => two_to_one_mux:mux.b
+result <= result~0.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= two_to_one_mux:mux.res
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add2|bit_adder:fa0|two_to_one_mux:mux
+a => res~0.DATAB
+b => res~0.DATAA
+sel => res~0.OUTPUTSELECT
+res <= res~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add2|bit_adder:fa1
+A => inter.IN0
+B => inter.IN1
+B => two_to_one_mux:mux.a
+Cin => result~0.IN1
+Cin => two_to_one_mux:mux.b
+result <= result~0.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= two_to_one_mux:mux.res
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add2|bit_adder:fa1|two_to_one_mux:mux
+a => res~0.DATAB
+b => res~0.DATAA
+sel => res~0.OUTPUTSELECT
+res <= res~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add2|bit_adder:fa2
+A => inter.IN0
+B => inter.IN1
+B => two_to_one_mux:mux.a
+Cin => result~0.IN1
+Cin => two_to_one_mux:mux.b
+result <= result~0.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= two_to_one_mux:mux.res
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add2|bit_adder:fa2|two_to_one_mux:mux
+a => res~0.DATAB
+b => res~0.DATAA
+sel => res~0.OUTPUTSELECT
+res <= res~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add2|bit_adder:fa3
+A => inter.IN0
+B => inter.IN1
+B => two_to_one_mux:mux.a
+Cin => result~0.IN1
+Cin => two_to_one_mux:mux.b
+result <= result~0.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= two_to_one_mux:mux.res
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add2|bit_adder:fa3|two_to_one_mux:mux
+a => res~0.DATAB
+b => res~0.DATAA
+sel => res~0.OUTPUTSELECT
+res <= res~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add2|bit_adder:fa4
+A => inter.IN0
+B => inter.IN1
+B => two_to_one_mux:mux.a
+Cin => result~0.IN1
+Cin => two_to_one_mux:mux.b
+result <= result~0.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= two_to_one_mux:mux.res
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add2|bit_adder:fa4|two_to_one_mux:mux
+a => res~0.DATAB
+b => res~0.DATAA
+sel => res~0.OUTPUTSELECT
+res <= res~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add2|bit_adder:fa5
+A => inter.IN0
+B => inter.IN1
+B => two_to_one_mux:mux.a
+Cin => result~0.IN1
+Cin => two_to_one_mux:mux.b
+result <= result~0.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= two_to_one_mux:mux.res
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add2|bit_adder:fa5|two_to_one_mux:mux
+a => res~0.DATAB
+b => res~0.DATAA
+sel => res~0.OUTPUTSELECT
+res <= res~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add2|bit_adder:fa6
+A => inter.IN0
+B => inter.IN1
+B => two_to_one_mux:mux.a
+Cin => result~0.IN1
+Cin => two_to_one_mux:mux.b
+result <= result~0.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= two_to_one_mux:mux.res
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add2|bit_adder:fa6|two_to_one_mux:mux
+a => res~0.DATAB
+b => res~0.DATAA
+sel => res~0.OUTPUTSELECT
+res <= res~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add2|bit_adder:fa7
+A => inter.IN0
+B => inter.IN1
+B => two_to_one_mux:mux.a
+Cin => result~0.IN1
+Cin => two_to_one_mux:mux.b
+result <= result~0.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= two_to_one_mux:mux.res
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add2|bit_adder:fa7|two_to_one_mux:mux
+a => res~0.DATAB
+b => res~0.DATAA
+sel => res~0.OUTPUTSELECT
+res <= res~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add2|bit_adder:fa8
+A => inter.IN0
+B => inter.IN1
+B => two_to_one_mux:mux.a
+Cin => result~0.IN1
+Cin => two_to_one_mux:mux.b
+result <= result~0.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= two_to_one_mux:mux.res
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add2|bit_adder:fa8|two_to_one_mux:mux
+a => res~0.DATAB
+b => res~0.DATAA
+sel => res~0.OUTPUTSELECT
+res <= res~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add2|bit_adder:fa9
+A => inter.IN0
+B => inter.IN1
+B => two_to_one_mux:mux.a
+Cin => result~0.IN1
+Cin => two_to_one_mux:mux.b
+result <= result~0.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= two_to_one_mux:mux.res
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add2|bit_adder:fa9|two_to_one_mux:mux
+a => res~0.DATAB
+b => res~0.DATAA
+sel => res~0.OUTPUTSELECT
+res <= res~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add2|bit_adder:fa10
+A => inter.IN0
+B => inter.IN1
+B => two_to_one_mux:mux.a
+Cin => result~0.IN1
+Cin => two_to_one_mux:mux.b
+result <= result~0.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= two_to_one_mux:mux.res
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add2|bit_adder:fa10|two_to_one_mux:mux
+a => res~0.DATAB
+b => res~0.DATAA
+sel => res~0.OUTPUTSELECT
+res <= res~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add2|bit_adder:fa11
+A => inter.IN0
+B => inter.IN1
+B => two_to_one_mux:mux.a
+Cin => result~0.IN1
+Cin => two_to_one_mux:mux.b
+result <= result~0.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= two_to_one_mux:mux.res
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add2|bit_adder:fa11|two_to_one_mux:mux
+a => res~0.DATAB
+b => res~0.DATAA
+sel => res~0.OUTPUTSELECT
+res <= res~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add2|bit_adder:fa12
+A => inter.IN0
+B => inter.IN1
+B => two_to_one_mux:mux.a
+Cin => result~0.IN1
+Cin => two_to_one_mux:mux.b
+result <= result~0.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= two_to_one_mux:mux.res
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add2|bit_adder:fa12|two_to_one_mux:mux
+a => res~0.DATAB
+b => res~0.DATAA
+sel => res~0.OUTPUTSELECT
+res <= res~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add2|bit_adder:fa13
+A => inter.IN0
+B => inter.IN1
+B => two_to_one_mux:mux.a
+Cin => result~0.IN1
+Cin => two_to_one_mux:mux.b
+result <= result~0.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= two_to_one_mux:mux.res
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add2|bit_adder:fa13|two_to_one_mux:mux
+a => res~0.DATAB
+b => res~0.DATAA
+sel => res~0.OUTPUTSELECT
+res <= res~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add2|bit_adder:fa14
+A => inter.IN0
+B => inter.IN1
+B => two_to_one_mux:mux.a
+Cin => result~0.IN1
+Cin => two_to_one_mux:mux.b
+result <= result~0.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= two_to_one_mux:mux.res
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add2|bit_adder:fa14|two_to_one_mux:mux
+a => res~0.DATAB
+b => res~0.DATAA
+sel => res~0.OUTPUTSELECT
+res <= res~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add2|bit_adder:fa15
+A => inter.IN0
+B => inter.IN1
+B => two_to_one_mux:mux.a
+Cin => result~0.IN1
+Cin => two_to_one_mux:mux.b
+result <= result~0.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= two_to_one_mux:mux.res
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_sub:sub|sixteen_bit_adder:add2|bit_adder:fa15|two_to_one_mux:mux
+a => res~0.DATAB
+b => res~0.DATAA
+sel => res~0.OUTPUTSELECT
+res <= res~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_or:Qor
+A[0] => RESULT~0.IN0
+A[1] => RESULT~1.IN0
+A[2] => RESULT~2.IN0
+A[3] => RESULT~3.IN0
+A[4] => RESULT~4.IN0
+A[5] => RESULT~5.IN0
+A[6] => RESULT~6.IN0
+A[7] => RESULT~7.IN0
+A[8] => RESULT~8.IN0
+A[9] => RESULT~9.IN0
+A[10] => RESULT~10.IN0
+A[11] => RESULT~11.IN0
+A[12] => RESULT~12.IN0
+A[13] => RESULT~13.IN0
+A[14] => RESULT~14.IN0
+A[15] => RESULT~15.IN0
+B[0] => RESULT~0.IN1
+B[1] => RESULT~1.IN1
+B[2] => RESULT~2.IN1
+B[3] => RESULT~3.IN1
+B[4] => RESULT~4.IN1
+B[5] => RESULT~5.IN1
+B[6] => RESULT~6.IN1
+B[7] => RESULT~7.IN1
+B[8] => RESULT~8.IN1
+B[9] => RESULT~9.IN1
+B[10] => RESULT~10.IN1
+B[11] => RESULT~11.IN1
+B[12] => RESULT~12.IN1
+B[13] => RESULT~13.IN1
+B[14] => RESULT~14.IN1
+B[15] => RESULT~15.IN1
+RESULT[0] <= RESULT~0.DB_MAX_OUTPUT_PORT_TYPE
+RESULT[1] <= RESULT~1.DB_MAX_OUTPUT_PORT_TYPE
+RESULT[2] <= RESULT~2.DB_MAX_OUTPUT_PORT_TYPE
+RESULT[3] <= RESULT~3.DB_MAX_OUTPUT_PORT_TYPE
+RESULT[4] <= RESULT~4.DB_MAX_OUTPUT_PORT_TYPE
+RESULT[5] <= RESULT~5.DB_MAX_OUTPUT_PORT_TYPE
+RESULT[6] <= RESULT~6.DB_MAX_OUTPUT_PORT_TYPE
+RESULT[7] <= RESULT~7.DB_MAX_OUTPUT_PORT_TYPE
+RESULT[8] <= RESULT~8.DB_MAX_OUTPUT_PORT_TYPE
+RESULT[9] <= RESULT~9.DB_MAX_OUTPUT_PORT_TYPE
+RESULT[10] <= RESULT~10.DB_MAX_OUTPUT_PORT_TYPE
+RESULT[11] <= RESULT~11.DB_MAX_OUTPUT_PORT_TYPE
+RESULT[12] <= RESULT~12.DB_MAX_OUTPUT_PORT_TYPE
+RESULT[13] <= RESULT~13.DB_MAX_OUTPUT_PORT_TYPE
+RESULT[14] <= RESULT~14.DB_MAX_OUTPUT_PORT_TYPE
+RESULT[15] <= RESULT~15.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_nand:Qnand
+A[0] => RESULT~0.IN0
+A[1] => RESULT~1.IN0
+A[2] => RESULT~2.IN0
+A[3] => RESULT~3.IN0
+A[4] => RESULT~4.IN0
+A[5] => RESULT~5.IN0
+A[6] => RESULT~6.IN0
+A[7] => RESULT~7.IN0
+A[8] => RESULT~8.IN0
+A[9] => RESULT~9.IN0
+A[10] => RESULT~10.IN0
+A[11] => RESULT~11.IN0
+A[12] => RESULT~12.IN0
+A[13] => RESULT~13.IN0
+A[14] => RESULT~14.IN0
+A[15] => RESULT~15.IN0
+B[0] => RESULT~0.IN1
+B[1] => RESULT~1.IN1
+B[2] => RESULT~2.IN1
+B[3] => RESULT~3.IN1
+B[4] => RESULT~4.IN1
+B[5] => RESULT~5.IN1
+B[6] => RESULT~6.IN1
+B[7] => RESULT~7.IN1
+B[8] => RESULT~8.IN1
+B[9] => RESULT~9.IN1
+B[10] => RESULT~10.IN1
+B[11] => RESULT~11.IN1
+B[12] => RESULT~12.IN1
+B[13] => RESULT~13.IN1
+B[14] => RESULT~14.IN1
+B[15] => RESULT~15.IN1
+RESULT[0] <= RESULT~0.DB_MAX_OUTPUT_PORT_TYPE
+RESULT[1] <= RESULT~1.DB_MAX_OUTPUT_PORT_TYPE
+RESULT[2] <= RESULT~2.DB_MAX_OUTPUT_PORT_TYPE
+RESULT[3] <= RESULT~3.DB_MAX_OUTPUT_PORT_TYPE
+RESULT[4] <= RESULT~4.DB_MAX_OUTPUT_PORT_TYPE
+RESULT[5] <= RESULT~5.DB_MAX_OUTPUT_PORT_TYPE
+RESULT[6] <= RESULT~6.DB_MAX_OUTPUT_PORT_TYPE
+RESULT[7] <= RESULT~7.DB_MAX_OUTPUT_PORT_TYPE
+RESULT[8] <= RESULT~8.DB_MAX_OUTPUT_PORT_TYPE
+RESULT[9] <= RESULT~9.DB_MAX_OUTPUT_PORT_TYPE
+RESULT[10] <= RESULT~10.DB_MAX_OUTPUT_PORT_TYPE
+RESULT[11] <= RESULT~11.DB_MAX_OUTPUT_PORT_TYPE
+RESULT[12] <= RESULT~12.DB_MAX_OUTPUT_PORT_TYPE
+RESULT[13] <= RESULT~13.DB_MAX_OUTPUT_PORT_TYPE
+RESULT[14] <= RESULT~14.DB_MAX_OUTPUT_PORT_TYPE
+RESULT[15] <= RESULT~15.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|proc|Arithmetic_Logic_Unit:ALU|sixteen_bit_and:Qand
+A[0] => RESULT~0.IN0
+A[1] => RESULT~1.IN0
+A[2] => RESULT~2.IN0
+A[3] => RESULT~3.IN0
+A[4] => RESULT~4.IN0
+A[5] => RESULT~5.IN0
+A[6] => RESULT~6.IN0
+A[7] => RESULT~7.IN0
+A[8] => RESULT~8.IN0
+A[9] => RESULT~9.IN0
+A[10] => RESULT~10.IN0
+A[11] => RESULT~11.IN0
+A[12] => RESULT~12.IN0
+A[13] => RESULT~13.IN0
+A[14] => RESULT~14.IN0
+A[15] => RESULT~15.IN0
+B[0] => RESULT~0.IN1
+B[1] => RESULT~1.IN1
+B[2] => RESULT~2.IN1
+B[3] => RESULT~3.IN1
+B[4] => RESULT~4.IN1
+B[5] => RESULT~5.IN1
+B[6] => RESULT~6.IN1
+B[7] => RESULT~7.IN1
+B[8] => RESULT~8.IN1
+B[9] => RESULT~9.IN1
+B[10] => RESULT~10.IN1
+B[11] => RESULT~11.IN1
+B[12] => RESULT~12.IN1
+B[13] => RESULT~13.IN1
+B[14] => RESULT~14.IN1
+B[15] => RESULT~15.IN1
+RESULT[0] <= RESULT~0.DB_MAX_OUTPUT_PORT_TYPE
+RESULT[1] <= RESULT~1.DB_MAX_OUTPUT_PORT_TYPE
+RESULT[2] <= RESULT~2.DB_MAX_OUTPUT_PORT_TYPE
+RESULT[3] <= RESULT~3.DB_MAX_OUTPUT_PORT_TYPE
+RESULT[4] <= RESULT~4.DB_MAX_OUTPUT_PORT_TYPE
+RESULT[5] <= RESULT~5.DB_MAX_OUTPUT_PORT_TYPE
+RESULT[6] <= RESULT~6.DB_MAX_OUTPUT_PORT_TYPE
+RESULT[7] <= RESULT~7.DB_MAX_OUTPUT_PORT_TYPE
+RESULT[8] <= RESULT~8.DB_MAX_OUTPUT_PORT_TYPE
+RESULT[9] <= RESULT~9.DB_MAX_OUTPUT_PORT_TYPE
+RESULT[10] <= RESULT~10.DB_MAX_OUTPUT_PORT_TYPE
+RESULT[11] <= RESULT~11.DB_MAX_OUTPUT_PORT_TYPE
+RESULT[12] <= RESULT~12.DB_MAX_OUTPUT_PORT_TYPE
+RESULT[13] <= RESULT~13.DB_MAX_OUTPUT_PORT_TYPE
+RESULT[14] <= RESULT~14.DB_MAX_OUTPUT_PORT_TYPE
+RESULT[15] <= RESULT~15.DB_MAX_OUTPUT_PORT_TYPE
+
+
 |proc|controlunit:cont
 Clock => Y_present~5.DATAIN
 Res => Y_present~9.DATAIN
@@ -1971,9 +3016,9 @@ datastring[12] => ~NO_FANOUT~
 datastring[13] => ~NO_FANOUT~
 datastring[14] => ~NO_FANOUT~
 datastring[15] => ~NO_FANOUT~
-Ain <= Ain~0.DB_MAX_OUTPUT_PORT_TYPE
-Gin <= Gin~0.DB_MAX_OUTPUT_PORT_TYPE
-Gout <= Gout~0.DB_MAX_OUTPUT_PORT_TYPE
+Ain <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+Gin <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+Gout <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
 Data <= Data~0.DB_MAX_OUTPUT_PORT_TYPE
 Done <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
 R0_in <= Selector1.DB_MAX_OUTPUT_PORT_TYPE
@@ -1984,23 +3029,42 @@ R2_in <= Selector3.DB_MAX_OUTPUT_PORT_TYPE
 R2_out <= Selector7.DB_MAX_OUTPUT_PORT_TYPE
 R3_in <= Selector4.DB_MAX_OUTPUT_PORT_TYPE
 R3_out <= Selector8.DB_MAX_OUTPUT_PORT_TYPE
-ALU <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+ALU[0] <= WideOr9.DB_MAX_OUTPUT_PORT_TYPE
+ALU[1] <= WideOr8.DB_MAX_OUTPUT_PORT_TYPE
+ALU[2] <= WideOr7.DB_MAX_OUTPUT_PORT_TYPE
+ALU[3] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
 funct[0] => Equal0.IN2
 funct[0] => Equal1.IN2
 funct[0] => Equal2.IN2
 funct[0] => Equal3.IN3
+funct[0] => Equal4.IN3
+funct[0] => Equal5.IN1
+funct[0] => Equal6.IN1
+funct[0] => Equal7.IN3
 funct[1] => Equal0.IN1
 funct[1] => Equal1.IN1
 funct[1] => Equal2.IN3
 funct[1] => Equal3.IN2
+funct[1] => Equal4.IN1
+funct[1] => Equal5.IN3
+funct[1] => Equal6.IN0
+funct[1] => Equal7.IN2
 funct[2] => Equal0.IN0
 funct[2] => Equal1.IN3
 funct[2] => Equal2.IN1
 funct[2] => Equal3.IN1
+funct[2] => Equal4.IN0
+funct[2] => Equal5.IN0
+funct[2] => Equal6.IN3
+funct[2] => Equal7.IN0
 funct[3] => Equal0.IN3
 funct[3] => Equal1.IN0
 funct[3] => Equal2.IN0
 funct[3] => Equal3.IN0
+funct[3] => Equal4.IN2
+funct[3] => Equal5.IN2
+funct[3] => Equal6.IN2
+funct[3] => Equal7.IN1
 funct[4] => Selector4.IN3
 funct[4] => Selector8.IN5
 funct[4] => temp[0].DATAIN
